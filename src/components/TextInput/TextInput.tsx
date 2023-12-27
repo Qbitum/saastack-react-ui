@@ -57,7 +57,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     {
       addon,
       className,
-      color = 'gray',
+      color = 'info',
       helperText,
       icon: Icon,
       rightIcon: RightIcon,
