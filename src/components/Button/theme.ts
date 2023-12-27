@@ -2,20 +2,26 @@ import type { FlowbiteButtonTheme } from './Button';
 import type { FlowbiteButtonGroupTheme } from './ButtonGroup';
 
 export const buttonTheme: FlowbiteButtonTheme = {
-  base: 'group flex items-stretch items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none',
+  base: 'group flex items-stretch items-center justify-center p-px text-center font-medium relative focus:z-10 focus:outline-none',
   fullSized: 'w-full',
   color: {
-    dark: 'text-white bg-gray-800 border border-transparent enabled:hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 dark:bg-gray-800 dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700',
-    failure:
-      'text-white bg-red-700 border border-transparent enabled:hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:enabled:hover:bg-red-700 dark:focus:ring-red-900',
-    gray: 'text-gray-900 bg-white border border-gray-200 enabled:hover:bg-gray-100 enabled:hover:text-cyan-700 :ring-cyan-700 focus:text-cyan-700 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:enabled:hover:text-white dark:enabled:hover:bg-gray-700 focus:ring-2',
-    info: 'text-white bg-cyan-700 border border-transparent enabled:hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800',
-    light:
-      'text-gray-900 bg-white border border-gray-300 enabled:hover:bg-gray-100 focus:ring-4 focus:ring-cyan-300 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700',
+    //primary
+    dark: 'text-btntext-primary bg-primary-100 border border-transparent enabled:hover:bg-primary-200 focus:ring-4 focus:ring-primary-60  dark:bg-gray-800 dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700',
+    //secondary
+    light: 'text-btntext-secondary bg-secondary-100 border border-transparent enabled:hover:bg-secondary-200 focus:ring-4 focus:ring-secondary-60 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700',
+    //tertiary
+    info: 'text-btntext-tertiary bg-tertiary-100 border border-transparent enabled:hover:bg-tertiary-200 focus:ring-4 focus:ring-tertiary-60 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800',
+
+    failure:'text-btntext-themeRed bg-themeRed-100 border border-transparent enabled:hover:bg-themeRed-200 focus:ring-4 focus:ring-themeRed-60 dark:bg-red-600 dark:enabled:hover:bg-red-700 dark:focus:ring-red-900',
+
+    success:'text-btntext-themeGreen bg-themeGreen-100 border border-transparent enabled:hover:bg-themeGreen-200 focus:ring-4 focus:ring-themeGreen-60 dark:bg-green-600 dark:enabled:hover:bg-green-700 dark:focus:ring-green-800',
+
+    gray: 'text-btntext-themeGray bg-themeGray-100 border border-transparent enabled:hover:bg-themeGray-200 focus:ring-4 focus:ring-themeGray-60 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:enabled:hover:text-white dark:enabled:hover:bg-gray-700 focus:ring-2',
+  
+    //=====================not in use
     purple:
       'text-white bg-purple-700 border border-transparent enabled:hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:enabled:hover:bg-purple-700 dark:focus:ring-purple-900',
-    success:
-      'text-white bg-green-700 border border-transparent enabled:hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:enabled:hover:bg-green-700 dark:focus:ring-green-800',
+    
     warning:
       'text-white bg-yellow-400 border border-transparent enabled:hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-900',
     blue: 'text-white bg-blue-700 border border-transparent enabled:hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800',

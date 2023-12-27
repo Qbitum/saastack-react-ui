@@ -51,7 +51,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       addon,
       children,
       className,
-      color = 'gray',
+      color = 'info',
       helperText,
       icon: Icon,
       shadow,

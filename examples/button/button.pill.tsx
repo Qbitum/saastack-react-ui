@@ -9,10 +9,7 @@ import { Button } from 'flowbite-react';
 function Component() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Button pill>Default</Button>
-      <Button color="blue" pill>
-        Blue
-      </Button>
+      <Button pill>Info</Button>
       <Button color="gray" pill>
         Gray
       </Button>
@@ -30,9 +27,6 @@ function Component() {
       </Button>
       <Button color="warning" pill>
         Warning
-      </Button>
-      <Button color="purple" pill>
-        Purple
       </Button>
     </div>
   );
@@ -45,10 +39,7 @@ import { Button } from 'flowbite-react';
 function Component() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Button pill>Default</Button>
-      <Button color="blue" pill>
-        Blue
-      </Button>
+      <Button pill>Info</Button>
       <Button color="gray" pill>
         Gray
       </Button>
@@ -66,9 +57,6 @@ function Component() {
       </Button>
       <Button color="warning" pill>
         Warning
-      </Button>
-      <Button color="purple" pill>
-        Purple
       </Button>
     </div>
   );
@@ -78,10 +66,7 @@ function Component() {
 function Component() {
   return (
     <div className="flex flex-wrap gap-2">
-      <Button pill>Default</Button>
-      <Button color="blue" pill>
-        Blue
-      </Button>
+      <Button pill>Info</Button>
       <Button color="gray" pill>
         Gray
       </Button>
@@ -99,9 +84,6 @@ function Component() {
       </Button>
       <Button color="warning" pill>
         Warning
-      </Button>
-      <Button color="purple" pill>
-        Purple
       </Button>
     </div>
   );
