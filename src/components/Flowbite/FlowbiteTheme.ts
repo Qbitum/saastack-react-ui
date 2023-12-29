@@ -38,6 +38,7 @@ import type { FlowbiteTimelineTheme } from '../Timeline';
 import type { FlowbiteToastTheme } from '../Toast';
 import type { FlowbiteToggleSwitchTheme } from '../ToggleSwitch';
 import type { FlowbiteTooltipTheme } from '../Tooltip';
+import type { FlowbiteHeaderTextTheme } from '../HeaderText';
 
 export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
@@ -83,6 +84,7 @@ export interface FlowbiteTheme {
   helperText: FlowbiteHelperTextTheme;
   table: FlowbiteTableTheme;
   timeline: FlowbiteTimelineTheme;
+  headerText: FlowbiteHeaderTextTheme;
 }
 
 export interface FlowbiteBoolean {
@@ -159,6 +161,20 @@ export interface FlowbiteSizes {
   '5xl': string;
   '6xl': string;
   '7xl': string;
+  'h1' : string;
+  'h2' : string;
+  'h3' : string;
+  'h4' : string;
+  'h5' : string;
+  'h6' : string
+}
+
+export interface FlowbiteFontWeight {
+  'extrabold': string;
+  'bold': string;
+  'semibold': string;
+  'normal': string;
+  'light': string;
 }
 
 export interface FlowbiteContentPositions {
