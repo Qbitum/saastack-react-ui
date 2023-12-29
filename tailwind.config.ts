@@ -27,7 +27,7 @@ const config: Config = {
         secondary: {
           60: '#C2C9E4',
           80: '#B4C4FE',
-          100: '#8DA4F6',
+          100: '#8EACE2',
           200: '#7A95F5',
           400: '#6886F0',
         },
@@ -39,19 +39,33 @@ const config: Config = {
           200: '#1278B1',
           400: '#156694',
         },
-        themeRed: {
-          60: '#D5C1B2',
-          80: '#F6B98D',
+        themeFailure: {
+          60: '#EFD2CC',
+          80: '#E87F34',
           100: '#BB4E00',
           200: '#9F4300',
           400: '#783300',
         },
-        themeGreen: {
-          60: '#B3C7AC',
-          80: '#95F68D',
+        themeSuccess: {
+          60: '#D5EFCC',
+          80: '#44AB20',
           100: '#387622',
           200: '#255A12',
           400: '#193F0C',
+        },
+        themeWarning: {
+          60: '#FFF8DA',
+          80: '#BDB07B',
+          100: '#F0C310',
+          200: '#DBB20E',
+          400: '#A68500',
+        },
+        themeInfo: {
+          60: '#C2E4FF',
+          80: '#52B4FF',
+          100: '#1597FA',
+          200: '#0670C2',
+          400: '#00518F',
         },
         themeGray: {
           60: '#F4F6FA',
@@ -68,9 +82,10 @@ const config: Config = {
           primary: '#FFFFFF',
           secondary: '#223F76',
           tertiary: '#FFFFFF',
-          themeRed: '#FFFFFF',
-          themeGreen: '#FFFFFF',
-          themeGray: '#FFFFFF',
+          themeFailure: '#FFFFFF',
+          themeSuccess: '#FFFFFF',
+          themeWarning: '#FFFFFF',
+          themeInfo: '#FFFFFF',
         },
       },
       maxWidth: {

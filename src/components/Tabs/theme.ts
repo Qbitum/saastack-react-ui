@@ -5,11 +5,11 @@ export const tabTheme: FlowbiteTabsTheme = {
   tablist: {
     base: 'flex text-center',
     styles: {
-      default: 'flex-wrap border-b border-gray-200 dark:border-gray-700',
-      underline: 'flex-wrap -mb-px border-b border-gray-200 dark:border-gray-700',
+      default: 'flex-wrap border-b border-themeGray-80 dark:border-gray-700',
+      underline: 'flex-wrap -mb-px border-b border-themeGray-80 dark:border-gray-700',
       pills: 'flex-wrap font-medium text-sm text-gray-500 dark:text-gray-400 space-x-2',
       fullWidth:
-        'w-full text-sm font-medium divide-x divide-gray-200 shadow grid grid-flow-col dark:divide-gray-700 dark:text-gray-400 rounded-none',
+        'w-full text-sm font-medium divide-x divide-themeGray-80 shadow grid grid-flow-col dark:divide-gray-700 dark:text-gray-400 rounded-none',
     },
     tabitem: {
       base: 'flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-4 focus:ring-cyan-300 focus:outline-none',

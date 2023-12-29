@@ -118,6 +118,12 @@ function Component() {
         </div>
         <TextInput id="input-warning" placeholder="Input Warning" required color="warning" />
       </div>
+      <div>
+        <div className="mb-2 block">
+          <Label htmlFor="input-secondary" color="secondary" value="Secondary" />
+        </div>
+        <TextInput id="input-secondary" placeholder="Input secondary" required color="secondary" />
+      </div>
     </div>
   );
 }
