@@ -33,7 +33,7 @@ export interface FlowbiteTextInputTheme {
 }
 
 export interface FlowbiteTextInputColors
-  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success' | 'secondary'> {
   [key: string]: string;
 }
 
@@ -57,7 +57,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     {
       addon,
       className,
-      color = 'info',
+      color = 'gray',
       helperText,
       icon: Icon,
       rightIcon: RightIcon,

@@ -47,7 +47,7 @@ export interface FlowbiteButtonOutlineTheme extends FlowbiteBoolean {
 }
 
 export interface ButtonColors
-  extends Pick<FlowbiteColors, 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning'> {
+  extends Pick<FlowbiteColors, 'primary' | 'secondary' | 'tertiary' | 'dark' | 'failure' | 'gray' | 'info' | 'light' | 'purple' | 'success' | 'warning' | 'green'> {
   [key: string]: string;
 }
 
@@ -90,7 +90,7 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
   {
     children,
     className,
-    color = 'info',
+    color = 'primary',
     disabled,
     fullSized,
     isProcessing = false,

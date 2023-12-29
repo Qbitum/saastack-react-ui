@@ -22,11 +22,18 @@ export const textInputTheme: FlowbiteTextInputTheme = {
         lg: 'sm:text-md p-4',
       },
       colors: {
-        gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-cyan-500 focus:ring-cyan-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-        info: 'border-secondary-100 focus:border-secondary-200 focus:ring-secondary-200 placeholder-secondary-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-        failure:'border-themeRed-100 bg-themeRed-80 text-themeRed-400 placeholder-themeRed-200 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500',
-        warning:'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500',
-        success:'border-themeGreen-100 bg-themeGreen-80 text-themeGreen-400 placeholder-themeGreen-200 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500',
+        gray: 'border-themeGray-100 bg-white text-defultText placeholder-themeGray-80 focus:border-themeGray-200 focus:ring-themeGray-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        
+        info: 'border-themeInfo-100 bg-themeInfo-60 text-defultText placeholder-themeInfo-80 focus:border-themeInfo-200 focus:ring-themeInfo-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+
+        failure:
+          'border-themeFailure-100 bg-themeFailure-60 text-defultText placeholder-themeFailure-80 focus:border-themeFailure-200 focus:ring-themeFailure-80 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500',
+        warning:
+          'border-themeWarning-100 bg-themeWarning-60 text-defultText placeholder-themeWarning-80 focus:border-themeWarning-200 focus:ring-themeWarning-80 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500',
+        success:
+          'border-themeSuccess-100 bg-themeSuccess-60 text-defultText placeholder-themeSuccess-80 focus:border-themeSuccess-200 focus:ring-themeSuccess-80 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500',
+
+        secondary: 'border-secondary-100 bg-white text-defultText placeholder-secondary-80 focus:border-secondary-200 focus:ring-secondary-60 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
       },
       withRightIcon: {
         on: 'pr-10',

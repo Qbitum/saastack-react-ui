@@ -47,9 +47,64 @@ function Component() {
   return (
     <div className="max-w-md">
       <div className="mb-2 block">
-        <Label htmlFor="countries" value="Select your country" />
+        <Label htmlFor="countries" value="Defult Select" />
       </div>
       <Select id="countries" required>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>France</option>
+        <option>Germany</option>
+      </Select>
+
+      <div className='mb-4'></div>
+      <div className="mb-2 block">
+        <Label htmlFor="countries" value="Info Select" />
+      </div>
+      <Select id="countries" color="info" required>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>France</option>
+        <option>Germany</option>
+      </Select>
+
+      <div className='mb-4'></div>
+      <div className="mb-2 block">
+        <Label htmlFor="countries" value="Failure Select" />
+      </div>
+      <Select id="countries" color="failure" required>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>France</option>
+        <option>Germany</option>
+      </Select>
+
+      <div className='mb-4'></div>
+      <div className="mb-2 block">
+        <Label htmlFor="countries" value="Warning Select" />
+      </div>
+      <Select id="countries" color="warning" required>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>France</option>
+        <option>Germany</option>
+      </Select>
+
+      <div className='mb-4'></div>
+      <div className="mb-2 block">
+        <Label htmlFor="countries" value="Success Select" />
+      </div>
+      <Select id="countries" color="success" required>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>France</option>
+        <option>Germany</option>
+      </Select>
+
+      <div className='mb-4'></div>
+      <div className="mb-2 block">
+        <Label htmlFor="countries" value="Gray Select" />
+      </div>
+      <Select id="countries" color="secondary" required>
         <option>United States</option>
         <option>Canada</option>
         <option>France</option>
