@@ -69,6 +69,7 @@ const config: Config = {
         },
         themeGray: {
           60: '#F4F6FA',
+          70: '#E6E6E6',
           80: '#B5B5B5',
           100: '#515151',
           200: '#3D3D3D',
