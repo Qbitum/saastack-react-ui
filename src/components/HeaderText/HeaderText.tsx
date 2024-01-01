@@ -3,7 +3,8 @@ import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
-import type {  FlowbiteBoolean, FlowbiteColors, FlowbiteSizes, FlowbiteFontWeight } from '../Flowbite';
+import type {  FlowbiteBoolean, FlowbiteColors, FlowbiteFontWeight } from '../Flowbite';
+import { FlowbiteTextSizes } from '../Flowbite/FlowbiteTheme';
 
 export interface FlowbiteHeaderTextTheme {
   root: FlowbiteHeaderTextRootTheme;
@@ -22,7 +23,7 @@ export interface FlowbiteHeaderTextIconTheme extends FlowbiteBoolean {
   size: HeaderTextSizes;
 }
 
-export interface HeaderTextSizes extends Pick<FlowbiteSizes, 'xs' | 'sm' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' > {
+export interface HeaderTextSizes extends Pick<FlowbiteTextSizes, 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' > {
   [key: string]: string;
 }
 
