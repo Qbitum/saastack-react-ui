@@ -78,6 +78,9 @@ const config: Config = {
         defultText: {
           100: '#515151',
         },
+        highlight: {
+          100: '#F58E15',
+        },
         btntext:{
           default: '#FFFFFF',
           primary: '#FFFFFF',
