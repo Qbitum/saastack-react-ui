@@ -1,5 +1,5 @@
 import { type CodeData } from '~/components/code-demo';
-import { Badge } from '~/src';
+import { Badge, HeaderText } from '~/src';
 
 const code = `
 'use client';

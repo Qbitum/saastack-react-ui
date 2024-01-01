@@ -8,6 +8,7 @@ export const headerTextTheme: FlowbiteHeaderTextTheme = {
     primary:'text-primary-100',
     secondary:'text-secondary-100',
     tertiary: 'text-tertiary-100',
+    highlight: 'text-highlight-100',
 
     success:'text-btntext-themeGreen bg-themeGreen-100 border border-transparent enabled:hover:bg-themeGreen-200 focus:ring-4 focus:ring-themeGreen-60 dark:bg-green-600 dark:enabled:hover:bg-green-700 dark:focus:ring-green-800',
     

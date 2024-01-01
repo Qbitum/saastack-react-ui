@@ -169,6 +169,18 @@ export interface FlowbiteSizes {
   'h6' : string
 }
 
+<<<<<<< HEAD
+=======
+export interface FlowbiteTextSizes {
+  'h1' : string;
+  'h2' : string;
+  'h3' : string;
+  'h4' : string;
+  'h5' : string;
+  'h6' : string
+}
+
+>>>>>>> 6b07d10dc82c816166fce4e20996847383691519
 export interface FlowbiteFontWeight {
   'extrabold': string;
   'bold': string;
