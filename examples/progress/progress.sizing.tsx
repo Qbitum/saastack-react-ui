@@ -4,7 +4,7 @@ import { Progress } from '~/src';
 const code = `
 'use client';
 
-import { Progress } from 'flowbite-react';
+import { Progress } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -23,7 +23,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Progress } from 'flowbite-react';
+import { Progress } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

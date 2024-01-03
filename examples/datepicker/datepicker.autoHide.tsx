@@ -4,7 +4,7 @@ import { Datepicker } from '~/src';
 const code = `
 'use client';
 
-import { Datepicker } from 'flowbite-react';
+import { Datepicker } from '@qbitum/react-flat-ui';
 
 function Component() {
   return <Datepicker autoHide={false} />;
@@ -12,7 +12,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Datepicker } from 'flowbite-react';
+import { Datepicker } from '@qbitum/react-flat-ui';
 
 function Component() {
   return <Datepicker autoHide={false} />;

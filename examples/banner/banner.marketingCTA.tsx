@@ -5,7 +5,7 @@ import { Banner, BannerCollapseButton, Button } from '~/src';
 const code = `
 'use client';
 
-import { Banner, Button } from 'flowbite-react';
+import { Banner, Button } from '@qbitum/react-flat-ui';
 import { HiX } from 'react-icons/hi';
 
 function Component() {
@@ -39,7 +39,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Banner, BannerCollapseButton } from 'flowbite-react';
+import { Banner, BannerCollapseButton } from '@qbitum/react-flat-ui';
 import { HiX } from 'react-icons/hi';
 
 function Component() {

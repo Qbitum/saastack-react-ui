@@ -27,7 +27,7 @@ export interface FlowbiteSelectTheme {
   };
 }
 
-export interface SelectColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+export interface SelectColors extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success' | 'secondary'> {
   [key: string]: string;
 }
 

@@ -1,22 +1,22 @@
 ---
-title: React Dark Mode - Flowbite
-description: Learn how to configure and build a dark mode switcher for Flowbite using Tailwind CSS and start developing with the components from the library
+title: React Dark Mode - Saastack React UI
+description: Learn how to configure and build a dark mode switcher for Saastack React UI using Tailwind CSS and start developing with the components from the library
 ---
 
 ## Toggle dark mode
 
-Surround the contents of your app with the `<Flowbite>` component, and add the `<DarkThemeToggle>` component inside it. The `<DarkThemeToggle>` component will automatically detect the current theme and display the correct icon, and allow the user to switch between themes as they like.
+Surround the contents of your app with the `<SaastackReactUI>` component, and add the `<DarkThemeToggle>` component inside it. The `<DarkThemeToggle>` component will automatically detect the current theme and display the correct icon, and allow the user to switch between themes as they like.
 
 ```jsx
-import { DarkThemeToggle, Flowbite } from 'flowbite-react';
+import { DarkThemeToggle, SaastackReactUI } from '@qbitum/react-flat-ui';
 
 export default function MyPage() {
   return (
-    <Flowbite>
+    <SaastackReactUI>
       ...
       <DarkThemeToggle />
       ...
-    </Flowbite>
+    </SaastackReactUI>
   );
 }
 ```
@@ -32,7 +32,7 @@ In server side rendered applications, such as NextJS, to avoid page flicker (if 
 ```tsx
 // app/layout.tsx
 
-import { ThemeModeScript } from 'flowbite-react';
+import { ThemeModeScript } from '@qbitum/react-flat-ui';
 
 export default function RootLayout({ children }) {
   return (
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
 ```tsx
 // pages/_document.tsx
 
-import { ThemeModeScript } from 'flowbite-react';
+import { ThemeModeScript } from '@qbitum/react-flat-ui';
 
 export default function Document() {
   return (

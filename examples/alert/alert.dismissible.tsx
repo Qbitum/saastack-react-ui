@@ -6,7 +6,7 @@ import { Alert } from '~/src';
 const code = `
 'use client';
 
-import { Alert } from 'flowbite-react';
+import { Alert } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

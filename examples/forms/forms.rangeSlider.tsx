@@ -4,7 +4,7 @@ import { Label, RangeSlider } from '~/src';
 const code = `
 'use client';
 
-import { Label, RangeSlider } from 'flowbite-react';
+import { Label, RangeSlider } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -45,7 +45,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Label, RangeSlider } from 'flowbite-react';
+import { Label, RangeSlider } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

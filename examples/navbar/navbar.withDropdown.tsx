@@ -15,7 +15,7 @@ import {
 const code = `
 'use client';
 
-import { Avatar, Dropdown, Navbar } from 'flowbite-react';
+import { Avatar, Dropdown, Navbar } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -70,7 +70,7 @@ import {
   NavbarCollapse,
   NavbarLink,
   NavbarToggle,
-} from 'flowbite-react';
+} from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -118,7 +118,7 @@ function Component() {
     <Navbar fluid rounded>
       <NavbarBrand href="https://flowbite-react.com">
         <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Saastack React UI</span>
       </NavbarBrand>
       <div className="flex md:order-2">
         <Dropdown

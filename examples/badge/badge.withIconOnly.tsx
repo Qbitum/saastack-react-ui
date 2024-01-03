@@ -5,7 +5,7 @@ import { Badge } from '~/src';
 const code = `
 'use client';
 
-import { Badge } from 'flowbite-react';
+import { Badge } from '@qbitum/react-flat-ui';
 import { HiCheck, HiClock } from 'react-icons/hi';
 
 function Component() {
@@ -21,7 +21,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Badge } from 'flowbite-react';
+import { Badge } from '@qbitum/react-flat-ui';
 import { HiCheck, HiClock } from 'react-icons/hi';
 
 function Component() {

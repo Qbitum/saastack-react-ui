@@ -6,7 +6,7 @@ import { ListGroup } from '~/src';
 const code = `
 'use client';
 
-import { ListGroup } from 'flowbite-react';
+import { ListGroup } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

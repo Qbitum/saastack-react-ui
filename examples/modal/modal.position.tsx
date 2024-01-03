@@ -7,7 +7,7 @@ import { Button, Modal, Select } from '~/src';
 const code = `
 'use client';
 
-import { Button, Modal, Select } from 'flowbite-react';
+import { Button, Modal, Select } from '@qbitum/react-flat-ui';
 import { useState } from 'react';
 
 function Component() {

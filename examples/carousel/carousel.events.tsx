@@ -6,7 +6,7 @@ import { Carousel } from '~/src';
 const code = `
 'use client';
 
-import { Carousel } from 'flowbite-react';
+import { Carousel } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

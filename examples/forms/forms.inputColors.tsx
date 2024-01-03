@@ -4,7 +4,7 @@ import { Label, TextInput } from '~/src';
 const code = `
 'use client';
 
-import { Label, TextInput } from 'flowbite-react';
+import { Label, TextInput } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -45,7 +45,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Label, TextInput } from 'flowbite-react';
+import { Label, TextInput } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -117,6 +117,12 @@ function Component() {
           <Label htmlFor="input-warning" color="warning" value="Warning" />
         </div>
         <TextInput id="input-warning" placeholder="Input Warning" required color="warning" />
+      </div>
+      <div>
+        <div className="mb-2 block">
+          <Label htmlFor="input-secondary" color="secondary" value="Secondary" />
+        </div>
+        <TextInput id="input-secondary" placeholder="Input secondary" required color="secondary" />
       </div>
     </div>
   );

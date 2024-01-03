@@ -6,7 +6,7 @@ const code = `
 'use client';
 
 import Link from 'next/link';
-import { Navbar } from 'flowbite-react';
+import { Navbar } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -34,7 +34,7 @@ function Component() {
 
 const codeRSC = `
 import Link from 'next/link';
-import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from 'flowbite-react';
+import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

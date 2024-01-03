@@ -7,7 +7,7 @@ import { Pagination } from '~/src';
 const code = `
 'use client';
 
-import { Pagination } from 'flowbite-react';
+import { Pagination } from '@qbitum/react-flat-ui';
 import { useState } from 'react';
 
 function Component() {

@@ -4,7 +4,7 @@ import { FileInput, Label } from '~/src';
 const code = `
 'use client';
 
-import { FileInput, Label } from 'flowbite-react';
+import { FileInput, Label } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (
@@ -20,7 +20,7 @@ function Component() {
 
 const codeRSC = `
 
-import { FileInput, Label } from 'flowbite-react';
+import { FileInput, Label } from '@qbitum/react-flat-ui';
 
 function Component() {
   return (

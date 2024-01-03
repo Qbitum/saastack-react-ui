@@ -5,7 +5,7 @@ import { Toast, ToastToggle } from '~/src';
 const code = `
 'use client';
 
-import { Toast } from 'flowbite-react';
+import { Toast } from '@qbitum/react-flat-ui';
 import { HiFire } from 'react-icons/hi';
 
 function Component() {
@@ -22,7 +22,7 @@ function Component() {
 `;
 
 const codeRSC = `
-import { Toast, ToastToggle } from 'flowbite-react';
+import { Toast, ToastToggle } from '@qbitum/react-flat-ui';
 import { HiFire } from 'react-icons/hi';
 
 function Component() {

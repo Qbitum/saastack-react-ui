@@ -22,6 +22,8 @@ export const fileInputTheme: FlowbiteFileInputTheme = {
           'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500',
         success:
           'border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500',
+
+        secondary: 'border-secondary-100 bg-white text-defultText placeholder-secondary-80 focus:border-secondary-200 focus:ring-secondary-60 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500'
       },
     },
   },

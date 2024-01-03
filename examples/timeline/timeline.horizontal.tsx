@@ -18,7 +18,7 @@ import {
 const code = `
 'use client';
 
-import { Button, Timeline } from 'flowbite-react';
+import { Button, Timeline } from '@qbitum/react-flat-ui';
 import { HiArrowNarrowRight, HiCalendar } from 'react-icons/hi';
 
 function Component() {
@@ -75,7 +75,7 @@ function Component() {
 //   TimelinePoint,
 //   TimelineTime,
 //   TimelineTitle,
-// } from 'flowbite-react';
+// } from '@qbitum/react-flat-ui';
 // import { HiArrowNarrowRight, HiCalendar } from 'react-icons/hi';
 
 // function Component() {
