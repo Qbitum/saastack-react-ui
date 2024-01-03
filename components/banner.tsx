@@ -12,7 +12,7 @@ export const Banner: FC = () => {
           <span className="mr-2 hidden rounded bg-cyan-100 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 dark:bg-cyan-200 dark:text-cyan-800 md:inline">
             New
           </span>
-          Flowbite React now supports Server Components and has full Next.js App Router support!
+          Saastack React UI now supports Server Components and has full Next.js App Router support!
           <Link
             className="ml-2 inline-flex items-center text-sm font-medium text-cyan-600 hover:underline dark:text-cyan-500 md:ml-2"
             href="/docs/getting-started/server-components"

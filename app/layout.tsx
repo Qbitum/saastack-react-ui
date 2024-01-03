@@ -12,7 +12,7 @@ const interFont = InterFont({
 
 export const metadata: Metadata = {
   description:
-    'Flowbite React is an open-source UI component library built with React components, Tailwind CSS utility classes and based on the Flowbite design system and components.',
+    'Saastack React UI is an open-source UI component library built with React components, Tailwind CSS utility classes and based on the Flowbite design system and components.',
   icons: {
     icon: [
       { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },

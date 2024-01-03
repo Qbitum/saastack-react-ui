@@ -38,18 +38,18 @@ export const DarkModeSection: FC = () => {
                 Dark mode integration
               </h2>
               <p className="text-lg text-gray-500 dark:text-gray-400">
-                Flowbite React has native built-in support for{' '}
+                Saastack React UI has native built-in support for{' '}
                 <Link
                   href="/docs/customize/dark-mode"
                   className="text-lg font-medium text-gray-900 underline hover:no-underline dark:text-white"
                 >
                   dark mode
                 </Link>{' '}
-                by using Tailwind CSS and the Flowbite design system.
+                by using Tailwind CSS and the Saastack React UI design system.
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400">
-                All of the UI components from Flowbite React will automatically invert the colors when activating dark
-                mode via browser settings or using a custom switcher component.
+                All of the UI components from Saastack React UI will automatically invert the colors when activating
+                dark mode via browser settings or using a custom switcher component.
               </p>
             </div>
             <div className="flex flex-col items-start self-stretch pt-8">

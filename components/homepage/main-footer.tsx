@@ -11,11 +11,11 @@ export const MainFooter: FC = () => {
           <div className="mb-4 max-w-sm lg:mb-0">
             <Link href="/" className="flex items-center gap-3">
               <Image alt="" height="32" src="/favicon.svg" width="32" />
-              <span className="text-xl font-semibold text-gray-900 dark:text-gray-100">Flowbite React</span>
+              <span className="text-xl font-semibold text-gray-900 dark:text-gray-100">Saastack React UI</span>
             </Link>
             <p className="mb-3 mt-4 max-w-sm text-gray-600 dark:text-gray-400">
-              Flowbite is an ecosystem built on top of Tailwind CSS including a component library, block sections, a
-              Figma design system and other resources.
+              Saastack React UI is an ecosystem built on top of Tailwind CSS including a component library, block
+              sections, a Figma design system and other resources.
             </p>
             <p className="mb-3 mt-4 max-w-sm text-gray-600 dark:text-gray-400">
               Code licensed{' '}
@@ -46,7 +46,7 @@ export const MainFooter: FC = () => {
                   GitHub
                 </Footer.Link>
                 <Footer.Link href="https://flowbite.com/" className="text-base">
-                  Flowbite
+                  Saastack React UI
                 </Footer.Link>
                 <Footer.Link href="https://tailwindcss.com/" className="text-base">
                   Tailwind CSS

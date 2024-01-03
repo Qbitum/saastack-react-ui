@@ -75,7 +75,7 @@ function DocsNavbar({ isCollapsed, setCollapsed }: DocsLayoutState) {
           </button>
         )}
         <Link href="/" className="sr-only">
-          Flowbite React
+           Saastack React UI
         </Link>
         <Link
           aria-hidden
@@ -83,7 +83,7 @@ function DocsNavbar({ isCollapsed, setCollapsed }: DocsLayoutState) {
           className="flex items-center gap-3 text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <Image alt="" height={32} src="/favicon.svg" width={32} className="h-8 w-8" />
-          <span>Flowbite React</span>
+          <span>Saastack React UI</span>
         </Link>
         <div className="ml-4 hidden lg:flex">
           <DocSearchInput />

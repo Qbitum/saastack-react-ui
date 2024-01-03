@@ -33,7 +33,7 @@ export interface FlowbiteTextInputTheme {
 }
 
 export interface FlowbiteTextInputColors
-  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success'> {
+  extends Pick<FlowbiteColors, 'gray' | 'info' | 'failure' | 'warning' | 'success' | 'secondary'> {
   [key: string]: string;
 }
 

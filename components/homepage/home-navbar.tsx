@@ -19,7 +19,7 @@ export const HomeNavbar: FC = () => {
     >
       <div className="flex items-center gap-3">
         <Link href="/" className="sr-only">
-          Flowbite React
+          Saastack React UI
         </Link>
         <Link
           aria-hidden
@@ -27,7 +27,7 @@ export const HomeNavbar: FC = () => {
           className="flex items-center gap-3 text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <Image alt="" aria-hidden height="32" src="/favicon.svg" width="32" />
-          <span>Flowbite React</span>
+          <span>Saastack React UI</span>
         </Link>
         <div className="ml-4 hidden lg:flex">
           <DocSearchInput />
