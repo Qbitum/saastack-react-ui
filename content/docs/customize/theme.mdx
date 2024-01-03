@@ -19,7 +19,7 @@ You have a few options, and each has its own pros and cons.
 This is the easiest way to customize the components. You can change the Tailwind CSS classes directly in the component via the `className` prop.
 
 ```jsx
-import { Button } from 'flowbite-react';
+import { Button } from '@qbitum/react-flat-ui';
 
 export default function MyPage() {
   return <Button className="bg-red-500 hover:bg-red-600">Click me</Button>;
@@ -30,13 +30,13 @@ The downside of this approach is that you have to change the `className` prop in
 
 ## Option 2: Create a custom theme
 
-You can create a custom theme and pass it to the `<SaastackReactUI>` component. The custom theme will be merged with the default theme, and the resulting theme will be used by the components.
+You can create a custom theme and pass it to the `<Flowbite>` component. The custom theme will be merged with the default theme, and the resulting theme will be used by the components.
 
 ```tsx
-import type { CustomSaastackReactUITheme } from 'flowbite-react';
-import { SaastackReactUI } from 'flowbite-react';
+import type { CustomFlowbiteTheme } from '@qbitum/react-flat-ui';
+import { Flowbite } from '@qbitum/react-flat-ui';
 
-const customTheme: CustomSaastackReactUITheme = {
+const customTheme: CustomFlowbiteTheme = {
   button: {
     color: {
       primary: 'bg-red-500 hover:bg-red-600',
@@ -58,8 +58,8 @@ export default function MyPage() {
 You can also pass `theme={}` directly to any component, which will override the theme for that component, but not its children. This is useful if you want to create a reusable component with a custom theme.
 
 ```tsx
-import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Button } from 'flowbite-react';
+import type { CustomFlowbiteTheme } from '@qbitum/react-flat-ui';
+import { Button } from '@qbitum/react-flat-ui';
 
 const customTheme: CustomFlowbiteTheme['button'] = {
   color: {
