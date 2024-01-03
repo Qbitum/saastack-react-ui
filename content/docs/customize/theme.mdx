@@ -1,6 +1,6 @@
 ---
-title: React Theme - Flowbite
-description: Learn how you can change the Tailwind CSS classes used by the components in Flowbite React
+title: React Theme - Saastack React UI
+description: Learn how you can change the Tailwind CSS classes used by the components in Saastack React UI
 ---
 
 import { Alert } from '~/src/components/Alert';
@@ -10,7 +10,7 @@ import { HiInformationCircle } from 'react-icons/hi';
   This feature is highly experimental. In the future, it could be deprecated or even suffer several changes.
 </Alert>
 
-Flowbite React is built on top of Tailwind CSS and it uses Tailwind CSS classes to style the components. This means that you can customize the components by changing the Tailwind CSS classes used by the components.
+Saastack React UI is built on top of Tailwind CSS and it uses Tailwind CSS classes to style the components. This means that you can customize the components by changing the Tailwind CSS classes used by the components.
 
 You have a few options, and each has its own pros and cons.
 
@@ -30,13 +30,13 @@ The downside of this approach is that you have to change the `className` prop in
 
 ## Option 2: Create a custom theme
 
-You can create a custom theme and pass it to the `<Flowbite>` component. The custom theme will be merged with the default theme, and the resulting theme will be used by the components.
+You can create a custom theme and pass it to the `<SaastackReactUI>` component. The custom theme will be merged with the default theme, and the resulting theme will be used by the components.
 
 ```tsx
-import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Flowbite } from 'flowbite-react';
+import type { CustomSaastackReactUITheme } from 'flowbite-react';
+import { SaastackReactUI } from 'flowbite-react';
 
-const customTheme: CustomFlowbiteTheme = {
+const customTheme: CustomSaastackReactUITheme = {
   button: {
     color: {
       primary: 'bg-red-500 hover:bg-red-600',
@@ -46,9 +46,9 @@ const customTheme: CustomFlowbiteTheme = {
 
 export default function MyPage() {
   return (
-    <Flowbite theme={{ theme: customTheme }}>
+    <SaastackReactUI theme={{ theme: customTheme }}>
       <Button color="primary">Click me</Button>
-    </Flowbite>
+    </SaastackReactUI>
   );
 }
 ```

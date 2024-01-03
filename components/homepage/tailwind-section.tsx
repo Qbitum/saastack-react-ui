@@ -29,7 +29,7 @@ export const TailwindSection: FC = () => {
                 Compatible with Tailwind CSS
               </h2>
               <p className="text-lg text-gray-500 dark:text-gray-400">
-                Flowbite React uses the utility classes from Tailwind CSS under the hood and provides an advanced{' '}
+                Saastack React UI uses the utility classes from Tailwind CSS under the hood and provides an advanced{' '}
                 <Link
                   href="/docs/customize/theme"
                   className="text-lg font-medium text-gray-900 underline hover:no-underline dark:text-white"
@@ -39,7 +39,7 @@ export const TailwindSection: FC = () => {
                 that you can use to apply classes to UI components and their underlying HTML elements structure.
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400">
-                This theming system can be used either on an application or component level and Flowbite React also
+                This theming system can be used either on an application or component level and Saastack React UI also
                 allows you to set up class name attributes on each component.
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400">
@@ -54,7 +54,7 @@ export const TailwindSection: FC = () => {
                   href="https://flowbite.com"
                   className="text-lg font-medium text-gray-900 underline hover:no-underline dark:text-white"
                 >
-                  Flowbite ecosystem
+                  Saastack React UI ecosystem
                 </a>{' '}
                 uses this framework in all of the libraries including the vanilla JS, Svelte, Vue, and React one.
               </p>
