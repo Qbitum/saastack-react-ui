@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.2",
+    "@uidotdev/usehooks": "^2.4.1",
     "contentlayer": "^0.3.4",
     "flowbite": "^2.0.0",
     "markdown-toc": "^1.2.0",

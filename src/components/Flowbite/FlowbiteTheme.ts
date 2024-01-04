@@ -44,6 +44,7 @@ import { FlowbitePageWrapperTheme } from '../PageWrapper';
 import type { FlowbitePageTheme } from '../Page';
 import { FlowbiteSectionTheme } from '../Section';
 // import { FlowbiteSubHeaderTheme } from '../SubHeader';
+import { FlowbiteSeparatorTheme } from '../Separator';
 
 export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
@@ -96,7 +97,7 @@ export interface FlowbiteTheme {
   timeline: FlowbiteTimelineTheme;
   headerText: FlowbiteHeaderTextTheme;
   section:FlowbiteSectionTheme;
-
+  separator: FlowbiteSeparatorTheme;
 }
 
 export interface FlowbiteBoolean {

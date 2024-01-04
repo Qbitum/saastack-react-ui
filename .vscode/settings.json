@@ -14,7 +14,7 @@
     "build/": true,
     "coverage/": true,
     "lib/": true,
-    "node_modules": true,
+    "node_modules": false,
     "storybook-static/": true,
     "tsconfig.tsbuildinfo": true,
     "yarn-error.log": true,
