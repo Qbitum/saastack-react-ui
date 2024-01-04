@@ -43,7 +43,7 @@ import { PageWrapperTheme } from './components/PageWrapper/theme';
 import { ParagraphTheme } from './components/Paragraph/theme';
 import { PageTheme } from './components/Page/theme';
 import { SectionTheme } from './components/Section/theme';
-// import { SubHeaderTheme } from './components/SubHeader/theme';
+
 import { separatorTheme } from './components/Separator/theme';
 
 export const theme: FlowbiteTheme = {
@@ -95,6 +95,6 @@ export const theme: FlowbiteTheme = {
   page: PageTheme,
   section: SectionTheme,
   root: undefined,
-  // subHeader: SubHeaderTheme,
+  
   separator: separatorTheme,
 };

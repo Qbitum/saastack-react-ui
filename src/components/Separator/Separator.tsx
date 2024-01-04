@@ -1,8 +1,8 @@
 import { ComponentProps, FC } from "react";
 import { twMerge } from "tailwind-merge";
-import { mergeDeep } from "~/src/helpers/merge-deep";
-import { getTheme } from "~/src/theme-store";
-import { DeepPartial } from "~/src/types";
+import { mergeDeep } from "../../helpers/merge-deep";
+import { getTheme } from "../../theme-store";
+import { DeepPartial } from "../../types";
 
 export interface FlowbiteSeparatorTheme {
   base:  string;
@@ -14,6 +14,8 @@ export interface FlowbiteSeparatorTheme {
 export interface SeparatorColors {
   error: string;
   default: string;
+  white:string
+  [key:string]:string
 }
 
 export interface SeparatorShow {

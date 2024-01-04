@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { Button } from '../Button';
 import { Checkbox } from '../Checkbox';
 import { FileInput } from '../FileInput';
-import { Flowbite, type CustomFlowbiteTheme } from '../Flowbite';
+import { Flowbite, CustomFlowbiteTheme } from '../Flowbite';
 import { Radio } from '../Radio';
 import { RangeSlider } from '../RangeSlider';
 import { Select } from '../Select';

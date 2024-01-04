@@ -42,8 +42,15 @@ export * from './components/Toast';
 export * from './components/ToggleSwitch';
 export * from './components/Tooltip';
 export * from './components/HeaderText';
+export * from './components/Separator'
 
 export * from './hooks/use-theme-mode';
 
 export * from './theme';
 export { getTheme, getThemeMode } from './theme-store';
+
+
+export * from './components/Page';
+export * from './components/Section';
+export * from './components/PageWrapper';
+export * from './components/Paragraph';

@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/themesberg/flowbite-react/compare/v0.8.0...v0.8.1) (2024-01-04)
+
+
+### Features
+
+* add new separator component ([73ed553](https://github.com/themesberg/flowbite-react/commit/73ed5534a3549e5d7f4ffaf45d15313e9e04953d))
+* AppHeader and SubHeader created ([0d2e1ab](https://github.com/themesberg/flowbite-react/commit/0d2e1ab6ac35e60eb4f2b7bc77fcb7117ec99724))
+* created PageWrapper, Paragraph and AppHeader ([c2f6d34](https://github.com/themesberg/flowbite-react/commit/c2f6d3484295bd081258b45922448e8760d33f2b))
+
+
+### Bug Fixes
+
+* add Header text component ([5674523](https://github.com/themesberg/flowbite-react/commit/5674523c4c7237a1c0847fe23debd9b6f104787d))
+* add Header text component ([258e0f4](https://github.com/themesberg/flowbite-react/commit/258e0f41472a15ec49fbe014a7368311de2a8e86))
+* automatic merge conflicts ([fd10376](https://github.com/themesberg/flowbite-react/commit/fd10376a22c10e21ad7ba2365dd623ec1a732b67))
+* Button and dropdown , text input update ([0f274f7](https://github.com/themesberg/flowbite-react/commit/0f274f7bd0c6fd41173a3586ade0f431f91e627f))
+* Button and dropdown , text input update ([fa71ad3](https://github.com/themesberg/flowbite-react/commit/fa71ad3933d72b89988a089dff7d6b7f83434536))
+* component update ([2792dd3](https://github.com/themesberg/flowbite-react/commit/2792dd3a30ef70bfe54d5e10c3d62409bd5d3632))
+* tab update ([0f7ccf8](https://github.com/themesberg/flowbite-react/commit/0f7ccf8ac121606566edf0af2f2d272a0590efaf))
+* tab update ([6fca83d](https://github.com/themesberg/flowbite-react/commit/6fca83db5edfde96475a131c1c9c33b2238f4e8e))
+* table and pagination update ([6f75748](https://github.com/themesberg/flowbite-react/commit/6f757489212296bcf4998d9efa3ac01e0e289e6f))
+* table and pagination update ([ffd564c](https://github.com/themesberg/flowbite-react/commit/ffd564cbd7752229527ad74f924bed3ddf95e3f5))
+* test commit ([c0c852d](https://github.com/themesberg/flowbite-react/commit/c0c852dd3ed13a9952fe415b1f637e75ec21cb95))
+* theme error ([6b07d10](https://github.com/themesberg/flowbite-react/commit/6b07d10dc82c816166fce4e20996847383691519))
+* theme update ([5343f24](https://github.com/themesberg/flowbite-react/commit/5343f24500045a7968017037e8b730354cd0eafb))
+* theme update ([d62f014](https://github.com/themesberg/flowbite-react/commit/d62f014fa0adc02e8664d2874558d4688282d7f3))
+
 ## 0.8.0 (2023-12-29)
 
 

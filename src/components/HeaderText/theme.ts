@@ -2,9 +2,9 @@ import type { FlowbiteHeaderTextTheme } from './HeaderText';
 
 export const headerTextTheme: FlowbiteHeaderTextTheme = {
   root: {
-    base: 'flex h-fit',
+    base: 'flex h-fit px-4',
     color: {
-    default: 'text-defultText-100',
+    default: 'text-sky-300',
     primary:'text-primary-100',
     secondary:'text-secondary-100',
     tertiary: 'text-tertiary-100',
@@ -36,8 +36,8 @@ export const headerTextTheme: FlowbiteHeaderTextTheme = {
     },
     href: 'group',
     size: {
-      xs: '',
-      sm: '',
+      xs: 'text-xs',
+      sm: 'text-sm',
       h1: 'text-2xl',
       h2: 'text-xl',
       h3: 'text-lg',

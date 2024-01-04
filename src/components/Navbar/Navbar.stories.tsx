@@ -139,11 +139,35 @@ subHeader.storyName = 'subHeader';
 subHeader.args = {
   children: (
     <>
-      <div className="bg-gray-600">
+      <div className="">
         <Navbar.Brand>
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white ">Flowbite</span>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white ">Label Checking</span>
         </Navbar.Brand>
       </div>
     </>
   ),
 };
+
+export const subHeaderWithButton = Template.bind({});
+subHeader.storyName = 'subHeaderWithButton';
+subHeader.args = {
+  children: (
+    <>
+      <div className="">
+      <div className="ml-auto flex items-center">
+
+      <Navbar.Collapse>
+          <Navbar.Link href="/navbars" className="m-7">
+            Button
+          </Navbar.Link>
+        </Navbar.Collapse>
+
+        {/* <Navbar.Brand>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white ">Label Checking</span>
+        </Navbar.Brand> */}
+      </div>
+      </div>
+    </>
+  ),
+};
+
