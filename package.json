@@ -30,6 +30,7 @@
   "scripts": {
     "build": "next build",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs",
+    "build:lib:win": "rmdir .lib/ && yarn build:lib:esm && yarn build:lib:cjs",
     "build:lib:cjs": "tsc -p tsconfig.lib.json",
     "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm",
     "commit": "cz",
@@ -38,6 +39,7 @@
     "dev": "next dev",
     "lint": "eslint --color .",
     "prepublishOnly": "yarn build:lib",
+    "prepublishOnlyWin": "del lib && yarn build:lib:esm && yarn build:lib:cjs",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "standard-version -a",
