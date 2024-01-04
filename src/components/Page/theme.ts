@@ -1,6 +1,6 @@
-import type { FlowbiteSubHeaderTheme } from './SubHeader';
+import type { FlowbitePageTheme } from './Page';
 
-export const subHeaderTheme: FlowbiteSubHeaderTheme = {
+export const PageTheme: FlowbitePageTheme = {
   root: {
     base: 'text-sm font-medium',
     disabled: 'opacity-50',
@@ -11,5 +11,6 @@ export const subHeaderTheme: FlowbiteSubHeaderTheme = {
       warning: 'text-yellow-500 dark:text-yellow-600',
       success: 'text-green-700 dark:text-green-500',
     },
+    align: ''
   },
 };

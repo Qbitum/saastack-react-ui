@@ -41,12 +41,18 @@ import type { FlowbiteTooltipTheme } from '../Tooltip';
 import type { FlowbiteHeaderTextTheme } from '../HeaderText';
 import { FlowbiteParagraphTheme } from '../Paragraph';
 import { FlowbitePageWrapperTheme } from '../PageWrapper';
+import type { FlowbitePageTheme } from '../Page';
+import { FlowbiteSectionTheme } from '../Section';
+// import { FlowbiteSubHeaderTheme } from '../SubHeader';
 
 export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
 export interface FlowbiteTheme {
   paragraph: FlowbiteParagraphTheme;
   pageWrapper: FlowbitePageWrapperTheme
+  // subHeader: FlowbiteSubHeaderTheme;
+  page: FlowbitePageTheme;
+  root: any;
   accordion: FlowbiteAccordionTheme;
   alert: FlowbiteAlertTheme;
   avatar: FlowbiteAvatarTheme;
@@ -89,6 +95,8 @@ export interface FlowbiteTheme {
   table: FlowbiteTableTheme;
   timeline: FlowbiteTimelineTheme;
   headerText: FlowbiteHeaderTextTheme;
+  section:FlowbiteSectionTheme;
+
 }
 
 export interface FlowbiteBoolean {
@@ -186,4 +194,11 @@ export interface FlowbiteFontWeight {
 
 export interface FlowbiteContentPositions {
   center: string;
+}
+
+export interface FlowbiteSectionBorderRadius{
+  xs:string,
+  sm:string,
+  lg: string,
+  xl: string,
 }

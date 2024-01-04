@@ -41,6 +41,9 @@ import { tooltipTheme } from './components/Tooltip/theme';
 import { headerTextTheme } from './components/HeaderText/theme';
 import { PageWrapperTheme } from './components/PageWrapper/theme';
 import { ParagraphTheme } from './components/Paragraph/theme';
+import { PageTheme } from './components/Page/theme';
+import { SectionTheme } from './components/Section/theme';
+// import { SubHeaderTheme } from './components/SubHeader/theme';
 
 export const theme: FlowbiteTheme = {
   accordion: accordionTheme,
@@ -88,4 +91,8 @@ export const theme: FlowbiteTheme = {
   pageWrapper: PageWrapperTheme,
   paragraph: ParagraphTheme,
 
+  page: PageTheme,
+  section: SectionTheme,
+  root: undefined,
+  // subHeader: SubHeaderTheme,
 };

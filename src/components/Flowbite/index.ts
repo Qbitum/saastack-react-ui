@@ -13,4 +13,5 @@ export type {
   FlowbiteStateColors,
   FlowbiteTheme,
   FlowbiteFontWeight,
+  FlowbiteSectionBorderRadius,
 } from './FlowbiteTheme';
