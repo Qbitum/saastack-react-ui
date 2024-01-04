@@ -104,3 +104,38 @@ WithDropdown.args = {
     </>
   ),
 };
+
+export const AppHeader = Template.bind({});
+AppHeader.storyName = 'App Header';
+AppHeader.args = {
+  children: (
+    <>
+      <Navbar.Brand href="https://flowbite.com/">
+        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Label Checking</span>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <div className="ml-auto flex items-center">
+
+      <Navbar.Brand href="https://flowbite.com/">
+        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+      </Navbar.Brand>
+      <Navbar.Collapse>
+        <Navbar.Link href="/navbars" className='m-4'>Admin</Navbar.Link>
+      </Navbar.Collapse>
+      
+      <Dropdown
+          arrowIcon={false}
+          inline
+          label={
+            <Avatar alt="User Profile" rounded />
+          }
+        >
+          <Dropdown.Item>Logout</Dropdown.Item>
+        </Dropdown>
+        <span className="block text-sm pl-2">Jade Faro</span>
+
+        </div>
+    </>
+  ),
+};

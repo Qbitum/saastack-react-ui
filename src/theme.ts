@@ -39,6 +39,8 @@ import { toastTheme } from './components/Toast/theme';
 import { toggleSwitchTheme } from './components/ToggleSwitch/theme';
 import { tooltipTheme } from './components/Tooltip/theme';
 import { headerTextTheme } from './components/HeaderText/theme';
+import { PageWrapperTheme } from './components/PageWrapper/theme';
+import { ParagraphTheme } from './components/Paragraph/theme';
 
 export const theme: FlowbiteTheme = {
   accordion: accordionTheme,
@@ -83,4 +85,7 @@ export const theme: FlowbiteTheme = {
   toast: toastTheme,
   tooltip: tooltipTheme,
   headerText: headerTextTheme,
+  pageWrapper: PageWrapperTheme,
+  paragraph: ParagraphTheme,
+
 };

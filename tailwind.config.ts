@@ -91,6 +91,9 @@ const config: Config = {
           themeWarning: '#FFFFFF',
           themeInfo: '#FFFFFF',
         },
+        appBg: {
+          100: '#DADEE5',
+        },
       },
       maxWidth: {
         '8xl': '90rem',

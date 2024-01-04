@@ -39,10 +39,14 @@ import type { FlowbiteToastTheme } from '../Toast';
 import type { FlowbiteToggleSwitchTheme } from '../ToggleSwitch';
 import type { FlowbiteTooltipTheme } from '../Tooltip';
 import type { FlowbiteHeaderTextTheme } from '../HeaderText';
+import { FlowbiteParagraphTheme } from '../Paragraph';
+import { FlowbitePageWrapperTheme } from '../PageWrapper';
 
 export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
 export interface FlowbiteTheme {
+  paragraph: FlowbiteParagraphTheme;
+  pageWrapper: FlowbitePageWrapperTheme
   accordion: FlowbiteAccordionTheme;
   alert: FlowbiteAlertTheme;
   avatar: FlowbiteAvatarTheme;
