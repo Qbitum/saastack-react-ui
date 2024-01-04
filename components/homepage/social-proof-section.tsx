@@ -67,9 +67,9 @@ export const SocialProofSection: FC = async () => {
               </div>
               <div className="flex max-w-2xl flex-col items-start justify-center gap-5 self-stretch pr-8">
                 <p className="text-lg font-medium leading-relaxed text-gray-900 dark:text-white">
-                  Saastack React UI provides a robust set of design tokens and components based on the popular Tailwind
-                  CSS framework. From the most used UI components like forms and navigation bars to the whole app
-                  screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.
+                  Flowbite provides a robust set of design tokens and components based on the popular Tailwind CSS
+                  framework. From the most used UI components like forms and navigation bars to the whole app screens
+                  designed both for desktop and mobile, this UI kit provides a solid foundation for any project.
                 </p>
                 <p className="text-lg font-medium leading-relaxed text-gray-900 dark:text-white">
                   Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS

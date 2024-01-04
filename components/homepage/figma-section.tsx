@@ -13,14 +13,12 @@ export const FigmaSection: FC = () => {
               </h2>
               <p className="text-lg">
                 Get started with the most popular and definitive design system built in Figma and used by thousands of
-                designers and agencies that is compatible across multiple frameworks in the Saastack React UI ecosystem
-                including React, Vue, Svelte, and Saastack React UI.
+                designers and agencies that is compatible across multiple frameworks in the Flowbite ecosystem including
+                React, Vue, Svelte, and Flowbite.
               </p>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <p className="self-stretch">
-                Check out the following resources to learn more about Saastack React UI Figma:
-              </p>
+              <p className="self-stretch">Check out the following resources to learn more about Flowbite Figma:</p>
               <div className="max-w-l isolate flex flex-col items-start gap-4 self-stretch">
                 <a
                   href="https://www.figma.com/file/xYaJr6UvThCW2LM2RjLeJf/flowbite-pro-figma-2.6.0?type=design&node-id=18-0&t=jKFrn2Dz5D8jhk7d-0"

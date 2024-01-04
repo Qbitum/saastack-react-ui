@@ -45,8 +45,8 @@ export const ReactSection: FC = () => {
                 is a free and open-source UI component library based on accessible React components and Tailwind CSS.
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400">
-                Get started building modern web applications using the React UI components from Saastack React UI based
-                on Tailwind CSS and the Saastack React UI design system by installing the package via NPM.
+                Get started building modern web applications using the React UI components from Flowbite based on
+                Tailwind CSS and the Flowbite design system by installing the package via NPM.
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400">
                 Browse a collection of hundreds of interactive UI components such as dropdowns, navbars, modals, and

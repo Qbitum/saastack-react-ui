@@ -16,8 +16,8 @@ export const HeroSection: FC = () => {
                 <span className="ml-2 text-cyan-700 dark:text-cyan-700 xl:inline">Saastack React UI</span>
               </h1>
               <p className="max-w-3xl text-lg leading-normal text-gray-500 dark:text-gray-400 lg:text-xl">
-                Saastack React UI is an open-source UI component library built on top of Tailwind CSS with React
-                components and based on the Saastack React UI Design System.
+                Saastack React UI is an open-source UI component library built on top of Tailwind CSS with React components
+                and based on the Flowbite Design System.
               </p>
               <div className="mt-2 grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 sm:gap-6 [&>div:first-child]:w-full">
                 <CopyPackageInput value="npm i flowbite-react" />

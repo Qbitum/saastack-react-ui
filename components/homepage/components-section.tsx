@@ -16,7 +16,7 @@ export const ComponentsSection: FC = () => {
             <span className="font-medium text-gray-900 dark:text-white">
               over {COMPONENTS_DATA.length} open-source UI components
             </span>{' '}
-            and interactive elements built with React, Saastack React UI and Tailwind CSS
+            and interactive elements built with React, Flowbite and Tailwind CSS
           </p>
         </div>
         <div className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 sm:gap-8 xl:grid-cols-3">

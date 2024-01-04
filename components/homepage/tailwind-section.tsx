@@ -54,7 +54,7 @@ export const TailwindSection: FC = () => {
                   href="https://flowbite.com"
                   className="text-lg font-medium text-gray-900 underline hover:no-underline dark:text-white"
                 >
-                  Saastack React UI ecosystem
+                  Flowbite ecosystem
                 </a>{' '}
                 uses this framework in all of the libraries including the vanilla JS, Svelte, Vue, and React one.
               </p>

@@ -33,8 +33,8 @@ export const ContributorsSection: FC = async () => {
               Community contributors
             </h2>
             <p className="text-center text-lg font-normal">
-              Join a community of open-source contributors by tuning in with the Saastack React UI community and become
-              one of the highlighted members
+              Join a community of open-source contributors by tuning in with the Saastack React UI community and become one
+              of the highlighted members
             </p>
           </div>
           <div className="flex max-w-5xl flex-col gap-3 px-4 lg:px-8">
@@ -68,7 +68,7 @@ export const ContributorsSection: FC = async () => {
                 <h2 className="text-left text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Join the community
                 </h2>
-                <p>Become a member of a community of developers by supporting Saastack React UI</p>
+                <p>Become a member of a community of developers by supporting Flowbite</p>
               </div>
               <Link
                 href="https://github.com/themesberg/flowbite-react"
