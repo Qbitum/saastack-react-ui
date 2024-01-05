@@ -47,3 +47,9 @@ export * from './hooks/use-theme-mode';
 
 export * from './theme';
 export { getTheme, getThemeMode } from './theme-store';
+
+
+export * from './components/Page';
+export * from './components/Section';
+export * from './components/PageWrapper';
+export * from './components/Paragraph';
