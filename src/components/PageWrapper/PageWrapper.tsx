@@ -1,12 +1,11 @@
-import { type ComponentProps, type FC, type ReactNode } from 'react';
+import { ComponentProps, FC, ReactNode } from 'react';
 import type { FlowbiteColors, FlowbiteStateColors } from '../Flowbite';
 import { twMerge } from 'tailwind-merge';
-import { mergeDeep } from '~/src/helpers/merge-deep';
-import { getTheme } from '~/src/theme-store';
-import { DeepPartial } from '~/src/types';
+import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import { DeepPartial } from '../../types';
 import classNames from 'classnames';
 import Mounted from '../Mounted';
-import { disabled } from '~/examples/button';
 
 export interface FlowbitePageWrapperTheme {
   root: FlowbitePageWrapperRootTheme;
@@ -28,6 +27,7 @@ export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
   color?: keyof FlowbiteColors;
   isProtected?: boolean;
   className?: string;
+  disabled:boolean;
   theme?: DeepPartial<FlowbitePageWrapperTheme>;
 }
 
@@ -35,6 +35,7 @@ export const PageWrapper: FC<PageWrapperProps> = ({
   children,
   className,
   color = 'default',
+  disabled =false,
   theme: customTheme = {},
 
   }) => {

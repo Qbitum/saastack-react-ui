@@ -3,8 +3,8 @@ import { twMerge } from 'tailwind-merge';
 import type { DeepPartial } from '../../types';
 import type { FlowbiteSizes, FlowbiteStateColors } from '../Flowbite';
 import type { FlowbiteColors, FlowbiteFontWeight } from '../Flowbite';
-import { getTheme } from '~/src/theme-store';
-import { mergeDeep } from '~/src/helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import { mergeDeep } from '../../helpers/merge-deep';
 
 export interface FlowbiteParagraphTheme {
   root: FlowbiteParagraphRootTheme;
