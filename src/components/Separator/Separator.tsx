@@ -47,6 +47,7 @@ export const Separator: FC<SeparatorProps> = ({
 
 	return <div className={twMerge(
     theme.base,
+    theme.colors[color],
     theme.sizes[size],
     className)} {...props}></div>;
 };
