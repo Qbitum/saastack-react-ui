@@ -45,6 +45,7 @@ import { PageTheme } from './components/Page/theme';
 import { SectionTheme } from './components/Section/theme';
 
 import { separatorTheme } from './components/Separator/theme';
+import { subheaderTheme } from './components/SubHeader/theme';
 
 export const theme: FlowbiteTheme = {
   accordion: accordionTheme,
@@ -97,4 +98,5 @@ export const theme: FlowbiteTheme = {
   root: undefined,
   
   separator: separatorTheme,
+  subheader: subheaderTheme
 };

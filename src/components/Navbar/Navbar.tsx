@@ -48,7 +48,7 @@ const NavbarComponent: FC<NavbarComponentProps> = ({
   children,
   className,
   fluid = false,
-  menuOpen,
+  menuOpen = false,
   rounded,
   theme: customTheme = {},
   ...props
