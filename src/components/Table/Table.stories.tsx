@@ -3,6 +3,7 @@ import type { TableProps } from './Table';
 import { Table } from './Table';
 import { TableBody } from './TableBody';
 import { HiTrash } from 'react-icons/hi';
+import { Badge } from '../Badge';
 
 export default {
   title: 'Components/Tables',
@@ -129,9 +130,9 @@ WithButton.args = {
             <Table.Cell>STY-NYK009</Table.Cell>
             <Table.Cell>Care Lable</Table.Cell>
             <Table.Cell>
-              <div className="flex items-center">
-                <div className="mr-2 h-6 w-32 rounded-full bg-yellow-500">Pending_Approval</div>
-              </div>
+            <Badge color={"teal"}>
+                Process Failed
+              </Badge>
             </Table.Cell>
             <Table.Cell>
             <button className="rounded border border-blue-500 px-4 py-2 text-blue-500 hover:bg-blue-500 hover:text-white focus:border-blue-300 focus:outline-none focus:ring">
@@ -140,7 +141,7 @@ WithButton.args = {
             </Table.Cell>
             <Table.Cell>
             <a href="/tables" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-           <HiTrash className="text-cyan-600 mr-2" size={24}/></a>
+           <HiTrash className="text-cyan-600 mr-2" size={24} style={{ color: 'red' }}/></a>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
@@ -151,9 +152,9 @@ WithButton.args = {
             <Table.Cell>STY-NYK009</Table.Cell>
             <Table.Cell>Care Lable</Table.Cell>
             <Table.Cell>
-              <div className="flex items-center">
-                <div className="mr-2 h-6 w-32 rounded-full bg-yellow-500">Pending_Approval</div>
-              </div>
+              <Badge color={"red"}>
+                Process Failed
+              </Badge>
             </Table.Cell>
             <Table.Cell>
               <button className="rounded border border-blue-500 px-4 py-2 text-blue-500 hover:bg-blue-500 hover:text-white focus:border-blue-300 focus:outline-none focus:ring">
@@ -162,7 +163,7 @@ WithButton.args = {
             </Table.Cell>
             <Table.Cell>
             <a href="/tables" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-           <HiTrash className="text-cyan-600 mr-2 "size={24} /></a>
+           <HiTrash className="text-cyan-600 mr-2 "size={24} style={{ color: 'red' }} /></a>
             </Table.Cell>
           </Table.Row>
         </TableBody>
