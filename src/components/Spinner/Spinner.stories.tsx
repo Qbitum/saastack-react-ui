@@ -24,7 +24,7 @@ export const Alignment = (): JSX.Element => (
     <div className="text-center">
       <Spinner aria-label="Center-aligned spinner example" />
     </div>
-    <div className="text-right">
+    <div className="text-￼right">
       <Spinner aria-label="Right-aligned spinner example" />
     </div>
   </div>
