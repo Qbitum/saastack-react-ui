@@ -7,7 +7,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
       on: 'w-16',
       off: 'w-64',
     },
-    inner: 'h-full overflow-y-auto overflow-x-hidden rounded bg-gray-50 py-4 px-3 dark:bg-gray-800',
+    inner: 'h-full overflow-y-auto overflow-x-hidden rounded bg-gray-50 py-4 pl-3 dark:bg-gray-800',
   },
   collapse: {
     button:
@@ -48,8 +48,8 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
     },
   },
   item: {
-    base: 'flex items-center justify-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
-    active: 'bg-gray-100 dark:bg-gray-700',
+    base: 'flex items-center justify-center rounded-l-lg p-2 text-sm font-normal text-gray-900 hover:bg-slate-300 dark:text-white dark:hover:bg-gray-700',
+    active: 'bg-slate-300 dark:bg-gray-800',
     collapsed: {
       insideCollapse: 'group w-full pl-8 transition duration-75',
       noIcon: 'font-bold',

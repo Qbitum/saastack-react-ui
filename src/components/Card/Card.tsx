@@ -4,11 +4,12 @@ import { mergeDeep } from '../../helpers/merge-deep';
 import { omit } from '../../helpers/omit';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
-import type { FlowbiteBoolean } from '../Flowbite';
+import type { FlowbiteBoolean, FlowbiteColors } from '../Flowbite';
 
 export interface FlowbiteCardTheme {
   root: FlowbiteCardRootTheme;
   img: FlowbiteCardImageTheme;
+  color: FlowbiteColors;
 }
 
 export interface FlowbiteCardRootTheme {
@@ -16,6 +17,7 @@ export interface FlowbiteCardRootTheme {
   children: string;
   horizontal: FlowbiteBoolean;
   href: string;
+  color: FlowbiteColors;
 }
 
 export interface FlowbiteCardImageTheme {
@@ -23,13 +25,15 @@ export interface FlowbiteCardImageTheme {
   horizontal: FlowbiteBoolean;
 }
 
-interface CommonCardProps extends ComponentProps<'div'> {
+interface CommonCardProps extends Omit<ComponentProps<'div'>,'color'> {
   horizontal?: boolean;
   href?: string;
   /** Overwrites the theme. Will be merged with the context theme.
    * @default {}
    */
+  color?: keyof FlowbiteColors;
   theme?: DeepPartial<FlowbiteCardTheme>;
+  // color?: string;
 }
 
 export type CardProps = (
@@ -40,12 +44,14 @@ export type CardProps = (
       renderImage?: (theme: DeepPartial<FlowbiteCardTheme>, horizontal: boolean) => JSX.Element;
       imgAlt?: never;
       imgSrc?: never;
+      color?: keyof FlowbiteColors;
+      // color?: keyof FlowbiteColors;
     }
 ) &
   CommonCardProps;
 
 export const Card: FC<CardProps> = (props) => {
-  const { children, className, horizontal, href, theme: customTheme = {} } = props;
+  const { children, className,color='info', horizontal, href, theme: customTheme = {} } = props;
   const Component = typeof href === 'undefined' ? 'div' : 'a';
   const theirProps = removeCustomProps(props);
 
@@ -55,22 +61,25 @@ export const Card: FC<CardProps> = (props) => {
     <Component
       data-testid="flowbite-card"
       href={href}
+      // color = 'default'
+
       className={twMerge(
         theme.root.base,
         theme.root.horizontal[horizontal ? 'on' : 'off'],
         href && theme.root.href,
+        theme.color[color], 
         className,
       )}
       {...theirProps}
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text -- jsx-ally/alt-text gives a false positive here. Since we use our own Image component, we cannot provide an "alt" prop.*/}
-      <Image {...props} />
+      <Image {...props} color={props.color}/>
       <div className={theme.root.children}>{children}</div>
     </Component>
   );
 };
 
-const Image: FC<CardProps> = ({ theme: customTheme = {}, ...props }) => {
+const Image: FC<CardProps & { color?: keyof FlowbiteColors }> = ({ theme: customTheme = {}, ...props }) => {
   const theme = mergeDeep(getTheme().card, customTheme);
   if (props.renderImage) {
     return props.renderImage(theme, props.horizontal ?? false);
@@ -97,4 +106,5 @@ const removeCustomProps = omit([
   'horizontal',
   'href',
   'theme',
+  'color'
 ]);

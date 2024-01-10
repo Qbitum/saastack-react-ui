@@ -1,9 +1,9 @@
-import { type ComponentProps, type FC, type ReactNode } from 'react';
+import { ComponentProps, FC, ReactNode } from 'react';
 import type { FlowbiteBoolean, FlowbiteColors, FlowbiteStateColors ,FlowbiteSectionBorderRadius} from '../Flowbite';
 import { twMerge } from 'tailwind-merge';
-import { mergeDeep } from '~/src/helpers/merge-deep';
-import { getTheme } from '~/src/theme-store';
-import { DeepPartial } from '~/src/types';
+import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import { DeepPartial } from '../../types';
 import classNames from 'classnames';
 
 

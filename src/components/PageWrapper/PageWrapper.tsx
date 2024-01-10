@@ -14,7 +14,6 @@ export interface FlowbitePageWrapperTheme {
 export interface FlowbitePageWrapperRootTheme {
   base: string;
   colors: PageWrapperColors;
-  disabled: string;
 }
 
 export interface PageWrapperColors extends FlowbiteStateColors {
@@ -42,7 +41,9 @@ export const PageWrapper: FC<PageWrapperProps> = ({
     const theme = mergeDeep(getTheme().label, customTheme);
 
     const wrapperClasses = classNames(
-      twMerge(theme.root.base, theme.root.colors[color], disabled && theme.root.disabled, className)           
+      twMerge(theme.root.base, 
+        theme.root.colors[color], 
+        className)           
         
     );
 

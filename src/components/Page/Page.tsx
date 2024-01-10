@@ -1,22 +1,16 @@
-import { type ComponentProps, type FC, type ReactNode } from 'react';
+import { ComponentProps,  FC,  ReactNode } from 'react';
 import type { FlowbiteStateColors } from '../Flowbite';
 import { twMerge } from 'tailwind-merge';
-import { mergeDeep } from '~/src/helpers/merge-deep';
-import { getTheme } from '~/src/theme-store';
-import { DeepPartial } from '~/src/types';
+import { mergeDeep } from '../../helpers/merge-deep';
+import { getTheme } from '../../theme-store';
+import { DeepPartial } from '../../types';
 import classNames from 'classnames';
-// import Mounted from '../Mounted';
 
 export interface FlowbitePageTheme {
-  root: FlowbitePageRootTheme;
-}
-
-export interface FlowbitePageRootTheme {
   base: string;
   colors: PageColors;
-  disabled: string;
   // border: string;
-  // radius: string;
+  radius: string;
   align: string;
 }
 
@@ -29,6 +23,7 @@ export interface PageProps extends Omit<ComponentProps<'div'>, 'color'> {
   children?: ReactNode;
   isProtected?: boolean;
   className?: string;
+  color?:string;
   theme?: DeepPartial<FlowbitePageTheme>;
   // border?: string;
   // radius?: string;
@@ -38,14 +33,18 @@ export interface PageProps extends Omit<ComponentProps<'div'>, 'color'> {
 export const Page: FC<PageProps> = ({
   children,
   className,
+  color = 'default',
   theme: customTheme = {},
   align,
 
   }) => {
-    const theme = mergeDeep(getTheme().label, customTheme);
+    const theme = mergeDeep(getTheme().page, customTheme);
 
     const pageClasses = classNames(
-      twMerge(theme.root.base && theme.root.disabled, className,align),  
+      twMerge(theme.base, 
+        theme.colors[color],
+        className,
+        align),  
     );
 
   return (

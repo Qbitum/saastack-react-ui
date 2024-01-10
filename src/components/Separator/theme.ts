@@ -3,8 +3,11 @@ import { FlowbiteSeparatorTheme } from "./Separator";
 export const separatorTheme: FlowbiteSeparatorTheme = {
   base: 'min-h-8 border-r-neutral-500',
   colors: {
-    default:'',
+    default:'border-r-sky-300',
     error: 'border-r-red-700',
+    primary:'border-r-primary-400',
+    secondary: 'border-r-secondary-400',
+    white:'border-r-white'
   },
   show: {
     off: '',
