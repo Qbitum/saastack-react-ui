@@ -4,39 +4,39 @@ import HeaderBasic from './headerBasic';
 import FooterButton from './footerButton';
 import FooterNav from './footerNav';
 import HeaderTab from './headerTab';
-import { DeepPartial } from '../../types';
 
-export interface FlowbiteWizardRootTheme {
-  base: string;
-}
-export interface FlowbiteWizardTheme {
-  root: FlowbiteWizardRootTheme;
-}
 export interface WizardProps {
   children?: ReactNode;
   headerStyle?: 'header-progress' | 'header-basic' | 'header-tab';
   footerStyle?: 'footer-button' | 'footer-nav';
-  theme?: DeepPartial<FlowbiteWizardTheme>;
+  setStep: (step: number) => void;
 }
 
-export const Wizard: React.FC<WizardProps> = ({ 
-  headerStyle, 
-  footerStyle, 
-  children
-}) => {
+export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, children, setStep }) => {
   const [currentStep, setCurrentStep] = useState(0);
+
 
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
   const handleNext = () => {
+    // console.log(children);
+
     setCurrentStep(prevStep => {
+      // console.log(prevStep);
+      setStep(prevStep + 1)
+
       setCompletedSteps(prev => [...prev, prevStep]);
       return Math.min(prevStep + 1, React.Children.count(children) - 1);
     });
+
   };
 
   const handlePrev = () => {
     setCurrentStep(prevStep => Math.max(prevStep - 1, 0));
+    console.log(currentStep);
+    // setCompletedSteps([1, currentStep]);
+    setStep(currentStep - 1);
+
   };
 
   // const handleStepClick = (stepIndex: number) => {
@@ -50,13 +50,13 @@ export const Wizard: React.FC<WizardProps> = ({
     <div>
       <div>
         {/* Add Header Style */}
-        
+
         {/* HeaderProgress */}
         {headerStyle === 'header-progress' && <HeaderProgress totalSteps={totalSteps} currentStep={currentStep} onStepClick={setCurrentStep} titles={titles} completedSteps={completedSteps} />}
-        
+
         {/* HeaderBasic */}
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[currentStep]} currentStep={currentStep + 1} totalSteps={totalSteps} />}
-        
+
         {/* HeaderTab */}
         {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={currentStep} onStepClick={setCurrentStep} titles={titles} />}
       </div>

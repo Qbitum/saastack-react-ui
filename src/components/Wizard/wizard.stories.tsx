@@ -7,14 +7,18 @@ export default {
   component: Wizard,
 } as Meta;
 
-const Template: StoryFn = ({ children }) => <Wizard>{children}</Wizard>;
+const Template: StoryFn = ({ children, setStep }) => <Wizard setStep={setStep}>{children}</Wizard>;
+
 
 export const DefaultWizard = Template.bind({});
 DefaultWizard.storyName = 'Wizard';
 DefaultWizard.args = {
-  children: (
+  setStep: (newStep: number) => {
+    console.log(`Setting step to: ${newStep}`);
+  },
+    children: (
     <div className="">
-      <Wizard headerStyle='header-progress' footerStyle='footer-button'>
+      <Wizard headerStyle='header-progress' footerStyle='footer-button' setStep={() => { }}>
             <WizardStep stepIndex='1' title='step title a'></WizardStep>
             <WizardStep stepIndex='2' title='step title b'></WizardStep>
             <WizardStep stepIndex='3' title='step title c'></WizardStep>

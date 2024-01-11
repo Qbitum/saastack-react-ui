@@ -13,5 +13,5 @@ export const DefaultPageWrapper = Template.bind({});
 DefaultPageWrapper.storyName = 'PageWrapper';
 DefaultPageWrapper.args = {
   children: 'PageWrapper',
-  className: 'bg-gray-600'    
+color:'white',
 };

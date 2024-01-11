@@ -1,5 +1,5 @@
 import { ComponentProps,  FC,  ReactNode } from 'react';
-import type { FlowbiteStateColors } from '../Flowbite';
+import type { FlowbiteColors, FlowbiteStateColors } from '../Flowbite';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
@@ -8,9 +8,12 @@ import classNames from 'classnames';
 
 export interface FlowbitePageTheme {
   base: string;
-  colors: PageColors;
+  // colors: PageColors;
+  // border: string;
   radius: string;
   align: string;
+  color: FlowbiteColors;
+
 }
 
 export interface PageColors extends FlowbiteStateColors {
@@ -22,7 +25,7 @@ export interface PageProps extends Omit<ComponentProps<'div'>, 'color'> {
   children?: ReactNode;
   isProtected?: boolean;
   className?: string;
-  color?:string;
+  color?: keyof FlowbiteColors;
   theme?: DeepPartial<FlowbitePageTheme>;
   align?: string;
 }
@@ -30,7 +33,7 @@ export interface PageProps extends Omit<ComponentProps<'div'>, 'color'> {
 export const Page: FC<PageProps> = ({
   children,
   className,
-  color = 'default',
+  color = 'white',
   theme: customTheme = {},
   align,
 
@@ -39,7 +42,7 @@ export const Page: FC<PageProps> = ({
 
     const pageClasses = classNames(
       twMerge(theme.base, 
-        theme.colors[color],
+        theme.color[color],
         className,
         align),  
     );

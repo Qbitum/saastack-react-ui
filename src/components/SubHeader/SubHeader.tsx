@@ -87,11 +87,10 @@ export const SubHeader: FC<SubHeaderProps> = ({ children,
 
 	const wrapperClasses = twMerge(
 		theme.base,
-		className,
+		className = " grid-cols-2",
 		h && theme.heights[h],
 		bg && theme.background[bg],
 	);
-
 	return (
 		<div className={wrapperClasses}
 		{...props}>

@@ -13,5 +13,5 @@ export const DefaultPage = Template.bind({});
 DefaultPage.storyName = 'Page';
 DefaultPage.args = {
   children: 'Page',
-  className: 'bg-gray-600' ,
+  color: 'white'
 };

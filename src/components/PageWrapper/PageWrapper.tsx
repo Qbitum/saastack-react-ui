@@ -1,5 +1,5 @@
 import { ComponentProps, FC, ReactNode } from 'react';
-import type { FlowbiteColors, FlowbiteStateColors } from '../Flowbite';
+import type { FlowbiteColors } from '../Flowbite';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
@@ -13,12 +13,7 @@ export interface FlowbitePageWrapperTheme {
 
 export interface FlowbitePageWrapperRootTheme {
   base: string;
-  colors: PageWrapperColors;
-}
-
-export interface PageWrapperColors extends FlowbiteStateColors {
-  [key: string]: string;
-  default: string;
+  color: FlowbiteColors;
 }
 
 export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
@@ -32,15 +27,15 @@ export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
 export const PageWrapper: FC<PageWrapperProps> = ({
   children,
   className,
-  color = 'default',
+  color = 'white',
   theme: customTheme = {},
 
   }) => {
-    const theme = mergeDeep(getTheme().label, customTheme);
+    const theme = mergeDeep(getTheme().pageWrapper, customTheme);
 
     const wrapperClasses = classNames(
       twMerge(theme.root.base, 
-        theme.root.colors[color], 
+        theme.root.color[color], 
         className)           
         
     );

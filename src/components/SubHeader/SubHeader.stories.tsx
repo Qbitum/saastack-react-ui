@@ -28,10 +28,6 @@ export const Sizes = (): JSX.Element => (
 
 export const ButtonAndTitle = (): JSX.Element => (
   <div className="gap-3">
-    <SubHeader h="lg" bg='primary'>
-      <SubHeaderLeft heading='Page title 2'>
-      </SubHeaderLeft>
-    </SubHeader>
     <SubHeader h="sm" bg='sky'>
       <SubHeaderLeft heading='Page title 2'></SubHeaderLeft>
       <SubHeaderRight>
