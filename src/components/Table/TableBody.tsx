@@ -7,10 +7,12 @@ import type { DeepPartial } from '../../types';
 import { TableBodyContext } from './TableBodyContext';
 import type { FlowbiteTableCellTheme } from './TableCell';
 import { useTableContext } from './TableContext';
+import { FlowbiteColors } from '../Flowbite';
 
 export interface FlowbiteTableBodyTheme {
   base: string;
   cell: FlowbiteTableCellTheme;
+  color: FlowbiteColors;
 }
 
 export interface TableBodyProps extends ComponentProps<'tbody'> {
