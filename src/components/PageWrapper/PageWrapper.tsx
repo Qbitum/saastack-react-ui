@@ -34,7 +34,6 @@ export const PageWrapper: FC<PageWrapperProps> = ({
   children,
   className,
   color = 'default',
-  disabled =false,
   theme: customTheme = {},
 
   }) => {

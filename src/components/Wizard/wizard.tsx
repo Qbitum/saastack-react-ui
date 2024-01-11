@@ -4,8 +4,8 @@ import HeaderBasic from './headerBasic';
 import FooterButton from './footerButton';
 import FooterNav from './footerNav';
 import HeaderTab from './headerTab';
-import { getTheme } from '../../theme-store';
-import { mergeDeep } from '../../helpers/merge-deep';
+// import { getTheme } from '../../theme-store';
+// import { mergeDeep } from '../../helpers/merge-deep';
 import { DeepPartial } from '../../types';
 
 export interface FlowbiteWizardRootTheme {
@@ -25,11 +25,10 @@ export const Wizard: React.FC<WizardProps> = ({
   headerStyle, 
   footerStyle, 
   children,
-  // className,
-  theme: customTheme = {},
-  ...props
+  // theme: customTheme = {},
+  
 }) => {
-  const theme = mergeDeep(getTheme().wizard, customTheme);
+  // const theme = mergeDeep(getTheme().wizard, customTheme);
   const [currentStep, setCurrentStep] = useState(0);
 
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);

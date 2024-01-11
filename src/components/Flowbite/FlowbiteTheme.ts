@@ -54,7 +54,7 @@ export interface FlowbiteTheme {
   paragraph: FlowbiteParagraphTheme;
   pageWrapper: FlowbitePageWrapperTheme
   page: FlowbitePageTheme;
-  root: any;
+  // root: any;
   accordion: FlowbiteAccordionTheme;
   alert: FlowbiteAlertTheme;
   avatar: FlowbiteAvatarTheme;
