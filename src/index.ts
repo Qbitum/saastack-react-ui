@@ -54,3 +54,5 @@ export * from './components/Page';
 export * from './components/Section';
 export * from './components/PageWrapper';
 export * from './components/Paragraph';
+export * from './components/Wizard'
+export * from './components/SubHeader'

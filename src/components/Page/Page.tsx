@@ -9,7 +9,6 @@ import classNames from 'classnames';
 export interface FlowbitePageTheme {
   base: string;
   colors: PageColors;
-  // border: string;
   radius: string;
   align: string;
 }
@@ -25,8 +24,6 @@ export interface PageProps extends Omit<ComponentProps<'div'>, 'color'> {
   className?: string;
   color?:string;
   theme?: DeepPartial<FlowbitePageTheme>;
-  // border?: string;
-  // radius?: string;
   align?: string;
 }
 

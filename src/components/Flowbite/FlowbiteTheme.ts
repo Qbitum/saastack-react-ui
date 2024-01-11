@@ -99,7 +99,7 @@ export interface FlowbiteTheme {
   headerText: FlowbiteHeaderTextTheme;
   section:FlowbiteSectionTheme;
   separator: FlowbiteSeparatorTheme;
-  wizard: FlowbiteWizardTheme
+  wizard: FlowbiteWizardTheme;
   subheader: FlowbiteSubHeaderTheme;
 }
 
