@@ -30,8 +30,8 @@
   "scripts": {
     "build": "next build",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs",
-    "build:lib:cjs": "tsc -p tsconfig.lib.json --explainFiles",
-    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm --explainFiles",
+    "build:lib:cjs": "tsc -p tsconfig.lib.json",
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm",
     "commit": "cz",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",

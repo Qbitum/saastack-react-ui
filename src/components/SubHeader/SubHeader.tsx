@@ -45,7 +45,7 @@ export const SubHeaderLeft: FC<SubHeaderLeftProps> = ({ children,heading, classN
 		{children}</div>;
 };
 SubHeaderLeft.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	className: PropTypes.string,
 };
 SubHeaderLeft.defaultProps = {
