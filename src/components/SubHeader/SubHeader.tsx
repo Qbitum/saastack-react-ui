@@ -40,7 +40,7 @@ export interface SubHeaderLeftProps {
 	className?: string;
 }
 export const SubHeaderLeft: FC<SubHeaderLeftProps> = ({ children,heading, className }) => {
-	return <div className={classNames('col-start-1', 'col-end-3', className)}>
+	return <div className={classNames('col-start-1', 'col-end-3', 'flex', className)}>
 		<span className='font-semibold text-base mb-0'>{heading}</span>
 		{children}</div>;
 };
@@ -91,7 +91,6 @@ export const SubHeader: FC<SubHeaderProps> = ({ children,
 		h && theme.heights[h],
 		bg && theme.background[bg],
 	);
-	console.log(wrapperClasses);
 
 	return (
 		<div className={wrapperClasses}
