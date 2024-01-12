@@ -101,4 +101,5 @@ export const theme: FlowbiteTheme = {
   separator: separatorTheme,
   subheader: subheaderTheme,
   wizard: wizardTheme,
+  
 };
