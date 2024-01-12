@@ -4,6 +4,20 @@ import HeaderBasic from './headerBasic';
 import FooterButton from './footerButton';
 import FooterNav from './footerNav';
 import HeaderTab from './headerTab';
+import { FlowbiteStateColors } from '../Flowbite';
+
+export interface FlowbiteWizardTheme {
+  root: FlowbiteWizardRootTheme;
+}
+
+export interface FlowbiteWizardRootTheme {
+  base: string;
+  colors: WizardColors;
+}
+
+export interface WizardColors extends FlowbiteStateColors {
+  default: string;
+}
 
 export interface WizardProps {
   children?: ReactNode;

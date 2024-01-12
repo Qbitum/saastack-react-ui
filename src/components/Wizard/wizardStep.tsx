@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 
-interface WizardStepProps {
+export interface WizardStepProps {
 	children?: ReactNode;
   stepIndex: string;
   title: string;
 }
 
-const WizardStep: React.FC<WizardStepProps>  = ( {stepIndex, title, children} ) => {
+export const WizardStep: React.FC<WizardStepProps>  = ( {stepIndex, title, children} ) => {
     return (
 			<form>
         <h2>{`Step ${stepIndex} - ${title}`}</h2>
