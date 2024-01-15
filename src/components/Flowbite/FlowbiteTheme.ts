@@ -52,7 +52,7 @@ export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 
 export interface FlowbiteTheme {
   paragraph: FlowbiteParagraphTheme;
-  pageWrapper: FlowbitePageWrapperTheme
+  pageWrapper: FlowbitePageWrapperTheme;
   page: FlowbitePageTheme;
   // root: any;
   accordion: FlowbiteAccordionTheme;
@@ -99,7 +99,7 @@ export interface FlowbiteTheme {
   headerText: FlowbiteHeaderTextTheme;
   section:FlowbiteSectionTheme;
   separator: FlowbiteSeparatorTheme;
-  wizard: FlowbiteWizardTheme
+  wizard: FlowbiteWizardTheme;
   subheader: FlowbiteSubHeaderTheme;
 }
 
@@ -206,3 +206,4 @@ export interface FlowbiteSectionBorderRadius{
   lg: string,
   xl: string,
 }
+

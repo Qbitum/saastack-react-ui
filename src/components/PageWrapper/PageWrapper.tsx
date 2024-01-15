@@ -22,6 +22,7 @@ export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
   isProtected?: boolean;
   className?: string;
   theme?: DeepPartial<FlowbitePageWrapperTheme>;
+
 }
 
 export const PageWrapper: FC<PageWrapperProps> = ({

@@ -2,7 +2,7 @@ import type { FlowbitePageWrapperTheme } from './PageWrapper';
 
 export const PageWrapperTheme: FlowbitePageWrapperTheme = {
   root: {
-    base: 'text-sm font-medium p-4 grid grid-flow-row',
+    base: 'text-sm font-medium grid grid-flow-row overflow-hidden h-[calc(100%-60px)]',
     color: {
       default: 'bg-appBg-100',
       primary: 'bg-primary-100',
@@ -24,7 +24,7 @@ export const PageWrapperTheme: FlowbitePageWrapperTheme = {
       light: '',
       lime: '',
       pink: '',
-      purple:'text-white bg-purple-700 border border-transparent enabled:hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:enabled:hover:bg-purple-700 dark:focus:ring-purple-900',
+      purple: 'text-white bg-purple-700 border border-transparent enabled:hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:enabled:hover:bg-purple-700 dark:focus:ring-purple-900',
       red: 'text-white bg-red-700 border border-transparent enabled:hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:text-white dark:border-red-600 dark:enabled:hover:bg-red-700 dark:enabled:hover:border-red-700 dark:focus:ring-red-700',
       teal: 'text-teal-900 bg-white border border-teal-300 enabled:hover:bg-teal-100 focus:ring-4 focus:ring-teal-300 dark:bg-teal-600 dark:text-white dark:border-teal-600 dark:enabled:hover:bg-teal-700 dark:enabled:hover:border-teal-700 dark:focus:ring-teal-700',
       white: 'text-black bg-white',
