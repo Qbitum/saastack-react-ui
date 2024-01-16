@@ -1,7 +1,7 @@
 import type { FlowbitePageTheme } from './Page';
 
 export const PageTheme: FlowbitePageTheme = {
-    base: 'p-4 overflow-auto h-fit ',
+    base: 'p-4 overflow-auto h-auto ',
     color: {
 
       primary: 'text-btntext-primary bg-primary-100 border border-transparent enabled:hover:bg-primary-200 focus:ring-4 focus:ring-primary-60 dark:bg-gray-800 dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700',
