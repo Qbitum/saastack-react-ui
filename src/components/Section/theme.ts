@@ -2,8 +2,8 @@ import type { FlowbiteSectionTheme } from './Section';
 
 export const SectionTheme: FlowbiteSectionTheme = {
   root: {
-    base: 'text-sm font-medium dark:border-gray-700',
-    disabled: 'opacity-50',
+    base: 'text-sm font-medium dark:border-gray-700 h-fit',
+    disabled: '',
     colors: {
       default: 'text-gray-900 dark:text-white',
       info: 'text-cyan-500 dark:text-cyan-600',

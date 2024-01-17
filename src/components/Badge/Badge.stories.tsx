@@ -52,3 +52,31 @@ BadgeAsLink.args = {
   href: '/badges',
   children: 'Read more →',
 };
+
+export const PendingApprovalJobLIst = Template.bind({});
+PendingApprovalJobLIst.storyName = 'PendingApprovalJobLIst';
+PendingApprovalJobLIst.args = {
+  color: 'bluependingApproval',
+  children: 'Pending Approval',
+};
+
+export const ProcessFailedJobLIst = Template.bind({});
+ProcessFailedJobLIst.storyName = 'ProcessFailedJobLIst';
+ProcessFailedJobLIst.args = {
+  color: 'redProcessFailed',
+  children: 'Process Failed',
+};
+
+export const ReadyToProcessJobLIst = Template.bind({});
+ReadyToProcessJobLIst.storyName = 'ReadyToProcessJobLIst';
+ReadyToProcessJobLIst.args = {
+  color: 'yellowReadyToProcess',
+  children: 'Ready To Process',
+};
+
+export const ProcessingJobLIst = Template.bind({});
+ProcessingJobLIst.storyName = 'ProcessingJobLIst';
+ProcessingJobLIst.args = {
+  color: 'purpleProcessing',
+  children: 'Processing',
+};
