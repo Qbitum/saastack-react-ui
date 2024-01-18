@@ -1,8 +1,7 @@
-import React, { Children, PropsWithChildren, ReactElement, ReactNode, useMemo, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import { FlowbiteStateColors } from '../Flowbite';
 import { FooterButton, FooterNav } from './FooterNav';
-import { WizardStepProps } from './WizardStep';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
@@ -27,6 +26,8 @@ export interface WizardProps {
 export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, children, setStep }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
+  /*
+  this is the recmended way of getting childrens
   const wSteps = useMemo(
     () =>
       Children.map(
@@ -34,7 +35,7 @@ export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, childr
         ({ props }) => props,
       ),
     [children],
-  );
+  );*/
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
   const handleNext = () => {
