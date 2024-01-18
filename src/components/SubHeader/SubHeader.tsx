@@ -86,7 +86,7 @@ export const SubHeader: FC<SubHeaderProps> = ({ children,
 		bg && theme.background[bg],
 	);
 	return (
-		<div className={wrapperClasses}
+		<div className={wrapperClasses} data-testid="qb-f-subHeader"
 		{...props}>
 			{children}
 		</div>

@@ -2,7 +2,7 @@ import type { FlowbitePageWrapperTheme } from './PageWrapper';
 
 export const PageWrapperTheme: FlowbitePageWrapperTheme = {
   root: {
-    base: 'text-sm font-medium grid grid-flow-row overflow-auto h-[calc(100%-60px)]',
+    base: 'text-sm overflow-auto h-[calc(100%-60px)] text-black',
     color: {
       default: 'bg-appBg-100',
       primary: 'bg-primary-100',

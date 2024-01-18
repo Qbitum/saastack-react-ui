@@ -4,7 +4,7 @@ export const headerTextTheme: FlowbiteHeaderTextTheme = {
   root: {
     base: 'flex h-fit px-4',
     color: {
-    default: 'text-sky-300',
+    default: 'text-white',
     primary:'text-primary-100',
     secondary:'text-secondary-100',
     tertiary: 'text-tertiary-100',

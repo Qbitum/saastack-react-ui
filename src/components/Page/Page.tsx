@@ -36,7 +36,7 @@ export const Page: FC<PageProps> = ({
   color = 'white',
   theme: customTheme = {},
   align,
-
+  
   }) => {
     const theme = mergeDeep(getTheme().page, customTheme);
 
