@@ -23,8 +23,8 @@ export const avatarTheme: FlowbiteAvatarTheme = {
       placeholder: 'absolute w-auto h-auto text-gray-400 -bottom-1',
     },
     size: {
-      xs: 'w-6 h-6',
-      sm: 'w-8 h-8',
+      xs: 'w-4 h-4',
+      sm: 'w-6 h-6',
       md: 'w-10 h-10',
       lg: 'w-20 h-20',
       xl: 'w-36 h-36',

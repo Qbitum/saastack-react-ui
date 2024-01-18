@@ -3,6 +3,7 @@ import { Avatar } from '../Avatar';
 import { Button } from '../Button';
 import { Dropdown } from '../Dropdown';
 import { Navbar, type NavbarComponentProps } from './Navbar';
+import {Separator} from '../Separator'
 
 export default {
   title: 'Components/Navbar',
@@ -111,24 +112,22 @@ AppHeader.args = {
   children: (
     <>
       <Navbar.Brand href="https://flowbite.com/">
-        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Label Checking</span>
+        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-6" alt="Flowbite Logo" />
+        <span className="self-center whitespace-nowrap text-xl text-white font-semibold dark:text-white">Label Checking</span>
       </Navbar.Brand>
       <Navbar.Toggle />
       <div className="ml-auto flex items-center">
-        <Navbar.Brand href="https://flowbite.com/">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-        </Navbar.Brand>
+        
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" className="m-4">
+          <Navbar.Link href="/navbars" className="mx-4">
             Admin
           </Navbar.Link>
         </Navbar.Collapse>
-
-        <Dropdown arrowIcon={false} inline label={<Avatar alt="User Profile" rounded />}>
+        <Separator/>
+        <Dropdown arrowIcon={false} inline label={<Avatar alt="User Profile" rounded size="sm" />}>
           <Dropdown.Item>Logout</Dropdown.Item>
         </Dropdown>
-        <span className="block pl-2 text-sm">Jade Faro</span>
+        <span className="block pl-2 text-sm text-white">Jade Faro</span>
       </div>
     </>
   ),

@@ -31,8 +31,11 @@ export const ButtonAndTitle = (): JSX.Element => (
     <SubHeader h="sm" bg='sky'>
       <SubHeaderLeft heading='Page title 2'></SubHeaderLeft>
       <SubHeaderRight>
-        <Button size={'sm'}>button</Button>
+        <Button  size={'sm'}>button</Button>
       </SubHeaderRight>
     </SubHeader>
+    <div className='flex bg-grey-50'>
+      <p>this iis the page header content</p>
+    </div>
   </div>
 );

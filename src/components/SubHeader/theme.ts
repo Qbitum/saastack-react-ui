@@ -1,7 +1,7 @@
 import { FlowbiteSubHeaderTheme } from "./SubHeader";
 
 export const subheaderTheme: FlowbiteSubHeaderTheme = {
-  base: 'min-h-6 px-4 py-2 grid grid-rows-1 grid-cols-4',
+  base: 'px-4 py-3 bg-white rounded-2xl shadow justify-between items-center flex',
   background: {
     default:'',
     sky:'bg-sky-100',
@@ -15,7 +15,7 @@ export const subheaderTheme: FlowbiteSubHeaderTheme = {
     on: '',
   },
   heights: {
-    sm:'min-h-6',
+    sm:'min-h-4',
     md: 'min-h-8',
     lg: 'min-h-10',
   },

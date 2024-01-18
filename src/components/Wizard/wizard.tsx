@@ -1,10 +1,8 @@
-import React, { ReactNode, useState } from 'react';
-import HeaderProgress from './headerProgress';
-import HeaderBasic from './headerBasic';
-import FooterButton from './footerButton';
-import FooterNav from './footerNav';
-import HeaderTab from './headerTab';
+import React, { Children, PropsWithChildren, ReactElement, ReactNode, useMemo, useState } from 'react';
+import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import { FlowbiteStateColors } from '../Flowbite';
+import { FooterButton, FooterNav } from './FooterNav';
+import { WizardStepProps } from './WizardStep';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
@@ -20,7 +18,7 @@ export interface WizardColors extends FlowbiteStateColors {
 }
 
 export interface WizardProps {
-  children?: ReactNode;
+  children: ReactNode;
   headerStyle?: 'header-progress' | 'header-basic' | 'header-tab';
   footerStyle?: 'footer-button' | 'footer-nav';
   setStep: (step: number) => void;
@@ -29,14 +27,19 @@ export interface WizardProps {
 export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, children, setStep }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
-
+  const wSteps = useMemo(
+    () =>
+      Children.map(
+        Children.toArray(children) as ReactElement<PropsWithChildren<WizardStepProps>>[],
+        ({ props }) => props,
+      ),
+    [children],
+  );
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
   const handleNext = () => {
-    // console.log(children);
 
     setCurrentStep(prevStep => {
-      // console.log(prevStep);
       setStep(prevStep + 1)
 
       setCompletedSteps(prev => [...prev, prevStep]);
@@ -48,14 +51,13 @@ export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, childr
   const handlePrev = () => {
     setCurrentStep(prevStep => Math.max(prevStep - 1, 0));
     console.log(currentStep);
-    // setCompletedSteps([1, currentStep]);
     setStep(currentStep - 1);
-
+ 
   };
 
-  // const handleStepClick = (stepIndex: number) => {
-  //   setCurrentStep(stepIndex);
-  // };
+   const handleStepClick = (stepIndex: number) => {
+    setCurrentStep(stepIndex);
+   };
 
   const totalSteps = React.Children.count(children);
   const titles = React.Children.map(children, child => (child as React.ReactElement<any>).props.title) as string[];
@@ -66,13 +68,13 @@ export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, childr
         {/* Add Header Style */}
 
         {/* HeaderProgress */}
-        {headerStyle === 'header-progress' && <HeaderProgress totalSteps={totalSteps} currentStep={currentStep} onStepClick={setCurrentStep} titles={titles} completedSteps={completedSteps} />}
+        {headerStyle === 'header-progress' && <HeaderProgress totalSteps={totalSteps} currentStep={currentStep} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />}
 
         {/* HeaderBasic */}
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[currentStep]} currentStep={currentStep + 1} totalSteps={totalSteps} />}
 
         {/* HeaderTab */}
-        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={currentStep} onStepClick={setCurrentStep} titles={titles} />}
+        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={currentStep} onStepClick={handleStepClick} titles={titles} />}
       </div>
       {React.Children.map(children, (child, index) =>
         index === currentStep ? React.cloneElement(child as React.ReactElement<any>, { onNext: handleNext, onPrev: handlePrev }) : null
@@ -95,5 +97,3 @@ Wizard.defaultProps = {
   headerStyle: 'header-progress',
   footerStyle: 'footer-button'
 };
-
-export default Wizard;

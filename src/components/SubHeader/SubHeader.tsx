@@ -40,16 +40,13 @@ export interface SubHeaderLeftProps {
 	className?: string;
 }
 export const SubHeaderLeft: FC<SubHeaderLeftProps> = ({ children,heading, className }) => {
-	return <div className={classNames('flex justify-between items-center h-full', className)}>
-		<span className='font-semibold text-base mb-0'>{heading}</span>
+	return <div className={classNames('text-gray-700 text-2xl font-bold items-center inline-flex', className)}>
+		<span className='mb-0'>{heading}</span>
 		{children}</div>;
 };
 SubHeaderLeft.propTypes = {
 	children: PropTypes.node,
 	className: PropTypes.string,
-};
-SubHeaderLeft.defaultProps = {
-	className: undefined,
 };
 
 export interface SubHeaderRightProps {
@@ -64,9 +61,6 @@ export const SubHeaderRight: FC<SubHeaderRightProps> = ({ children, className })
 SubHeaderRight.propTypes = {
 	children: PropTypes.node.isRequired,
 	className: PropTypes.string,
-};
-SubHeaderRight.defaultProps = {
-	className: undefined,
 };
 
 export interface SubHeaderProps {
@@ -87,7 +81,7 @@ export const SubHeader: FC<SubHeaderProps> = ({ children,
 
 	const wrapperClasses = twMerge(
 		theme.base,
-		className = " grid-cols-2",
+		className,
 		h && theme.heights[h],
 		bg && theme.background[bg],
 	);

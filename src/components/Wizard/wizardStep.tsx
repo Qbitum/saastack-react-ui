@@ -8,11 +8,9 @@ export interface WizardStepProps {
 
 export const WizardStep: React.FC<WizardStepProps>  = ( {stepIndex, title, children} ) => {
     return (
-			<form>
+			<div>
         <h2>{`Step ${stepIndex} - ${title}`}</h2>
         {children}
-      </form>
+      </div>
     )
 }
-
-export default WizardStep

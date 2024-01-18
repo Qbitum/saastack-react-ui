@@ -1,11 +1,16 @@
-export { Wizard } from './wizard';
-export { WizardStep } from './wizardStep';
+export { Wizard } from './Wizard';
+export { WizardStep } from './WizardStep';
+export {HeaderBasic,HeaderProgress,HeaderTab} from './HeaderStyles';
+export {FooterButton,FooterNav} from './FooterNav';
+
+export type {HeaderBasicProps,HeaderProgressProps,HeaderTabProps} from './HeaderStyles';
+export type {FooterButtonProps,FooterNavProps} from './FooterNav';
 export type {
   WizardProps,
   FlowbiteWizardRootTheme,
   FlowbiteWizardTheme,
-} from './wizard';
+} from './Wizard';
 
 export type {
   WizardStepProps,
-}from './wizardStep'
+}from './WizardStep'
