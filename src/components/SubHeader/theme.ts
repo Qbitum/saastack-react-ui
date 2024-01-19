@@ -1,4 +1,4 @@
-import { FlowbiteSubHeaderTheme } from "./SubHeader";
+import type { FlowbiteSubHeaderTheme } from "./SubHeader";
 
 export const subheaderTheme: FlowbiteSubHeaderTheme = {
   base: 'px-4 py-3 bg-white rounded-2xl shadow justify-between items-center flex',

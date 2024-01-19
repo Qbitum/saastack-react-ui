@@ -1,4 +1,4 @@
-import { FlowbiteSeparatorTheme } from "./Separator";
+import type { FlowbiteSeparatorTheme } from "./Separator";
 
 export const separatorTheme: FlowbiteSeparatorTheme = {
   base: 'min-h-6 border-r-neutral-500 mr-2',

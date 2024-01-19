@@ -4,7 +4,7 @@ import { mergeDeep } from '../../helpers/merge-deep';
 import { getTheme } from '../../theme-store';
 import type { DeepPartial } from '../../types';
 import type {  FlowbiteBoolean, FlowbiteColors, FlowbiteFontWeight } from '../Flowbite';
-import { FlowbiteTextSizes } from '../Flowbite/FlowbiteTheme';
+import type { FlowbiteTextSizes } from '../Flowbite/FlowbiteTheme';
 
 export interface FlowbiteHeaderTextTheme {
   root: FlowbiteHeaderTextRootTheme;

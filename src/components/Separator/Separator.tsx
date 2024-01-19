@@ -1,8 +1,8 @@
-import { ComponentProps, FC } from "react";
+import type { ComponentProps, FC } from "react";
 import { twMerge } from "tailwind-merge";
 import { mergeDeep } from "../../helpers/merge-deep";
 import { getTheme } from "../../theme-store";
-import { DeepPartial } from "../../types";
+import type { DeepPartial } from "../../types";
 
 export interface FlowbiteSeparatorTheme {
   base:  string;

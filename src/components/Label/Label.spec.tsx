@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { Button } from '../Button';
 import { Checkbox } from '../Checkbox';
 import { FileInput } from '../FileInput';
-import { Flowbite, CustomFlowbiteTheme } from '../Flowbite';
+import { Flowbite } from '../Flowbite';
 import { Radio } from '../Radio';
 import { RangeSlider } from '../RangeSlider';
 import { Select } from '../Select';
@@ -12,6 +12,7 @@ import { TextInput } from '../TextInput';
 import { Textarea } from '../Textarea';
 import { ToggleSwitch } from '../ToggleSwitch';
 import { Label } from './Label';
+import type {CustomFlowbiteTheme} from '../Flowbite'
 
 describe.concurrent('Components / Label', () => {
   describe.concurrent('A11y', () => {

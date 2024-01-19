@@ -1,9 +1,9 @@
-import { FC,ReactNode } from 'react';
+import type { FC,ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mergeDeep } from '../../helpers/merge-deep';
 import { twMerge } from 'tailwind-merge';
-import { DeepPartial } from '../../types';
+import type { DeepPartial } from '../../types';
 import { getTheme } from "../../theme-store";
 
 export interface FlowbiteSubHeaderTheme{

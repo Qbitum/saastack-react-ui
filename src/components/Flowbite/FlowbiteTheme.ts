@@ -39,14 +39,14 @@ import type { FlowbiteToastTheme } from '../Toast';
 import type { FlowbiteToggleSwitchTheme } from '../ToggleSwitch';
 import type { FlowbiteTooltipTheme } from '../Tooltip';
 import type { FlowbiteHeaderTextTheme } from '../HeaderText';
-import { FlowbiteParagraphTheme } from '../Paragraph';
-import { FlowbitePageWrapperTheme } from '../PageWrapper';
+import type { FlowbiteParagraphTheme } from '../Paragraph';
+import type { FlowbitePageWrapperTheme } from '../PageWrapper';
 import type { FlowbitePageTheme } from '../Page';
-import { FlowbiteSectionTheme } from '../Section';
+import type { FlowbiteSectionTheme } from '../Section';
 
-import { FlowbiteSeparatorTheme } from '../Separator';
-import { FlowbiteWizardTheme } from '../Wizard';
-import { FlowbiteSubHeaderTheme } from '../SubHeader';
+import type { FlowbiteSeparatorTheme } from '../Separator';
+import type { FlowbiteWizardTheme } from '../Wizard';
+import type { FlowbiteSubHeaderTheme } from '../SubHeader';
 
 export type CustomFlowbiteTheme = DeepPartial<FlowbiteTheme>;
 

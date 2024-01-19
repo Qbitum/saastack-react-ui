@@ -107,7 +107,6 @@ WithDropdown.args = {
 };
 
 export const AppHeader = Template.bind({});
-AppHeader.storyName = 'App Header';
 AppHeader.args = {
   children: (
     <>

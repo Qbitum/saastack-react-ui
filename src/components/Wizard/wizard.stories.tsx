@@ -1,6 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react';
-import {Wizard, WizardProps }from './Wizard';
-import {WizardStep} from './WizardStep';
+import {Wizard, }from './wizard';
+import {WizardStep} from './wizardStep';
+import type {WizardProps} from './wizard';
 
 export default {
   title: 'Components/Wizard',

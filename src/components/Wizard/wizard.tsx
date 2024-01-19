@@ -1,7 +1,10 @@
-import React, { ReactNode, useState } from 'react';
+'use client';
+
+import React, {useState } from 'react';
+import type {ReactNode} from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
-import { FlowbiteStateColors } from '../Flowbite';
-import { FooterButton, FooterNav } from './FooterNav';
+import type { FlowbiteStateColors } from '../Flowbite';
+import { FooterButton, FooterNav } from './footerNav';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
@@ -61,6 +64,7 @@ export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, childr
    };
 
   const totalSteps = React.Children.count(children);
+  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
   const titles = React.Children.map(children, child => (child as React.ReactElement<any>).props.title) as string[];
 
   return (
@@ -77,7 +81,9 @@ export const Wizard: React.FC<WizardProps> = ({ headerStyle, footerStyle, childr
         {/* HeaderTab */}
         {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={currentStep} onStepClick={handleStepClick} titles={titles} />}
       </div>
+
       {React.Children.map(children, (child, index) =>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
         index === currentStep ? React.cloneElement(child as React.ReactElement<any>, { onNext: handleNext, onPrev: handlePrev }) : null
       )}
       <div>

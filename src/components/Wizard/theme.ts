@@ -1,4 +1,4 @@
-import type { FlowbiteWizardTheme } from './Wizard';
+import type { FlowbiteWizardTheme } from './wizard';
 
 export const wizardTheme: FlowbiteWizardTheme = {
   root: {
