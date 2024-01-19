@@ -12,6 +12,5 @@ const Template: StoryFn<PageWrapperProps> = (args) => <PageWrapper {...args} />;
 export const DefaultPageWrapper = Template.bind({});
 DefaultPageWrapper.storyName = 'PageWrapper';
 DefaultPageWrapper.args = {
-  children: 'PageWrapper',
-color:'white',
+  children: 'PageWrapper'
 };

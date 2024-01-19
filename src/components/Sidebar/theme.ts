@@ -2,7 +2,7 @@ import type { FlowbiteSidebarTheme } from './Sidebar';
 
 export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
-    base: 'h-full',
+    base: 'py-4 h-full shadow-lg rounded-r-lg',
     collapsed: {
       on: 'w-16',
       off: 'w-64',
@@ -48,7 +48,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
     },
   },
   item: {
-    base: 'flex items-center justify-center rounded-l-lg p-2 text-sm font-normal text-gray-900 hover:bg-slate-300 dark:text-white dark:hover:bg-gray-700',
+    base: 'flex items-center justify-center p-2 text-sm font-normal text-gray-900 hover:bg-slate-300 dark:text-white dark:hover:bg-gray-700',
     active: 'bg-slate-300 dark:bg-gray-800',
     collapsed: {
       insideCollapse: 'group w-full pl-8 transition duration-75',

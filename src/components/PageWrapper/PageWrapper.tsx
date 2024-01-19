@@ -28,7 +28,7 @@ export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
 export const PageWrapper: FC<PageWrapperProps> = ({
   children,
   className,
-  color = 'white',
+  color = 'default',
   theme: customTheme = {},
 
   }) => {

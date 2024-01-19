@@ -285,5 +285,5 @@ LogoBranding.args = {
       </Sidebar.Items>
     </>
   ),
-  collapsed: false,
+  collapsed: true,
 };

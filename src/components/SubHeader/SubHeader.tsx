@@ -40,7 +40,7 @@ export interface SubHeaderLeftProps {
 	className?: string;
 }
 export const SubHeaderLeft: FC<SubHeaderLeftProps> = ({ children,heading, className }) => {
-	return <div className={classNames('text-gray-700 text-2xl font-bold items-center inline-flex', className)}>
+	return <div className={classNames('text-gray-700 text-l font-bold items-center inline-flex', className)}>
 		<span className='mb-0'>{heading}</span>
 		{children}</div>;
 };
@@ -55,7 +55,7 @@ export interface SubHeaderRightProps {
 }
 export const SubHeaderRight: FC<SubHeaderRightProps> = ({ children, className }) => {
 	return (
-		<div className={classNames('col-span-1', 'ml-auto', className)}>{children}</div>
+		<div className={classNames('inline-flex', 'ml-auto', className)}>{children}</div>
 	);
 };
 SubHeaderRight.propTypes = {
