@@ -266,7 +266,7 @@ LogoBranding.args = {
           <Sidebar.Item href="#" icon={HiViewBoards}>
             Kanban
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiInbox}>
+          <Sidebar.Item active={true} href="#" icon={HiInbox}>
             Inbox
           </Sidebar.Item>
           <Sidebar.Item href="#" icon={HiUser}>

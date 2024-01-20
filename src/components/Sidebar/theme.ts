@@ -2,16 +2,16 @@ import type { FlowbiteSidebarTheme } from './Sidebar';
 
 export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
-    base: 'py-4 h-full shadow-lg rounded-r-lg',
+    base: 'h-full',
     collapsed: {
-      on: 'w-16',
+      on: 'w-20',
       off: 'w-64',
     },
-    inner: 'h-full overflow-y-auto overflow-x-hidden rounded bg-white  pl-3 dark:bg-gray-800',
+    inner: 'h-full overflow-y-auto overflow-x-hidden shadow-lg pb-4 rounded-r-lg bg-sky-600 dark:bg-gray-800',
   },
   collapse: {
     button:
-      'group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
+      'group flex w-full items-center rounded-lg text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
     icon: {
       base: 'h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white',
       open: {
@@ -48,34 +48,37 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
     },
   },
   item: {
-    base: 'flex items-center justify-center p-2 text-sm font-normal text-gray-900 hover:bg-slate-300 dark:text-white dark:hover:bg-gray-700',
-    active: 'bg-slate-300 dark:bg-gray-800',
+    base: 'flex items-center justify-center p-1 rounded bg-sky-800 text-sm font-normal text-sky-800 hover:bg-blue-200 dark:text-white dark:hover:bg-gray-700',
+    active: 'bg-blue-200 dark:bg-gray-800',
     collapsed: {
-      insideCollapse: 'group w-full pl-8 transition duration-75',
+      insideCollapse: 'group pl-8 transition duration-75',
       noIcon: 'font-bold',
     },
     content: {
-      base: 'px-3 flex-1 whitespace-nowrap',
+      base: 'px-3 flex-1 whitespace-nowrap text-blue-200',
     },
     icon: {
-      base: 'h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white',
-      active: 'text-gray-700 dark:text-gray-100',
+      base: 'h-6 w-6 flex-shrink-0 text-blue-200 hover:text-sky-800 transition duration-75 group-hover:text-sky-800 dark:text-gray-400 dark:group-hover:text-white',
+      active: 'text-sky-800 dark:text-gray-100',
     },
-    label: '',
+    label: {
+      base:'text-sky-800 text-xs font-bold text-left overflow-hidden',
+      active:'text-blue-200'
+    },
     listItem: '',
   },
   items: {
     base: '',
   },
   itemGroup: {
-    base: 'mt-4 space-y-2 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0 dark:border-gray-700',
+    base: 'mt-4 space-y-5 px-4 mb-4 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 dark:border-gray-700',
   },
   logo: {
-    base: 'mb-5 flex items-center pl-2.5',
+    base: 'mb-5 flex items-center bg-sky-800 p-4',
     collapsed: {
       on: 'hidden',
       off: 'self-center whitespace-nowrap text-xl font-semibold dark:text-white',
     },
-    img: 'mr-3 h-6 sm:h-7',
+    img: 'h-12 sm:h-10',
   },
 };

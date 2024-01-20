@@ -1,4 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react';
+import React from 'react';
+import { Card } from '../Card';
 import type { PageProps } from './Page';
 import { Page } from './Page';
 
@@ -21,7 +23,7 @@ DefaultPage.args = {
 export const TestPage = Template.bind({});
 TestPage.storyName = 'TestPage';
 TestPage.args = {
-  children: 'Page',
+  children: <Card><p>this is the content</p></Card>,
 
   
 //   children: (

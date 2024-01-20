@@ -7,7 +7,6 @@ import { mergeDeep } from '../../helpers/merge-deep';
 import type { DeepPartial } from '../../types';
 import { Badge } from '../Badge';
 import type { FlowbiteColors } from '../Flowbite';
-import { Tooltip } from '../Tooltip';
 import { useSidebarContext } from './SidebarContext';
 import { useSidebarItemContext } from './SidebarItemContext';
 
@@ -25,7 +24,10 @@ export interface FlowbiteSidebarItemTheme {
     base: string;
     active: string;
   };
-  label: string;
+  label: {
+    base:string;
+    active:string;
+  };
   listItem: string;
 }
 
@@ -54,16 +56,7 @@ const ListItem: FC<
 > = ({ id, theme, isCollapsed, tooltipChildren, children: wrapperChildren, ...props }) => (
   <li {...props}>
     {isCollapsed ? (
-      <Tooltip
-        content={
-          <Children id={id} theme={theme}>
-            {tooltipChildren}
-          </Children>
-        }
-        placement="right"
-      >
-        {wrapperChildren}
-      </Tooltip>
+      wrapperChildren
     ) : (
       wrapperChildren
     )}
@@ -117,7 +110,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
           {...props}
         >
           {Icon && (
-            <Icon
+          <Icon
               aria-hidden
               data-testid="flowbite-sidebar-item-icon"
               className={twMerge(theme.icon?.base, isActive && theme.icon?.active)}
@@ -132,11 +125,15 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
             </Children>
           )}
           {!isCollapsed && label && (
-            <Badge color={labelColor} data-testid="flowbite-sidebar-label" hidden={isCollapsed} className={theme.label}>
+            <Badge color={labelColor} data-testid="flowbite-sidebar-label" hidden={isCollapsed} className={theme.label.base}>
               {label}
             </Badge>
           )}
         </Component>
+        {isCollapsed && (<div className={twMerge(
+              theme.label.base,
+              isActive && theme.label.active
+            )}>{children}</div>)}
       </ListItem>
     );
   },
