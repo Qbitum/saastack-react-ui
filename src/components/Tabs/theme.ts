@@ -1,7 +1,7 @@
 import type { FlowbiteTabsTheme } from './Tabs';
 
 export const tabTheme: FlowbiteTabsTheme = {
-  base: 'flex flex-col gap-2',
+  base: 'flex flex-col gap-1 h-full',
   tablist: {
     base: 'flex text-center',
     styles: {
@@ -47,7 +47,7 @@ export const tabTheme: FlowbiteTabsTheme = {
     },
   },
   tabitemcontainer: {
-    base: '',
+    base: 'flex-auto',
     styles: {
       default: '',
       underline: '',
@@ -55,5 +55,5 @@ export const tabTheme: FlowbiteTabsTheme = {
       fullWidth: '',
     },
   },
-  tabpanel: 'py-3',
+  tabpanel: 'py-1 h-full',
 };
