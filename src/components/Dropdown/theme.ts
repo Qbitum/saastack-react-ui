@@ -31,5 +31,5 @@ export const dropdownTheme: FlowbiteDropdownTheme = {
     },
     target: 'w-fit',
   },
-  inlineWrapper: 'flex items-center',
+  inlineWrapper: 'flex items-center outline py-1 px-1 rounded',
 };
