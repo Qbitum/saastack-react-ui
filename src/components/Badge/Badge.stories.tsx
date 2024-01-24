@@ -20,7 +20,7 @@ export default {
 } as Meta;
 
 const Template: StoryFn<BadgeProps> = (args) => (
-  <div className="flex items-center">
+  <div className="flex items-center h-4">
     <Badge {...args} />
   </div>
 );
@@ -56,27 +56,28 @@ BadgeAsLink.args = {
 export const PendingApprovalJobLIst = Template.bind({});
 PendingApprovalJobLIst.storyName = 'PendingApprovalJobLIst';
 PendingApprovalJobLIst.args = {
-  color: 'bluependingApproval',
+  color: 'blue',
   children: 'Pending Approval',
 };
 
 export const ProcessFailedJobLIst = Template.bind({});
 ProcessFailedJobLIst.storyName = 'ProcessFailedJobLIst';
 ProcessFailedJobLIst.args = {
-  color: 'redProcessFailed',
+  color: 'pink',
   children: 'Process Failed',
 };
 
 export const ReadyToProcessJobLIst = Template.bind({});
 ReadyToProcessJobLIst.storyName = 'ReadyToProcessJobLIst';
 ReadyToProcessJobLIst.args = {
-  color: 'yellowReadyToProcess',
+  color: 'amber',
   children: 'Ready To Process',
 };
 
 export const ProcessingJobLIst = Template.bind({});
 ProcessingJobLIst.storyName = 'ProcessingJobLIst';
 ProcessingJobLIst.args = {
-  color: 'purpleProcessing',
+  color: 'purple',
   children: 'Processing',
+  pill:true
 };

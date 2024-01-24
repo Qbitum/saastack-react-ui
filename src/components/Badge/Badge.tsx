@@ -15,6 +15,7 @@ export interface FlowbiteBadgeRootTheme {
   color: FlowbiteColors;
   href: string;
   size: BadgeSizes;
+  pill: FlowbiteBoolean;
 }
 
 export interface FlowbiteBadgeIconTheme extends FlowbiteBoolean {
@@ -31,6 +32,7 @@ export interface BadgeProps extends Omit<ComponentProps<'span'>, 'color'> {
   icon?: FC<ComponentProps<'svg'>>;
   size?: keyof BadgeSizes;
   theme?: DeepPartial<FlowbiteBadgeTheme>;
+  pill?:boolean;
 }
 
 export const Badge: FC<BadgeProps> = ({
@@ -39,6 +41,7 @@ export const Badge: FC<BadgeProps> = ({
   href,
   icon: Icon,
   size = 'xs',
+  pill = false,
   className,
   theme: customTheme = {},
   ...props
@@ -52,6 +55,7 @@ export const Badge: FC<BadgeProps> = ({
         theme.root.color[color],
         theme.root.size[size],
         theme.icon[Icon ? 'on' : 'off'],
+        theme.root.pill[pill ? 'on' : 'off'],
         className,
       )}
       data-testid="flowbite-badge"
