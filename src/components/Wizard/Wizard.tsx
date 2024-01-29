@@ -24,10 +24,11 @@ export interface WizardProps {
   headerStyle?: 'header-progress' | 'header-basic' | 'header-tab';
   footerStyle?: 'footer-button' | 'footer-nav';
   setStep?: (step: number) => void;
+  onNext?:()=>boolean;
   onStepChange:(index:number)=> void;
 }
 
-export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, footerStyle, children, onStepChange },ref) => {
+export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, footerStyle, children, onStepChange,onNext },ref) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   
   /*
@@ -43,8 +44,12 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
   const handleNext = () => {
+    if(onNext && !onNext()){
+      return;
+    }
     setCompletedSteps(prev => [...prev,activeItemIndex])
     setActiveItemIndex(activeItemIndex + 1)
+    if(onStepChange)onStepChange(activeItemIndex);
   };
 
   const handlePrev = () => {
@@ -59,7 +64,7 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
 
    const handleStepClick = (stepIndex: number) => {
     setActiveItemIndex(stepIndex);
-    if(onStepChange)onStepChange(activeItemIndex);
+    if(onStepChange)onStepChange(stepIndex);
    };
 
   const totalSteps = React.Children.count(children);
@@ -67,8 +72,8 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
   const titles = React.Children.map(children, child => (child as React.ReactElement<any>).props.title) as string[];
 
   return (
-    <div ref={ref}>
-      <div>
+    <div ref={ref} className='wizard' data-test-id='wizard'>
+      <div className='wizard-header'>
         {/* Add Header Style */}
 
         {/* HeaderProgress */}
@@ -93,7 +98,7 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
       //  index === activeItemIndex ? React.cloneElement(child as React.ReactElement<any>, { onNext: handleNext, onPrev: handlePrev }) : null
       //)
       }
-      <div>
+      <div className='wizard-footer'>
         {/* Add Footer styles */}
 
         {/* FooterButton */}

@@ -9,10 +9,9 @@ export interface WizardStepProps {
   className?: string;
 }
 
-export const WizardStep: React.FC<WizardStepProps>  = ( {stepIndex, title, children,className} ) => {
+export const WizardStep: React.FC<WizardStepProps>  = ( {children,className} ) => {
     return (
-			<div className={classNames('wizard-item', className)}>
-        <h2>{`Step ${stepIndex} - ${title}`}</h2>
+			<div className={classNames('wizard-item flex flex-auto', className)}>
         {children}
       </div>
     )
