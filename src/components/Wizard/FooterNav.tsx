@@ -36,9 +36,9 @@ export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, current
   const isFirstStep = currentStep === 0;
 
   return (
-    <div className=' flex items-center justify-between border-t border-slate-700 pt-6 mt-6'>
+    <div className=' flex  float-right items-center    pt-6 mt-6 '>
       <Button outline onClick={onPrev} disabled={isFirstStep} >Previous </Button>
-      <Button onClick={onNext} >{isLastStep ? 'Finish' : 'Next'}</Button>
+      <Button className='m-1 order-last' onClick={onNext} >{isLastStep ? 'Finish' : 'Next'}</Button>
     </div>
   )
 }

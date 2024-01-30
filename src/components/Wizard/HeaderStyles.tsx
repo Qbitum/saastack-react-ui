@@ -40,7 +40,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
         <div
           className={`w-full relative flex items-center 
           ${currentStep === index ? 'bg-cyan-300' : completedSteps.includes(index) ? 'bg-cyan-600' : 'bg-stone-100'}
-          h-14 mr-0.5`}
+          h-12 mr-0.5`}
           key={index}
           style={{
             borderRadius: `${
@@ -48,8 +48,13 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
             }`,
           }}
         >
-          <div className="h-full w-16 flex items-center justify-center">
-            <div className={`text-2xl font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
+          <div className={`h-full w-16 flex items-center justify-center ${currentStep === index ? 'bg-cyan-600' : ''}`}
+          style={{
+            borderRadius: `${
+              index === 0 ? '8px 0 0 8px' :  '0'
+            }`,
+          }}>
+            <div className={`text-xl font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
               {completedSteps.includes(index) ? (
                 (index + 1).toString()
               ) : (
@@ -60,7 +65,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
           <div
             className={`flex-auto h-full p-2 rounded-r-lg 300 font-bold 
               ${currentStep === index ? 'text-white' : completedSteps.includes(index) ? 'text-white' : 'text-cyan-600'}
-              flex-auto text-xl font-bold flex items-center`}
+              flex-auto text-lg font-bold flex items-center`}
           >
             {title}
           </div>
@@ -77,6 +82,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
       ))}
     </div>
   );
+  
 };
 
 export interface HeaderProgressProps {
