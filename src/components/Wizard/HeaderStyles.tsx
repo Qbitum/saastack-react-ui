@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../Button';
+import { AiOutlineCheckCircle, AiOutlineRight } from 'react-icons/ai';
 
 export interface HeaderBasicProps {
   title: string;
@@ -24,29 +25,59 @@ export interface HeaderTabProps {
   totalSteps: number;
   currentStep: number;
   onStepClick: (stepIndex: number) => void;
-  titles: string[]; 
+  titles: string[];
+  completedSteps: number[];
 }
 
-export const HeaderTab: React.FC<HeaderTabProps> = ({ onStepClick, titles }) => {
-
-	const handleStepClick = (index: number) => {
-    onStepClick(index);
-  }
+export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, completedSteps }) => {
+  // const handleStepClick = (index: number) => {
+  //   onStepClick(index);
+  // };
 
   return (
     <div className='flex items-center justify-between mb-10'>
-      {titles.map((title, index) => ( 
-        <div className='w-full relative flex items-center' key={index}>
-          <Button
-            onClick={() => handleStepClick(index)}
-            className='rounded-r-lg'
-          >{(index + 1).toString()}</Button>
-          <div className='flex-auto h-full p-2 rounded-r-lg bg-gray-200 mr-4 text-xs uppercase font-bold text-theme-primary'>{title}</div>
+      {titles.map((title, index) => (
+        <div
+          className={`w-full relative flex items-center 
+          ${currentStep === index ? 'bg-cyan-300' : completedSteps.includes(index) ? 'bg-cyan-600' : 'bg-stone-100'}
+          h-14 mr-0.5`}
+          key={index}
+          style={{
+            borderRadius: `${
+              index === 0 ? '8px 0 0 8px' : index === titles.length - 1 ? '0 8px 8px 0' : '0'
+            }`,
+          }}
+        >
+          <div className="h-full w-16 flex items-center justify-center">
+            <div className={`text-2xl font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
+              {completedSteps.includes(index) ? (
+                (index + 1).toString()
+              ) : (
+                (index + 1).toString()
+              )}
+            </div>
+          </div>
+          <div
+            className={`flex-auto h-full p-2 rounded-r-lg 300 font-bold 
+              ${currentStep === index ? 'text-white' : completedSteps.includes(index) ? 'text-white' : 'text-cyan-600'}
+              flex-auto text-xl font-bold flex items-center`}
+          >
+            {title}
+          </div>
+          <div className='h-full w-16 flex items-center justify-center'>
+            {currentStep === index ? (
+              <AiOutlineRight className={`h-6 w-6 text-cyan-600`} />
+            ) : completedSteps.includes(index) ? (
+              <AiOutlineCheckCircle className="h-6 w-6 text-white" />
+            ) : (
+              ''
+            )}
+          </div>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export interface HeaderProgressProps {
   totalSteps: number;

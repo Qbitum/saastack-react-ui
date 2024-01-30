@@ -170,9 +170,9 @@ div + pre[class*='language-'] {
 }
 
 /* without preview */
-.highlight pre[class*='language-'] {
+/* .highlight pre[class*='language-'] {
   @apply m-0 mb-8 mt-4 rounded-xl bg-gray-50 p-6 pt-6 text-sm dark:bg-gray-800;
-}
+} */
 
 /* when after preview */
 .code-preview-wrapper

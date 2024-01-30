@@ -53,7 +53,8 @@ const ListItem: FC<
     tooltipChildren: ReactNode | undefined;
     className?: string;
   }>
-> = ({ id, theme, isCollapsed, tooltipChildren, children: wrapperChildren, ...props }) => (
+  //id, theme, tooltipChildren, was removed due to lint errors
+> = ({  isCollapsed, children: wrapperChildren, ...props }) => (
   <li {...props}>
     {isCollapsed ? (
       wrapperChildren

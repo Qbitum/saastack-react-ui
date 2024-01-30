@@ -1,6 +1,7 @@
 'use client';
 
-import React, {Children, cloneElement, forwardRef, ReactElement, useState } from 'react';
+import React, {Children, cloneElement, forwardRef,useState } from 'react';
+import type {ReactElement}from 'react'
 import type {ReactNode} from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import type { FlowbiteStateColors } from '../Flowbite';
@@ -54,7 +55,8 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
 
   const handlePrev = () => {
     setCompletedSteps(prev => {
-      let arr = [...prev];
+      //const was used instead of let due to lint errors
+      const arr = [...prev];
       arr.pop();
       return arr;
     })
@@ -83,7 +85,7 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} />}
 
         {/* HeaderTab */}
-        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} />}
+        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />}
       </div>
 
       {
@@ -110,6 +112,7 @@ export const Wizard = forwardRef<HTMLDivElement,WizardProps>(({ headerStyle, foo
     </div>
   );
 })
+Wizard.displayName = 'Wizard'; // Add this line to set the display name
 
 // Set default props
 Wizard.defaultProps = {
