@@ -21,7 +21,7 @@ export const ProgressWizard = (args: WizardProps): JSX.Element => {
   const wref = useRef(null);
 
   return (
-    <Wizard headerStyle='header-tab'{...args} ref={wref}>
+    <Wizard  headerStyle='header-tab'{...args} ref={wref}>
       <WizardStep stepIndex="1" title="step title a"></WizardStep>
       <WizardStep stepIndex="2" title="step title b"></WizardStep>
       <WizardStep stepIndex="3" title="step title c"></WizardStep>
@@ -43,15 +43,16 @@ ProgressWizard.args = {
 
 
 
-export const LMWizard = (args: WizardProps): JSX.Element => {
+export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element => {
   const wref = useRef(null);
 
   return (
-    <Wizard headerStyle='header-tab'{...args} ref={wref}>
-      <WizardStep stepIndex="1" title="step title a"></WizardStep>
-      <WizardStep stepIndex="2" title="step title b"></WizardStep>
-      <WizardStep stepIndex="3" title="step title c"></WizardStep>
-      <WizardStep stepIndex="4" title="step title d"></WizardStep>
+    
+    <Wizard {...setStep} headerStyle='header-tab'{...args} ref={wref}>
+      <WizardStep stepIndex="1" title="Upload Base Image"></WizardStep>
+      <WizardStep stepIndex="2" title="AI Processing"></WizardStep>
+      <WizardStep stepIndex="3" title="Sample Check"></WizardStep>
+      <WizardStep stepIndex="4" title="Approval"></WizardStep>
     </Wizard>
   );
 };
@@ -59,9 +60,16 @@ export const LMWizard = (args: WizardProps): JSX.Element => {
 LMWizard.args = {
   onStepChange: (newStep: number) => {
     console.log(`LM Wizard to: ${newStep}`);
+    
   },
+
+  
   onNext: () => {
     return true;
   },
+
+  nextDisable: false, 
+  setStep: '2'
+  
   
 };

@@ -18,9 +18,13 @@ DefaultPageWrapper.storyName = 'PageWrapper';
 DefaultPageWrapper.args = {
   children: <>
   <SubHeader><SubHeaderLeft heading='Job List'></SubHeaderLeft>
+
+
   <SubHeaderRight><Button>add new</Button></SubHeaderRight></SubHeader>
   <Page>
-    <Card><div className="flex">
+  {/* <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9 " alt="Flowbite Logo" /> */}
+
+    <Card><div className="flex ">
   <div className="flex-1 border w-64">
     02
   </div>

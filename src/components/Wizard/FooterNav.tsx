@@ -7,9 +7,12 @@ export interface FooterNavProps {
   onPrev: () => void;
   currentStep: number;
   totalSteps: number;
+  disabled:boolean;
+  nextDisable:boolean;
+  
 }
 
-export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep }) => {
+export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, nextDisable }) => {
   //const isLastStep = currentStep === totalSteps - 1;
   const isFirstStep = currentStep === 0;
 
@@ -24,6 +27,8 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
       <Button 
 			onClick={onNext}
 			className='mx-2'
+      disabled={nextDisable} 
+      style={nextDisable ? { opacity: 0.5 } : {}}
 			>
 				<HiOutlineArrowRight className="h-6 w-6" />
 			</Button>
@@ -34,11 +39,13 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
 export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps }) => {
   const isLastStep = currentStep === totalSteps - 1;
   const isFirstStep = currentStep === 0;
+  
 
   return (
     <div className=' flex  float-right items-center    pt-6 mt-6 '>
       <Button outline onClick={onPrev} disabled={isFirstStep} >Previous </Button>
-      <Button className='m-1 order-last' onClick={onNext} >{isLastStep ? 'Finish' : 'Next'}</Button>
+      <Button className='m-1 order-last'  onClick={onNext}
+              >{isLastStep ? 'Finish' : 'Next'}</Button>
     </div>
   )
 }
