@@ -68,7 +68,7 @@ LMWizard.args = {
     return true;
   },
 
-  nextDisable: false, 
+  nextDisable: true, 
   setStep: '2'
   
   

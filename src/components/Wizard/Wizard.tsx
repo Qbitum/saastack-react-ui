@@ -27,11 +27,13 @@ export interface WizardProps {
   setStep?: (step: number) => void;
   onNext?:()=>boolean;
   onStepChange:(index:number)=> void;
-  nextDisable?: ()=> boolean;
+  nextDisable?: boolean;
 
 }
 
-export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, nextDisable }, ref) => {
+export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, 
+  nextDisable = false,
+}, ref) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
@@ -84,8 +86,9 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
 
       <div className='wizard-footer'>
         {/* Add Footer styles */}
-        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={false} />}
-        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} />}
+        {footerStyle === 'footer-nav' && nextDisable !== undefined && (
+  <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} />
+)}        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} />}
       </div>
     </div>
   );
