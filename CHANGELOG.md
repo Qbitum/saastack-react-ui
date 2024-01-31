@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.3](https://github.com/themesberg/flowbite-react/compare/v0.8.1...v0.8.3) (2024-01-31)
+
+
+### Features
+
+* added card component ([246856f](https://github.com/themesberg/flowbite-react/commit/246856fccfa51779a31006ce849a9b151e56f372))
+* added subheader, page, page wrapper, wizard features ([0c60dce](https://github.com/themesberg/flowbite-react/commit/0c60dcedde3527d951f8364d5a6ecc8e22b9e2c2))
+* added table stories ([30ce140](https://github.com/themesberg/flowbite-react/commit/30ce140f34a556f554a8df462676cc2a31a3e068))
+* added table story WithButton ([4a81500](https://github.com/themesberg/flowbite-react/commit/4a815008a310f02cab08fd80f527b320b819013f))
+
+
+### Bug Fixes
+
+* added missing features ([cb79bb2](https://github.com/themesberg/flowbite-react/commit/cb79bb2d02fc289332cb3e15909621803eb40568))
+* badge styles to match with design ([48f96fc](https://github.com/themesberg/flowbite-react/commit/48f96fc3ffe88b19d06f8086fa959726129b7afc))
+* colours ([204ae33](https://github.com/themesberg/flowbite-react/commit/204ae3349bef9073cd09712d6eff209d92b3ff28))
+* compilation error ([e8fe35d](https://github.com/themesberg/flowbite-react/commit/e8fe35d9901b75b7f0e3a6b5ef2361bb6ab1a955))
+* dropdown ([55679a5](https://github.com/themesberg/flowbite-react/commit/55679a5b9d37a0c10cf4f731dfa418a7a6d63882))
+* fixed wizard naming conventions ([5124778](https://github.com/themesberg/flowbite-react/commit/51247788e7ab59a17028d76eb408aa00b0336108))
+* footer button ([a185b05](https://github.com/themesberg/flowbite-react/commit/a185b051164da5b1eb0fae281bb3afc8cd2fa2f5))
+* height and overflow ([c66ed0c](https://github.com/themesberg/flowbite-react/commit/c66ed0cf728c506fd0d01bde3aa2823dc73090c2))
+* layout component placing and spaciing ([fd8c981](https://github.com/themesberg/flowbite-react/commit/fd8c981ed8a73a8bda85e7b45b4cd2371ea83bd3))
+* lint errors resolved ([f2feaa9](https://github.com/themesberg/flowbite-react/commit/f2feaa905e7bf2a78098eedbe5022bf6773d9bd8))
+* linting issue resolved ([ecbf358](https://github.com/themesberg/flowbite-react/commit/ecbf358a88967ccc582f55bea37d4ebb1c84c26b))
+* missing exports ([96d0970](https://github.com/themesberg/flowbite-react/commit/96d0970c47e09fd7d85b593f2b2702c4dc096e3d))
+* page height ([18665b9](https://github.com/themesberg/flowbite-react/commit/18665b9012fcb536a1ae9b4d6f438b1d243b3ebb))
+* prepublish errors ([d459dd7](https://github.com/themesberg/flowbite-react/commit/d459dd7faf46006e9cec7de931238cc191e9a7a0))
+* removed unused code ([21ebfab](https://github.com/themesberg/flowbite-react/commit/21ebfab790080d5a48ab3fe4cd5d92ed79720d6d))
+* rename wizard ([c923816](https://github.com/themesberg/flowbite-react/commit/c923816ca215788882abb40880dbac7e40ebda15))
+* resolved conflicts ([1637170](https://github.com/themesberg/flowbite-react/commit/163717024602094724603f480af12976c29cbcbf))
+* sidebar menu font size and style ([b6f0d99](https://github.com/themesberg/flowbite-react/commit/b6f0d99378b3356c6563fb541f2ce5fe1daf0829))
+* solved lint errors ([c2bab3a](https://github.com/themesberg/flowbite-react/commit/c2bab3af9f927884bea9d9f38851c0b463a919d8))
+* structure changes ([a2f2f1a](https://github.com/themesberg/flowbite-react/commit/a2f2f1a7122862bf518d2964e2024e8c431fee5c))
+* sub header changes ([0aad6da](https://github.com/themesberg/flowbite-react/commit/0aad6da663b16d8eadd9f0d2ec5b6509d137a141))
+* subheader button alignment ([de61e58](https://github.com/themesberg/flowbite-react/commit/de61e58a3ac407fbca9c21b088ab655c395c59f1))
+* Subheader unused code ([9f6a0de](https://github.com/themesberg/flowbite-react/commit/9f6a0de80385608fe7923d19cf249315c0b26db1))
+* suubheader ([b02d0a1](https://github.com/themesberg/flowbite-react/commit/b02d0a11c81034648b6cdf83129951b120458693))
+* wizard bug when clicking previos ([c15e786](https://github.com/themesberg/flowbite-react/commit/c15e786933de09ae58bc35cb12ef5911f9fc2dc8))
+* wizard export updated ([725c970](https://github.com/themesberg/flowbite-react/commit/725c970b354f93f50e5eb02d8f41e7f08666a832))
+* wizard features and tailwind config ([a16c788](https://github.com/themesberg/flowbite-react/commit/a16c788ac265fefcb5da2783d67758d190e5d845))
+* wizard footer button ([0a473a7](https://github.com/themesberg/flowbite-react/commit/0a473a7f879a49dcaead23130ebc74060c7bdadd))
+* wizard header tab UI fix ([94daaae](https://github.com/themesberg/flowbite-react/commit/94daaae446b9158611dd8ed55f9333a3876534c9))
+* wizard next ([0bfd94c](https://github.com/themesberg/flowbite-react/commit/0bfd94c6cd71fff4b4a8df876f5af99f3484044a))
+* wizard nextDisable function ([47a8e1a](https://github.com/themesberg/flowbite-react/commit/47a8e1a8ca8b636c4a75cc16f57650408fb23772))
+* wizard reference on step change1 ([a94d81c](https://github.com/themesberg/flowbite-react/commit/a94d81c3c05d1c571f8f80fc108f495e31c77875))
+* wizard updated ([cc39592](https://github.com/themesberg/flowbite-react/commit/cc3959239b7fe4cb09e54419f518d8ce25faf2ad))
+
 ### [0.8.2](https://github.com/themesberg/flowbite-react/compare/v0.8.1...v0.8.2) (2024-01-18)
 
 
