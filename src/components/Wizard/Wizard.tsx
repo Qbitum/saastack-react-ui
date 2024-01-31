@@ -42,8 +42,9 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       return;
     }
     setCompletedSteps((prev) => [...prev, activeItemIndex]);
-    setActiveItemIndex(activeItemIndex + 1);
-    if (onStepChange) onStepChange(activeItemIndex);
+    let nextIndex= activeItemIndex + 1;
+    setActiveItemIndex(nextIndex);
+    if (onStepChange) onStepChange(nextIndex);
   };
 
   const handlePrev = () => {
@@ -52,8 +53,9 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       arr.pop();
       return arr;
     });
-    setActiveItemIndex(activeItemIndex - 1);
-    if (onStepChange) onStepChange(activeItemIndex);
+    let pIndex= activeItemIndex - 1;
+    setActiveItemIndex(pIndex);
+    if (onStepChange) onStepChange(pIndex);
   };
 
   const handleStepClick = (stepIndex: number) => {
@@ -64,7 +66,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
   const totalSteps = React.Children.count(children);
   const titles = React.Children.map(children, (child) => (child as React.ReactElement<any>).props.title) as string[];
 
-  const isNextDisabled = onNext ? !onNext() : false;
+  const isNextDisabled = false;
 
   return (
     <div ref={ref} className='wizard' data-test-id='wizard'>
