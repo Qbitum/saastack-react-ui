@@ -35,8 +35,9 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
     </div>
   )
 }
+//onPrev
 
-export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps, nextDisable }) => {
+export const FooterButton: React.FC<FooterNavProps> = ({ onNext, currentStep, totalSteps, nextDisable }) => {
   const isLastStep = currentStep === totalSteps - 1;
   // const isFirstStep = currentStep === 0;
   

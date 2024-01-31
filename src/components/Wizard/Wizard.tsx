@@ -5,7 +5,7 @@ import type {ReactElement}from 'react'
 import type {ReactNode} from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import type { FlowbiteStateColors } from '../Flowbite';
-import { FooterButton, FooterNav } from './FooterNav';
+import {  FooterNav } from './FooterNav';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
