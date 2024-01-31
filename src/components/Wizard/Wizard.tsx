@@ -5,7 +5,7 @@ import type {ReactElement}from 'react'
 import type {ReactNode} from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import type { FlowbiteStateColors } from '../Flowbite';
-import {  FooterNav } from './FooterNav';
+import { FooterButton, FooterNav } from './FooterNav';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
@@ -86,9 +86,8 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
 
       <div className='wizard-footer'>
         {/* Add Footer styles */}
-        {footerStyle === 'footer-nav' && nextDisable !== undefined && (
-  <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} />
-)}        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} />}
+        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} />}
+        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} />}
       </div>
     </div>
   );

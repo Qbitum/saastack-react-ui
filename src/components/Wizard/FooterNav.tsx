@@ -35,27 +35,17 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
     </div>
   )
 }
-//onPrev
 
-export const FooterButton: React.FC<FooterNavProps> = ({ onNext, currentStep, totalSteps, nextDisable }) => {
+export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps }) => {
   const isLastStep = currentStep === totalSteps - 1;
-  // const isFirstStep = currentStep === 0;
+  const isFirstStep = currentStep === 0;
   
 
   return (
     <div className=' flex  float-right items-center    pt-6 mt-6 '>
-      <Button
-  onClick={onNext}
-  className='mx-2'
-  disabled={nextDisable} 
-  style={nextDisable ? { opacity: 0.5 } : {}}
->
-  <HiOutlineArrowRight className="h-6 w-6" />
-</Button>
-
- {/* FooterButton.tsx */}
-<Button className='m-1 order-last'  onClick={onNext}
-        disabled={isLastStep || nextDisable}   >{isLastStep ? 'Finish' : 'Next'}</Button>
+      <Button outline onClick={onPrev} disabled={isFirstStep} >Previous </Button>
+      <Button className='m-1 order-last'  onClick={onNext}
+              >{isLastStep ? 'Finish' : 'Next'}</Button>
     </div>
   )
 }
