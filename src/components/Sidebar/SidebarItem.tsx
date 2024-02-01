@@ -50,7 +50,7 @@ const ListItem: FC<
     id: string;
     theme: FlowbiteSidebarItemTheme;
     isCollapsed: boolean;
-    tooltipChildren: ReactNode | undefined;
+    // tooltipChildren: ReactNode | undefined;
     className?: string;
   }>
   //id, theme, tooltipChildren, was removed due to lint errors
@@ -98,7 +98,8 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
     const theme = mergeDeep(rootTheme.item, customTheme);
 
     return (
-      <ListItem theme={theme} className={theme.listItem} id={id} isCollapsed={isCollapsed} tooltipChildren={children}>
+      // tooltipChildren={children} was included before
+      <ListItem theme={theme} className={theme.listItem} id={id} isCollapsed={isCollapsed} >
         <Component
           aria-labelledby={`flowbite-sidebar-item-${id}`}
           ref={ref}
