@@ -28,13 +28,17 @@ export interface WizardProps {
   onNext?:()=>boolean;
   onStepChange:(index:number)=> void;
   nextDisable?: boolean;
+  initialStep?: number; 
 
 }
 
 export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, 
   nextDisable = false,
+  initialStep = 0
 }, ref) => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [activeItemIndex, setActiveItemIndex] = useState(initialStep); // Set the initial active step
+
+  // const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
   const handleNext = () => {
@@ -42,7 +46,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       return;
     }
     setCompletedSteps((prev) => [...prev, activeItemIndex]);
-    let nextIndex= activeItemIndex + 1;
+    const nextIndex= activeItemIndex + 1;
     setActiveItemIndex(nextIndex);
     if (onStepChange) onStepChange(nextIndex);
   };
@@ -53,7 +57,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       arr.pop();
       return arr;
     });
-    let pIndex= activeItemIndex - 1;
+    const pIndex= activeItemIndex - 1;
     setActiveItemIndex(pIndex);
     if (onStepChange) onStepChange(pIndex);
   };
@@ -62,10 +66,15 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
     setActiveItemIndex(stepIndex);
     if (onStepChange) onStepChange(stepIndex);
   };
-
+ 
   const totalSteps = React.Children.count(children);
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const titles = React.Children.map(children, (child) => (child as React.ReactElement<any>).props.title) as string[];
 
+
+
+
+  
   const isNextDisabled = false;
 
   return (
@@ -75,8 +84,8 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
         {headerStyle === 'header-progress' && (
           <HeaderProgress totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />
         )}
-        {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} />}
-        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />}
+        {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} onStep={2}/>}
+        {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} onStep={2} />}
       </div>
 
       {Children.map(children, (child, index) =>

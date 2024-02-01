@@ -5,7 +5,7 @@ import type { WizardProps } from './Wizard';
 import { useRef } from 'react';
 export default {
   title: 'Components/Wizard',
-  component: Wizard,
+  // component: Wizard,
 } as Meta;
 
 const Template: StoryFn = ({ children, setStep }) => <Wizard onStepChange={setStep}>{children}</Wizard>;
@@ -48,7 +48,7 @@ export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element =
 
   return (
     
-    <Wizard {...setStep} headerStyle='header-tab'{...args} ref={wref}>
+    <Wizard {...setStep}  headerStyle='header-tab'{...args} ref={wref}>
       <WizardStep stepIndex="1" title="Upload Base Image"></WizardStep>
       <WizardStep stepIndex="2" title="AI Processing"></WizardStep>
       <WizardStep stepIndex="3" title="Sample Check"></WizardStep>
@@ -68,8 +68,8 @@ LMWizard.args = {
     return true;
   },
 
-  nextDisable: true, 
-  setStep: '2'
+  nextDisable: false, 
+  initialStep: 3, 
   
   
 };

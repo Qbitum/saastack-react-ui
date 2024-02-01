@@ -18,6 +18,9 @@ const config: Config = {
           100: '#00B2C5',
           200: '#008E9D',
           400: '#007481',
+          //======= not theme colors
+          600: '#268BAC',
+          700: '#0E7EA3',
         },
         secondary: {
           40: '#F5FBFF',
@@ -28,9 +31,7 @@ const config: Config = {
           200: '#0060B0',
           400: '#004A80',
 
-          //======= not theme colors
-          600: '#268BAC',
-          700: '#0E7EA3',
+          
         },
 
         tertiary: {

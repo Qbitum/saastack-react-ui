@@ -6,6 +6,7 @@ export interface HeaderBasicProps {
   title: string;
   currentStep: number;
   totalSteps: number;
+  onStep: number;
 }
 
 export const HeaderBasic: React.FC<HeaderBasicProps>  = ({ title, currentStep, totalSteps }) => {
@@ -27,6 +28,8 @@ export interface HeaderTabProps {
   onStepClick: (stepIndex: number) => void;
   titles: string[];
   completedSteps: number[];
+  onStep: number;
+
 }
 
 export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, completedSteps }) => {

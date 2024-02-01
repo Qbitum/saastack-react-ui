@@ -10,7 +10,7 @@ export default {
 const Template: StoryFn<TextInputProps> = (args) => <TextInput {...args} />;
 
 export const Default = Template.bind({});
-Default.storyName = 'Text input';
+// Default.storyName = 'Text input';
 Default.args = {};
 
 export const Filter = Template.bind({});
