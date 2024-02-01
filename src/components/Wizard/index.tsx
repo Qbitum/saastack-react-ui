@@ -1,7 +1,7 @@
 export { Wizard } from './Wizard';
 export { WizardStep } from './WizardStep';
 export { HeaderBasic, HeaderProgress, HeaderTab } from './HeaderStyles';
-export { FooterButton, FooterNav } from './FooterNav';
+export { FooterButton, FooterNav, LMFooterButton } from './FooterNav';
 
 export type { HeaderBasicProps, HeaderProgressProps, HeaderTabProps } from './HeaderStyles';
 export type { FooterNavProps } from './FooterNav';

@@ -57,7 +57,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
               index === 0 ? '8px 0 0 8px' :  '0'
             }`,
           }}>
-            <div className={`text-xm font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
+            <div className={`text-sm font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
               {completedSteps.includes(index) ? (
                 (index + 1).toString()
               ) : (
@@ -68,7 +68,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
           <div
             className={`flex-auto h-full p-2 rounded-r-lg 300 font-bold 
               ${currentStep === index ? 'text-white' : completedSteps.includes(index) ? 'text-white' : 'text-cyan-600'}
-              flex-auto text-xs font-bold flex items-center`}
+              flex-auto text-sm font-bold flex items-center`}
           >
             {title}
           </div>

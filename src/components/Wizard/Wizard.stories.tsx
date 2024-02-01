@@ -8,7 +8,7 @@ export default {
   // component: Wizard,
 } as Meta;
 
-const Template: StoryFn = ({ children, setStep }) => <Wizard onStepChange={setStep}>{children}</Wizard>;
+const Template: StoryFn = ({ children, setStep, saveExit }) => <Wizard onStepChange={setStep} saveExit={saveExit}>{children}</Wizard>;
 
 export const DefaultWizard = Template.bind({});
 DefaultWizard.storyName = 'Wizard';
@@ -37,8 +37,8 @@ ProgressWizard.args = {
   onNext: () => {
     return true;
   },
-  // headerStyle: 'header-progress',
-  // footerStyle: 'footer-button',
+  headerStyle: 'header-progress',
+  footerStyle: 'footer-button',
 };
 
 
@@ -71,5 +71,6 @@ LMWizard.args = {
   nextDisable: false, 
   initialStep: 3, 
   
-  
+  footerStyle: 'footer-button',
+
 };

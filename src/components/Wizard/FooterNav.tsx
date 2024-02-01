@@ -9,6 +9,7 @@ export interface FooterNavProps {
   totalSteps: number;
   disabled:boolean;
   nextDisable:boolean;
+  saveExit: () => void;
   
 }
 
@@ -44,6 +45,26 @@ export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, current
   return (
     <div className=' flex  float-right items-center    pt-6 mt-6 '>
       <Button outline onClick={onPrev} disabled={isFirstStep} >Previous </Button>
+      <Button className='m-1 order-last'  onClick={onNext}
+               disabled={nextDisable} 
+               style={nextDisable ? { opacity: 0.5 } : {}}
+              
+              >{isLastStep ? 'Finish' : 'Next'}</Button>
+    </div>
+  )
+}
+
+
+export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps, nextDisable, saveExit }) => {
+  const isLastStep = currentStep === totalSteps - 1;
+  const isFirstStep = currentStep === 0;
+  
+
+  return (
+    <div className=' flex  float-right items-center    pt-6 mt-6 '>
+      <Button className='absolute left-0'outline onClick={onPrev} disabled={isFirstStep} >Previous </Button>
+      <Button className=''outline onClick={saveExit} >Save and Exit </Button>
+
       <Button className='m-1 order-last'  onClick={onNext}
                disabled={nextDisable} 
                style={nextDisable ? { opacity: 0.5 } : {}}

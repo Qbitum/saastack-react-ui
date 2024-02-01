@@ -5,7 +5,7 @@ import type {ReactElement}from 'react'
 import type {ReactNode} from 'react';
 import {HeaderBasic, HeaderProgress, HeaderTab} from './HeaderStyles';
 import type { FlowbiteStateColors } from '../Flowbite';
-import { FooterButton, FooterNav } from './FooterNav';
+import { FooterButton, FooterNav, LMFooterButton } from './FooterNav';
 
 export interface FlowbiteWizardTheme {
   root: FlowbiteWizardRootTheme;
@@ -23,16 +23,18 @@ export interface WizardColors extends FlowbiteStateColors {
 export interface WizardProps {
   children: ReactNode;
   headerStyle?: 'header-progress' | 'header-basic' | 'header-tab';
-  footerStyle?: 'footer-button' | 'footer-nav';
+  footerStyle?: 'footer-button' | 'footer-nav'| 'lm-footer-button';
   setStep?: (step: number) => void;
   onNext?:()=>boolean;
   onStepChange:(index:number)=> void;
   nextDisable?: boolean;
   initialStep?: number; 
+  saveExit: () => void;
+
 
 }
 
-export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, 
+export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, saveExit,
   nextDisable = false,
   initialStep = 0
 }, ref) => {
@@ -68,13 +70,9 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
   };
  
   const totalSteps = React.Children.count(children);
-  /* eslint-disable @typescript-eslint/no-explicit-any */
+   /* eslint-disable @typescript-eslint/no-explicit-any */
   const titles = React.Children.map(children, (child) => (child as React.ReactElement<any>).props.title) as string[];
 
-
-
-
-  
   const isNextDisabled = false;
 
   return (
@@ -97,8 +95,10 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
 
       <div className='wizard-footer'>
         {/* Add Footer styles */}
-        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} />}
-        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} />}
+        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
+
+        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
+        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} saveExit={saveExit} />}
       </div>
     </div>
   );
@@ -109,3 +109,6 @@ Wizard.defaultProps = {
   headerStyle: 'header-progress',
   footerStyle: 'footer-button',
 };
+
+
+
