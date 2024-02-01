@@ -1,6 +1,6 @@
 'use client';
 
-import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react';
+import type { ComponentProps, ElementType, FC, PropsWithChildren } from 'react';
 import { forwardRef, useId } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { mergeDeep } from '../../helpers/merge-deep';
