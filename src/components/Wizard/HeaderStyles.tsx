@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../Button';
-import { AiOutlineCheckCircle, AiOutlineRight } from 'react-icons/ai';
+import { AiFillCheckCircle } from 'react-icons/ai';
 
 export interface HeaderBasicProps {
   title: string;
@@ -41,9 +41,9 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
     <div className='flex items-center justify-between mb-10 '>
       {titles.map((title, index) => (
         <div
-        className={`w-full relative flex items-center transition-all duration-300
-          ${currentStep === index ? 'bg-cyan-300' : completedSteps.includes(index) ? 'bg-cyan-600' : 'bg-stone-100'}
-          h-8 mr-0.5`}
+        className={`w-full relative flex items-stretch items-center transition-all duration-300
+          ${currentStep === index ? 'bg-teal-300' : completedSteps.includes(index) ? 'bg-teal-300' : 'bg-stone-100'}
+           mr-0.5`}
         key={index}
         style={{
           borderRadius: `${
@@ -51,13 +51,13 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
           }`,
         }}
       >
-          <div className={`h-full w-10 flex items-center justify-center ${currentStep === index ? 'bg-cyan-600' : ''}`}
+          <div className={`w-10 flex items-center justify-center ${currentStep === index ? 'bg-teal-600' : ''}`}
           style={{
             borderRadius: `${
               index === 0 ? '8px 0 0 8px' :  '0'
             }`,
           }}>
-            <div className={`text-sm font-bold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-cyan-600'}`}>
+            <div className={`text-sm font-semibold leading-tight ${completedSteps.includes(index) ? 'text-white' : currentStep === index ? 'text-white' : 'text-teal-300'}`}>
               {completedSteps.includes(index) ? (
                 (index + 1).toString()
               ) : (
@@ -66,17 +66,17 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
             </div>
           </div>
           <div
-            className={`flex-auto h-full p-2 rounded-r-lg 300 font-bold 
+            className={`flex-auto p-3 rounded-r-lg 300
               ${currentStep === index ? 'text-white' : completedSteps.includes(index) ? 'text-white' : 'text-cyan-600'}
-              flex-auto text-sm font-bold flex items-center`}
+              flex-auto text-sm flex items-center font-semibold`}
           >
             {title}
           </div>
-          <div className='h-full w-10 flex items-center justify-center'>
+          <div className='w-10 flex items-center justify-center'>
             {currentStep === index ? (
-              <AiOutlineRight className={`h-6 w-6 text-cyan-600`} />
+              <AiFillCheckCircle className={`h-6 w-6 text-white`} />
             ) : completedSteps.includes(index) ? (
-              <AiOutlineCheckCircle className="h-6 w-6 text-white" />
+              <AiFillCheckCircle className="h-6 w-6 text-white" />
             ) : (
               ''
             )}

@@ -74,7 +74,7 @@ LMWizard.args = {
   },
 
   nextDisable: false, 
-  initialStep: 3, 
+  initialStep: 0, 
   
   footerStyle: 'footer-button',
 

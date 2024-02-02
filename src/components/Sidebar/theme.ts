@@ -7,7 +7,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
       on: 'w-20',
       off: 'w-64',
     },
-    inner: 'h-full overflow-y-auto overflow-x-hidden shadow-lg pb-4 rounded-r-lg bg-sky-600 dark:bg-gray-800',
+    inner: 'h-full overflow-y-auto overflow-x-hidden shadow-lg pb-4 rounded-r-lg bg-sky-400 dark:bg-gray-800',
   },
   collapse: {
     button:
@@ -48,24 +48,24 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
     },
   },
   item: {
-    base: 'flex items-center justify-center p-1 rounded bg-sky-800 text-sm font-normal text-sky-800 hover:bg-blue-200 dark:text-white dark:hover:bg-gray-700',
+    base: 'flex items-center justify-center p-1 rounded text-sm font-normal hover:text-sky-400 hover:bg-blue-200 dark:text-white dark:hover:bg-gray-700',
     active: 'bg-blue-200 dark:bg-gray-800',
     collapsed: {
       insideCollapse: 'group pl-8 transition duration-75',
       noIcon: 'font-bold',
     },
     content: {
-      base: 'px-3 flex-1 whitespace-nowrap text-blue-200',
+      base: 'px-3 flex-1 whitespace-nowrap',
     },
     icon: {
-      base: 'h-6 w-6 flex-shrink-0 text-blue-200 hover:text-sky-800 transition duration-75 group-hover:text-sky-800 dark:text-gray-400 dark:group-hover:text-white',
-      active: 'text-sky-800 dark:text-gray-100',
+      base: 'h-6 w-6 flex-shrink-0 transition duration-75 dark:text-gray-400 dark:group-hover:text-white',
+      active: 'text-sky-400',
     },
     label: {
-      base:'text-sky-800 text-xs font-bold text-left overflow-hidden',
-      active:'text-blue-200'
+      base:'text-xs font-bold text-left overflow-hidden',
+      active:''
     },
-    listItem: '',
+    listItem: 'text-blue-200',
   },
   items: {
     base: '',
@@ -79,6 +79,6 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
       on: 'hidden',
       off: 'self-center whitespace-nowrap text-xl font-semibold dark:text-white',
     },
-    img: 'h-12 sm:h-10',
+    img: 'h-12 shadow sm:h-10',
   },
 };
