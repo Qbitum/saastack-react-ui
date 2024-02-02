@@ -41,8 +41,9 @@ export interface SubHeaderLeftProps {
 }
 export const SubHeaderLeft: FC<SubHeaderLeftProps> = ({ children,heading, className }) => {
 	return <div className={classNames('text-gray-700 text-l font-bold items-center inline-flex', className)}>
+		{children}
 		<span className='mb-0'>{heading}</span>
-		{children}</div>;
+		</div>;
 };
 SubHeaderLeft.propTypes = {
 	children: PropTypes.node,

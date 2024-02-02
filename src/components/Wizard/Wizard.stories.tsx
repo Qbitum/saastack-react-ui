@@ -3,6 +3,8 @@ import { Wizard } from './Wizard';
 import { WizardStep } from './WizardStep';
 import type { WizardProps } from './Wizard';
 import { useRef } from 'react';
+import { Page } from '../Page';
+import { PageWrapper } from '../PageWrapper';
 export default {
   title: 'Components/Wizard',
   // component: Wizard,
@@ -47,13 +49,16 @@ export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element =
   const wref = useRef(null);
 
   return (
-    
+    <PageWrapper className='h-64'>
+    <Page className='h-full'>
     <Wizard {...setStep}  headerStyle='header-tab'{...args} ref={wref}>
       <WizardStep stepIndex="1" title="Upload Base Image"></WizardStep>
       <WizardStep stepIndex="2" title="AI Processing"></WizardStep>
       <WizardStep stepIndex="3" title="Sample Check"></WizardStep>
       <WizardStep stepIndex="4" title="Approval"></WizardStep>
     </Wizard>
+    </Page>
+    </PageWrapper>
   );
 };
 
