@@ -59,7 +59,7 @@ export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element =
           <Button color="light" ><AiOutlineArrowLeft className="mr-2 h-5 w-5" />Back</Button>
         </SubHeaderLeft>
       </SubHeader>
-      <Page className='bg-cyan-700 h-24'>
+      <Page className='h-fill'>
      
       <Wizard {...setStep}  headerStyle='header-tab'{...args} ref={wref}>
       <WizardStep stepIndex="1" title="Upload Base Image"></WizardStep>

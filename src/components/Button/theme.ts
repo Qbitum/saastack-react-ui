@@ -124,7 +124,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
     'ml-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cyan-200 text-xs font-semibold text-cyan-800',
   outline: {
     color: {
-      gray: 'border border-gray-400 bg-white dark:border-white',
+      gray: 'border border-gray-400 bg-white dark:border-white ',
       primary: 'border border-primary-100 bg-white',
       secondary: 'border border-secondary-100 bg-white',
       tertiary: 'border border-tertiary-100 bg-white',

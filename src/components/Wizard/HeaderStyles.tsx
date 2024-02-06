@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../Button';
-import { AiFillCheckCircle } from 'react-icons/ai';
+import { AiFillCheckCircle, AiOutlineRight } from 'react-icons/ai';
 
 export interface HeaderBasicProps {
   title: string;
@@ -43,12 +43,15 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
         <div
         className={`w-full relative flex items-stretch items-center transition-all duration-300
           ${currentStep === index ? 'bg-teal-300' : completedSteps.includes(index) ? 'bg-teal-300' : 'bg-stone-100'}
-           mr-0.5`}
+          ${index === titles.length - 1 ? '0' : 'mr-0.5'}
+
+          `}
         key={index}
         style={{
           borderRadius: `${
-            index === 0 ? '8px 0 0 8px' : index === titles.length - 1 ? '0 8px 8px 0' : '0'
+            index === 0 ? '8px 0 0 8px' : index === titles.length - 1 ? '0 8px 8px 0' : '0' 
           }`,
+          
         }}
       >
           <div className={`w-10 flex items-center justify-center ${currentStep === index ? 'bg-teal-600' : ''}`}
@@ -74,7 +77,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
           </div>
           <div className='w-10 flex items-center justify-center'>
             {currentStep === index ? (
-              <AiFillCheckCircle className={`h-6 w-6 text-white`} />
+              <AiOutlineRight className={`h-6 w-6 text-cyan-600`} />
             ) : completedSteps.includes(index) ? (
               <AiFillCheckCircle className="h-6 w-6 text-white" />
             ) : (

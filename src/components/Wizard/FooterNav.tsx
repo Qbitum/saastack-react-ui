@@ -10,6 +10,7 @@ export interface FooterNavProps {
   disabled:boolean;
   nextDisable:boolean;
   saveExit: () => void;
+  hidden:boolean;
   
 }
 
@@ -59,33 +60,13 @@ export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, curre
   const isLastStep = currentStep === totalSteps - 1;
   const isFirstStep = currentStep === 0;
   
-
-  // return (
-  //   <div className=' flex'>
-  //     <div className='flex flex-row-1 items-bottom '>
-  //     <Button className='m-1' onClick={onPrev} disabled={isFirstStep} >Previous </Button>
-  //     </div>
-  //     <div className=' flex float-right items-bottom '>
-  //     {/* ms-96  */}
-  //     <Button className='m-1 ' onClick={saveExit} >Save and Exit </Button>
-
-  //     <Button className='m-1 order-last bottom-0 right-0'  onClick={onNext}
-  //              disabled={nextDisable} 
-  //              style={nextDisable ? { opacity: 0.5 } : {}}
-              
-  //             >{isLastStep ? 'Finish' : 'Next'}</Button>
-  //     </div>
-  //   </div>
-  // )
-
-
   return (
     <div className='flex items-center'>
-      <Button className='m-1' onClick={onPrev} disabled={isFirstStep}>
+      <Button className='m-1' onClick={onPrev} disabled={isFirstStep} hidden>
         Previous
       </Button>
       <div className='flex flex-grow justify-end'>
-        <Button className='m-1' onClick={saveExit}>
+        <Button className='m-1' outline onClick={saveExit}>
           Save and Exit
         </Button>
         <Button className='m-1' onClick={onNext} disabled={nextDisable} style={nextDisable ? { opacity: 0.5 } : {}}>

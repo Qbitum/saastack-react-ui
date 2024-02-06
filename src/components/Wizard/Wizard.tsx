@@ -78,7 +78,6 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
   return (
     <div ref={ref} className='wizard flex flex-col h-full' data-test-id='wizard'>
       <div className='wizard-header'>
-      {/* top-0 left-0  right-0 fixed   z-50*/}
         {/* Add Header Style */}
         {headerStyle === 'header-progress' && (
           <HeaderProgress totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />
@@ -86,7 +85,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} onStep={2}/>}
         {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} onStep={2} />}
       </div>
-      <div className="flex-grow overflow-y-scroll">
+      <div className="flex-grow overflow-y-auto">
       {Children.map(children, (child, index) =>
         cloneElement(child as unknown as ReactElement, {
           className: index !== activeItemIndex ? 'hidden' : '',
@@ -95,12 +94,11 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       )}
       </div>
       <div className='wizard-footer '>
-      {/* fixed bottom-0 left-0 right-0 z-50 */}
         {/* Add Footer styles */}
-        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
+        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} hidden />}
 
-        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
-        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} saveExit={saveExit} />}
+        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} hidden />}
+        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} saveExit={saveExit} hidden />}
       </div>
     </div>
   );
