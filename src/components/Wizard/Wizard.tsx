@@ -76,7 +76,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
   const isNextDisabled = false;
 
   return (
-    <div ref={ref} className='wizard' data-test-id='wizard'>
+    <div ref={ref} className='wizard flex flex-col h-full' data-test-id='wizard'>
       <div className='wizard-header fixed top-0 left-0 right-0 z-50'>
         {/* Add Header Style */}
         {headerStyle === 'header-progress' && (
@@ -85,7 +85,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} onStep={2}/>}
         {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} onStep={2} />}
       </div>
-      <div className="overflow-y-scroll h-full">
+      <div className="flex-grow overflow-y-scroll">
       {Children.map(children, (child, index) =>
         cloneElement(child as unknown as ReactElement, {
           className: index !== activeItemIndex ? 'hidden' : '',
