@@ -3,6 +3,11 @@ import { Wizard } from './Wizard';
 import { WizardStep } from './WizardStep';
 import type { WizardProps } from './Wizard';
 import { useRef } from 'react';
+import { PageWrapper } from '../PageWrapper';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { Button } from '../Button';
+import { Page } from '../Page';
+import { SubHeader, SubHeaderLeft } from '../SubHeader';
 
 export default {
   title: 'Components/Wizard',
@@ -48,12 +53,23 @@ export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element =
   const wref = useRef(null);
 
   return (
-    <Wizard {...setStep}  headerStyle='header-tab'{...args} ref={wref}>
+    <PageWrapper className='bg-gray-700'>
+      <SubHeader>
+        <SubHeaderLeft heading="New Training">
+          <Button color="light" ><AiOutlineArrowLeft className="mr-2 h-5 w-5" />Back</Button>
+        </SubHeaderLeft>
+      </SubHeader>
+      <Page className='bg-cyan-700 h-24'>
+     
+      <Wizard {...setStep}  headerStyle='header-tab'{...args} ref={wref}>
       <WizardStep stepIndex="1" title="Upload Base Image"></WizardStep>
       <WizardStep stepIndex="2" title="AI Processing"></WizardStep>
       <WizardStep stepIndex="3" title="Sample Check"></WizardStep>
       <WizardStep stepIndex="4" title="Approval"></WizardStep>
-    </Wizard>
+     </Wizard>
+      </Page >
+    </PageWrapper>
+    
     
   );
 };

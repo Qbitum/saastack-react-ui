@@ -77,7 +77,8 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
 
   return (
     <div ref={ref} className='wizard flex flex-col h-full' data-test-id='wizard'>
-      <div className='wizard-header fixed top-0 left-0 right-0 z-50'>
+      <div className='wizard-header'>
+      {/* top-0 left-0  right-0 fixed   z-50*/}
         {/* Add Header Style */}
         {headerStyle === 'header-progress' && (
           <HeaderProgress totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />
@@ -93,7 +94,8 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
         })
       )}
       </div>
-      <div className='wizard-footer fixed bottom-0 left-0 right-0 z-50'>
+      <div className='wizard-footer '>
+      {/* fixed bottom-0 left-0 right-0 z-50 */}
         {/* Add Footer styles */}
         {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
 
