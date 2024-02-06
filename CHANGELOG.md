@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.4](https://github.com/themesberg/flowbite-react/compare/v0.8.3...v0.8.4) (2024-02-06)
+
+
+### Bug Fixes
+
+* lint error ([63753cf](https://github.com/themesberg/flowbite-react/commit/63753cf37abf87496c48252ae76661ddca5fc71b))
+* sidebar styles and wizard style chagnes ([f942494](https://github.com/themesberg/flowbite-react/commit/f942494ab6ea6bebdc4f67d9b695a9315211c735))
+* sidebar tooltipCHildren remove ([9938777](https://github.com/themesberg/flowbite-react/commit/99387773c13265f1ea06c2426fe281d48ec821c5))
+* subheader children ([4e88297](https://github.com/themesberg/flowbite-react/commit/4e88297665a9de575fcdb6d68a59d83e1497c2af))
+* wiard alignment ([c1d71a0](https://github.com/themesberg/flowbite-react/commit/c1d71a0d2fa4000fb11b3ea453c6a23c5db85a15))
+* wizard lm-footer-button ([eb69308](https://github.com/themesberg/flowbite-react/commit/eb693082ca6936187e4bbb51b7d7a6d245137837))
+* wizard nextDisable and initialStep ([37fecc3](https://github.com/themesberg/flowbite-react/commit/37fecc324cd4429efbb946ddf16febe6186bc682))
+
 ### [0.8.3](https://github.com/themesberg/flowbite-react/compare/v0.8.1...v0.8.3) (2024-01-31)
 
 
