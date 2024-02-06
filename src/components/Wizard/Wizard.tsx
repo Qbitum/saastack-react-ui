@@ -77,7 +77,7 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
 
   return (
     <div ref={ref} className='wizard' data-test-id='wizard'>
-      <div className='wizard-header'>
+      <div className='wizard-header fixed top-0 left-0 right-0 z-50'>
         {/* Add Header Style */}
         {headerStyle === 'header-progress' && (
           <HeaderProgress totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} />
@@ -85,15 +85,15 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
         {headerStyle === 'header-basic' && <HeaderBasic title={titles[activeItemIndex]} currentStep={activeItemIndex} totalSteps={totalSteps} onStep={2}/>}
         {headerStyle === 'header-tab' && <HeaderTab totalSteps={totalSteps} currentStep={activeItemIndex} onStepClick={handleStepClick} titles={titles} completedSteps={completedSteps} onStep={2} />}
       </div>
-
+      <div className="overflow-y-scroll h-full">
       {Children.map(children, (child, index) =>
         cloneElement(child as unknown as ReactElement, {
           className: index !== activeItemIndex ? 'hidden' : '',
           'aria-hidden': index !== activeItemIndex,
         })
       )}
-
-      <div className='wizard-footer'>
+      </div>
+      <div className='wizard-footer fixed bottom-0 left-0 right-0 z-50'>
         {/* Add Footer styles */}
         {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} />}
 
