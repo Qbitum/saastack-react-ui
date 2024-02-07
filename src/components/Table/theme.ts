@@ -13,7 +13,7 @@ export const tableTheme: FlowbiteTableTheme = {
     },
   },
   head: {
-    base: 'group/head text-xs uppercase text-primary-100 dark:text-gray-400 border-secondary-100 border-y ',
+    base: 'group/head text-xs uppercase text-themeGray-100 dark:text-gray-400 border-themeGray-70 p-0.5 border-y ',
     cell: {
       base: 'group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg dark:bg-gray-700 px-6 py-2 max-w-4',
     },

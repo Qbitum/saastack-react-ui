@@ -1,11 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryFn } from '@storybook/react';
-import Link from 'next/link';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Button } from '../Button';
-import { Checkbox } from '../Checkbox';
-import { Label } from '../Label';
-import { TextInput } from '../TextInput';
 import type { ModalProps } from './Modal';
 import { Modal } from './Modal';
 
@@ -84,7 +80,7 @@ FormElements.storyName = 'Form elements';
 FormElements.args = {
   children: (
     <>
-      <Modal.Header />
+      {/* <Modal.Header />
       <Modal.Body>
         <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
           <h3 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
@@ -119,7 +115,35 @@ FormElements.args = {
             </Link>
           </div>
         </div>
-      </Modal.Body>
+      </Modal.Body> */}
+
+return (
+    <>
+      <Button >Toggle modal</Button>
+      <Modal >
+        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Body>
+          <div className="space-y-6">
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
+              companies around the world are updating their terms of service agreements to comply.
+            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant
+              to ensure a common set of data rights in the European Union. It requires organizations to notify users as
+              soon as possible of high-risk data breaches that could personally affect them.
+            </p>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button >I accept</Button>
+          <Button >
+            Decline
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
     </>
   ),
 };
