@@ -29,3 +29,10 @@ DefaultButton.storyName = 'Default';
 DefaultButton.args = {
   children: 'Button',
 };
+
+export const Continue = Template.bind({});
+Continue.storyName = 'Continue';
+Continue.args = {
+  children: 'Button',
+  outline: true,
+};
