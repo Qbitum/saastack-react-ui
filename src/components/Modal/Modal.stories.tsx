@@ -2,13 +2,8 @@ import { action } from '@storybook/addon-actions';
 import type { Meta, StoryFn } from '@storybook/react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { Button } from '../Button';
-import { TextInput } from '../TextInput';
 import type { ModalProps } from './Modal';
 import { Modal } from './Modal';
-import { Label } from '../Label';
-import { Checkbox } from '../Checkbox';
-import Link from 'next/link';
-// import { LMModalHeader } from './ModalHeader';
 
 export default {
   title: 'Components/Modal',
