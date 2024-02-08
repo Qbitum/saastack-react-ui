@@ -49,7 +49,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
         key={index}
         style={{
           borderRadius: `${
-            index === 0 ? '8px 0 0 8px' : index === titles.length - 1 ? '0 8px 8px 0' : '0' 
+            index === 0 ? 'rounded-lg 0 0 rounded-lg' : index === titles.length - 1 ? '0 rounded-lg rounded-lg 0' : '0' 
           }`,
           
         }}
