@@ -32,7 +32,7 @@ export interface WizardProps {
   message?: string;
   changeStep?: (index: number) => void;
 }
-
+  /* eslint-disable @typescript-eslint/no-explicit-any */
 export const Wizard = forwardRef<any, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, saveExit, message,
   nextDisable = false,
   initialStep = 0
