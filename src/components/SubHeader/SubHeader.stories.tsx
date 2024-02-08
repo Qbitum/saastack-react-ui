@@ -29,13 +29,11 @@ export const Sizes = (): JSX.Element => (
 export const ButtonAndTitle = (): JSX.Element => (
   <div className="gap-3">
     <SubHeader h="sm" bg='sky'>
-      <SubHeaderLeft heading='Page title 2'></SubHeaderLeft>
-      <SubHeaderRight>
-        <Button  size={'sm'}>button</Button>
-      </SubHeaderRight>
+      <SubHeaderLeft heading='Page title 2'>
+      <Button  color='secondary' clear size={'sm'}>button</Button>
+      </SubHeaderLeft>
     </SubHeader>
     <div className='flex bg-grey-50'>
-      <p>this iis the page header content</p>
     </div>
   </div>
 );

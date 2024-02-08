@@ -30,6 +30,7 @@ export interface FlowbiteButtonTheme {
   inner: FlowbiteButtonInnerTheme;
   label: string;
   outline: FlowbiteButtonOutlineTheme;
+  clear: FlowbiteButtonOutlineTheme;
   pill: FlowbiteBoolean;
   size: ButtonSizes;
 }
@@ -38,6 +39,7 @@ export interface FlowbiteButtonInnerTheme {
   base: string;
   position: PositionInButtonGroup;
   outline: string;
+  clear: string;
   isProcessingPadding: ButtonSizes;
 }
 
@@ -80,6 +82,7 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   processingSpinner?: ReactNode;
   label?: ReactNode;
   outline?: boolean;
+  clear?: boolean;
   pill?: boolean;
   positionInGroup?: keyof PositionInButtonGroup;
   size?: keyof ButtonSizes;
@@ -100,6 +103,7 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
     gradientMonochrome,
     label,
     outline = false,
+    clear = false,
     pill = false,
     positionInGroup = 'none',
     size = 'md',
@@ -124,6 +128,8 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
         gradientDuoTone && !gradientMonochrome && theme.gradientDuoTone[gradientDuoTone],
         !gradientDuoTone && gradientMonochrome && theme.gradient[gradientMonochrome],
         outline && (theme.outline.color[color] ?? theme.outline.color.default),
+        clear && (theme.clear.color[color] ?? theme.clear.color.default),
+
         theme.pill[pill ? 'on' : 'off'],
         fullSized && theme.fullSized,
         groupTheme.position[positionInGroup],
@@ -135,9 +141,13 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
         className={twMerge(
           theme.inner.base,
           theme.outline[outline ? 'on' : 'off'],
+          theme.clear[clear ? 'on' : 'off'],
+
           theme.outline.pill[outline && pill ? 'on' : 'off'],
           theme.size[size],
           outline && !theme.outline.color[color] && theme.inner.outline,
+          clear && !theme.clear.color[color] && theme.inner.clear,
+
           isProcessing && theme.isProcessing,
           isProcessing && theme.inner.isProcessingPadding[size],
           theme.inner.position[positionInGroup],

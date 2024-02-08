@@ -14,7 +14,7 @@ export default {
   // component: Wizard,
 } as Meta;
 
-const Template: StoryFn = ({ children, setStep, saveExit }) => <Wizard onStepChange={setStep} saveExit={saveExit}>{children}</Wizard>;
+const Template: StoryFn = ({ children, setStep, saveExit , onmessage}) => <Wizard onmessage={onmessage}onStepChange={setStep} saveExit={saveExit}>{children}</Wizard>;
 
 export const DefaultWizard = Template.bind({});
 DefaultWizard.storyName = 'Wizard';
@@ -87,8 +87,7 @@ LMWizard.args = {
 
   nextDisable: false, 
   initialStep: 0, 
-
-  
+// onmessage: "hi",
   footerStyle: 'lm-footer-button',
 
 };

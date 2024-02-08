@@ -30,12 +30,13 @@ export interface WizardProps {
   nextDisable?: boolean;
   initialStep?: number; 
   saveExit: () => void;
+  onmessage: string;
   
 
 
 }
 
-export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, saveExit,
+export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, saveExit, onmessage,
   nextDisable = false,
   initialStep = 0
 }, ref) => {
@@ -96,10 +97,10 @@ export const Wizard = forwardRef<HTMLDivElement, WizardProps>(({ headerStyle, fo
       </div>
       <div className='wizard-footer '>
         {/* Add Footer styles */}
-        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} hidden />}
+        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} onmessage={onmessage} hidden />}
 
-        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} hidden />}
-        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} saveExit={saveExit} hidden />}
+        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} onmessage={onmessage} hidden />}
+        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} saveExit={saveExit} onmessage={onmessage} hidden />}
       </div>
     </div>
   );
