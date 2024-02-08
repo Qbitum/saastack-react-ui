@@ -100,7 +100,6 @@ const ButtonComponentFn = <T extends ElementType = 'button'>(
     gradientMonochrome,
     label,
     outline = false,
-    clear = false,
     pill = false,
     positionInGroup = 'none',
     size = 'md',
