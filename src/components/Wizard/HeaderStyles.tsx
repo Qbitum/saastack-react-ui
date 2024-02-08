@@ -38,7 +38,7 @@ export const HeaderTab: React.FC<HeaderTabProps> = ({  titles, currentStep, comp
   // };
 
   return (
-    <div className='flex items-center justify-between mb-10 top-0 '>
+    <div className='flex items-center justify-between'>
       {titles.map((title, index) => (
         <div
         className={`w-full relative flex items-stretch items-center transition-all duration-300

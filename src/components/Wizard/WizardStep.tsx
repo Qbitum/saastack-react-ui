@@ -11,7 +11,7 @@ export interface WizardStepProps {
 
 export const WizardStep: React.FC<WizardStepProps>  = ( {children,className} ) => {
     return (
-			<div className={classNames('wizard-item flex flex-auto', className)}>
+			<div className={classNames('wizard-item flex flex-auto border p-2', className)}>
         {children}
       </div>
     )

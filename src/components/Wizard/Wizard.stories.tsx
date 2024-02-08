@@ -14,7 +14,7 @@ export default {
   // component: Wizard,
 } as Meta;
 
-const Template: StoryFn = ({ children, setStep, saveExit , onmessage}) => <Wizard onmessage={onmessage}onStepChange={setStep} saveExit={saveExit}>{children}</Wizard>;
+const Template: StoryFn = ({ children, setStep, saveExit , onmessage}) => <Wizard message={onmessage}onStepChange={setStep} saveExit={saveExit}>{children}</Wizard>;
 
 export const DefaultWizard = Template.bind({});
 DefaultWizard.storyName = 'Wizard';
@@ -50,10 +50,11 @@ ProgressWizard.args = {
 
 
 export const LMWizard = (args: WizardProps, setStep: WizardProps): JSX.Element => {
-  const wref = useRef(null);
-
+  const wref = useRef<WizardProps>(null);
+  
+  
   return (
-    <PageWrapper className='bg-gray-700'>
+    <PageWrapper className='bg-slate-300'>
       <SubHeader>
         <SubHeaderLeft heading="New Training">
           <Button color="light" ><AiOutlineArrowLeft className="mr-2 h-5 w-5" />Back</Button>
