@@ -30,6 +30,7 @@ export interface WizardProps {
   nextDisable?: boolean;
   initialStep?: number; 
   saveExit: () => void;
+  
 
 
 }
