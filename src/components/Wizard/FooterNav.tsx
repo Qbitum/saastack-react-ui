@@ -79,16 +79,7 @@ export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, curre
   // );
   return (
     <div className='flex items-center'>
-            
-      {isSecondStep && (
-        <div className='flex items-center'>
-             <Button className='m-1' outline onClick={onPrev} disabled={isFirstStep} hidden>
-               Previous
-             </Button>
-             
-           </div>
-      )
-      }
+  
       {isSecondStep && (
         <div className='flex items-center'>
              <Button className='m-1' outline onClick={onPrev} disabled={isFirstStep} hidden>
