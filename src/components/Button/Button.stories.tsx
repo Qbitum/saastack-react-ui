@@ -35,4 +35,6 @@ Continue.storyName = 'Continue';
 Continue.args = {
   children: 'Button',
   outline: true,
+  color:"secondary",
+  size:'xs',
 };
