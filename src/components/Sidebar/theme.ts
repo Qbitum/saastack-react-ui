@@ -2,12 +2,12 @@ import type { FlowbiteSidebarTheme } from './Sidebar';
 
 export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
-    base: 'h-full',
+    base: 'h-full bg-gradient-to-t from-cyan-500 to-blue-500 rounded-r-lg',
     collapsed: {
       on: 'w-20',
       off: 'w-64',
     },
-    inner: 'h-full overflow-hidden shadow-lg pb-4 rounded-r-lg bg-sky-400 dark:bg-gray-800',
+    inner: 'h-fit overflow-hidden shadow-lg pb-4',
   },
   collapse: {
     button:
@@ -74,7 +74,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
     base: 'mt-4 space-y-5 px-4 mb-4 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 dark:border-gray-700',
   },
   logo: {
-    base: 'mb-5 flex items-center bg-sky-800 p-4',
+    base: 'mb-5 flex items-center bg-sky-800 p-4 rounded-r-lg',
     collapsed: {
       on: 'hidden',
       off: 'self-center whitespace-nowrap text-xl font-semibold dark:text-white',
