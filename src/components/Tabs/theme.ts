@@ -24,7 +24,7 @@ export const tabTheme: FlowbiteTabsTheme = {
         underline: {
           base: 'rounded-t-lg',
           active: {
-            on: 'text-primary-100 font-bold rounded-t-lg border-b-4 border-primary-100 active dark:text-cyan-500 dark:border-cyan-500',
+            on: 'text-secondary-400 font-bold rounded-t-lg border-b-4 border-secondary-400 active dark:text-cyan-500 dark:border-cyan-500',
             off: 'border-b-4 border-transparent text-themeGray-100 hover:border-themeGray-70 hover:text-themeGray-200 dark:text-gray-400 dark:hover:text-gray-300',
           },
         },

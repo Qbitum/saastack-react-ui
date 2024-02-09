@@ -122,7 +122,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       middle: 'rounded-none',
       end: 'rounded-l-none',
     },
-    outline: 'border border-transparent text-red-600',
+    outline: 'border border-transparent',
     isProcessingPadding: {
       xs: 'pl-8',
       sm: 'pl-10',
@@ -136,10 +136,10 @@ export const buttonTheme: FlowbiteButtonTheme = {
     'ml-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cyan-200 text-xs font-semibold ',//text-cyan-800
   outline: {
     color: {
-      gray: 'border border-gray-400 bg-white dark:border-white text-gray-100 text-xs',
-      primary: 'border border-primary-100 bg-white text-primary-100 text-xs',
-      secondary: 'border border-secondary-100 bg-white text-secondary-100 text-xs',
-      tertiary: 'border border-tertiary-100 bg-white text-tertiary-100 text-xs',
+      gray: 'border border-gray-400 enabled:hover:bg-gray-80 bg-white dark:border-white text-gray-100 text-xs',
+      primary: 'border border-primary-100 enabled:hover:bg-primary-80 bg-white text-primary-100 text-xs',
+      secondary: 'border border-secondary-100 enabled:hover:bg-secondary-80 bg-white text-secondary-100 text-xs',
+      tertiary: 'border border-tertiary-100 enabled:hover:bg-tertiary-80 bg-white text-tertiary-100 text-xs',
       failure: 'border border-themeFailure-100 bg-white',
       success: 'border border-themeSuccess-100 bg-white',
       info: 'border border-themeInfo-100 bg-white',
@@ -156,7 +156,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       default: 'border-0',
     },
     off: '',
-    on: 'flex justify-center bg-white transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-xs',//text-gray-900
+    on: 'flex justify-center bg-white transition-all duration-75 ease-in dark:bg-gray-900 group-enabled:group-hover:bg-opacity-0 dark:text-white w-full text-xs',//text-gray-900
     pill: {
       off: 'rounded-md',
       on: 'rounded-full',
@@ -175,10 +175,10 @@ export const buttonTheme: FlowbiteButtonTheme = {
   },
   clear: {
     color: {
-      gray: 'border border-gray-400 bg-white dark:border-white ',
-      primary: 'border border-transparent bg-transparent text-primary-100 text-xs',
-      secondary: 'border border-transparent bg-transparent text-secondary-100 text-xs',
-      tertiary: 'border border-transparent bg-white text-tertiary-100 text-xs',
+      gray: 'border border-gray-400 enabled:hover:bg-gray-80 bg-white dark:border-white ',
+      primary: 'border border-transparent enabled:hover:bg-primary-80 bg-transparent text-primary-100 text-xs',
+      secondary: 'border border-transparent enabled:hover:bg-secondary-80 bg-transparent text-secondary-100 text-xs',
+      tertiary: 'border border-transparent enabled:hover:bg-tertiary-80 bg-white text-tertiary-100 text-xs',
       failure: 'border border-transparent bg-white',
       success: 'border border-transparent bg-white',
       info: 'border border-transparent bg-white',
@@ -195,7 +195,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       default: 'border-0',
     },
     off: '',
-    on: 'flex justify-center bg-transparent transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-secondary-100 text-xs',//text-gray-900
+    on: 'flex justify-center bg-transparent transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-xs',//text-gray-900
     pill: {
       off: 'rounded-md',
       on: 'rounded-full',
