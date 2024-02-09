@@ -2,7 +2,7 @@ import type { FlowbiteButtonTheme } from './Button';
 import type { FlowbiteButtonGroupTheme } from './ButtonGroup';
 
 export const buttonTheme: FlowbiteButtonTheme = {
-  base: 'group flex items-stretch items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none transition-all duration-50 ease-in uppercase min-w-32',
+  base: 'group flex items-stretch items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none transition-all duration-50 ease-in uppercase min-w-32 min-h-0.5 text-xs',
   fullSized: 'w-full',
   color: {
     primary:
@@ -12,7 +12,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       'text-btntext-secondary bg-secondary-100 border border-transparent enabled:hover:bg-secondary-200 focus:ring-4 focus:ring-secondary-60 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700 text-xs',
 
     tertiary:
-      'text-btntext-tertiary bg-tertiary-100 border border-transparent enabled:hover:bg-tertiary-200 focus:ring-4 focus:ring-tertiary-60 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800',
+      'text-btntext-tertiary bg-tertiary-100 border border-transparent enabled:hover:bg-tertiary-200 focus:ring-4 focus:ring-tertiary-60 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 text-xs',
 
     failure:
       'text-btntext-themeFailure bg-themeFailure-100 border border-transparent enabled:hover:bg-themeFailure-200 focus:ring-4 focus:ring-themeFailure-60 dark:bg-red-600 dark:enabled:hover:bg-red-700 dark:focus:ring-red-900',
@@ -28,9 +28,9 @@ export const buttonTheme: FlowbiteButtonTheme = {
     dark: 'text-white bg-gray-800 border border-transparent enabled:hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 dark:bg-gray-800 dark:enabled:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700',
 
     light:
-      'text-gray-900 bg-white border border-gray-300 enabled:hover:bg-gray-100 focus:ring-4 focus:ring-cyan-300 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700',
+      'text-gray-900 bg-white border border-gray-300 enabled:hover:bg-gray-100 focus:ring-4 focus:ring-cyan-300 dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:enabled:hover:bg-gray-700 dark:enabled:hover:border-gray-700 dark:focus:ring-gray-700 text-xs',
 
-    blue: 'text-white bg-blue-700 border border-transparent enabled:hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
+    blue: 'text-white bg-blue-700 border border-transparent enabled:hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 text-xs',
 
     green:
       'text-white bg-green-700 border border-transparent enabled:hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:text-white dark:border-green-600 dark:enabled:hover:bg-green-700 dark:enabled:hover:border-green-700 dark:focus:ring-green-700',
@@ -139,7 +139,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       gray: 'border border-gray-400 bg-white dark:border-white text-gray-100 text-xs',
       primary: 'border border-primary-100 bg-white text-primary-100 text-xs',
       secondary: 'border border-secondary-100 bg-white text-secondary-100 text-xs',
-      tertiary: 'border border-tertiary-100 bg-white text-tertiary-100',
+      tertiary: 'border border-tertiary-100 bg-white text-tertiary-100 text-xs',
       failure: 'border border-themeFailure-100 bg-white',
       success: 'border border-themeSuccess-100 bg-white',
       info: 'border border-themeInfo-100 bg-white',
@@ -156,7 +156,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       default: 'border-0',
     },
     off: '',
-    on: 'flex justify-center bg-white transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full',//text-gray-900
+    on: 'flex justify-center bg-white transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-xs',//text-gray-900
     pill: {
       off: 'rounded-md',
       on: 'rounded-full',
@@ -176,9 +176,9 @@ export const buttonTheme: FlowbiteButtonTheme = {
   clear: {
     color: {
       gray: 'border border-gray-400 bg-white dark:border-white ',
-      primary: 'border border-transparent bg-transparent text-primary-100',
-      secondary: 'border border-transparent bg-transparent text-secondary-100',
-      tertiary: 'border border-transparent bg-white text-tertiary-100',
+      primary: 'border border-transparent bg-transparent text-primary-100 text-xs',
+      secondary: 'border border-transparent bg-transparent text-secondary-100 text-xs',
+      tertiary: 'border border-transparent bg-white text-tertiary-100 text-xs',
       failure: 'border border-transparent bg-white',
       success: 'border border-transparent bg-white',
       info: 'border border-transparent bg-white',
@@ -195,7 +195,7 @@ export const buttonTheme: FlowbiteButtonTheme = {
       default: 'border-0',
     },
     off: '',
-    on: 'flex justify-center bg-transparent transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-secondary-100 ',//text-gray-900
+    on: 'flex justify-center bg-transparent transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full text-secondary-100 text-xs',//text-gray-900
     pill: {
       off: 'rounded-md',
       on: 'rounded-full',
