@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.5](https://github.com/themesberg/flowbite-react/compare/v0.8.4...v0.8.5) (2024-02-09)
+
+
+### Bug Fixes
+
+* build error fix ([eb9b22c](https://github.com/themesberg/flowbite-react/commit/eb9b22c7b1b26ae5c18983c7b32d98042442d3fc))
+* build error fix ([0f7089b](https://github.com/themesberg/flowbite-react/commit/0f7089ba57ce702288e90157248ed0566a2c0f00))
+* build errors ([9c2d391](https://github.com/themesberg/flowbite-react/commit/9c2d39140c9ff57ce5839efb3262f2f563131454))
+* cange clases ([b1d7166](https://github.com/themesberg/flowbite-react/commit/b1d7166b81adde717c5f6bfade0152e901ccb416))
+* clear button added ([efeca5c](https://github.com/themesberg/flowbite-react/commit/efeca5ce11d52a13ceb1592a2810c64a24be3c2c))
+* menu gradient changes ([2faa896](https://github.com/themesberg/flowbite-react/commit/2faa896d4247f92765c08fcb056257c60d7e0bc9))
+* modal header and footer ([b5f9749](https://github.com/themesberg/flowbite-react/commit/b5f974913c95ed2fdf75ae6923051596298a4aa6))
+* outline button colour change according to theme ([8a886ed](https://github.com/themesberg/flowbite-react/commit/8a886ed7ac632ea8755dfe27740bfd066415616a))
+* table view ([6f7ce69](https://github.com/themesberg/flowbite-react/commit/6f7ce6973e8ee35496ec510d7cda4081b603653c))
+* uppercase button, button width ([a2c3959](https://github.com/themesberg/flowbite-react/commit/a2c39590de49deeab9a265946a5f36ad74285e41))
+* wiard alignment ([d9491b6](https://github.com/themesberg/flowbite-react/commit/d9491b6d31c787d92f7c8613aaeb570bd0023d05))
+* wizard , sidebar ([26e2ed2](https://github.com/themesberg/flowbite-react/commit/26e2ed296ab3a765a6ef186a19ecf8e90c5ffb44))
+* wizard footer UI ([45158fe](https://github.com/themesberg/flowbite-react/commit/45158fec5af2f6868e024a997c0c5bb285a3e63a))
+* wizard header alignment ([519925f](https://github.com/themesberg/flowbite-react/commit/519925f88472924823aab2a74eb3de0281535af0))
+* wizard spacing ([79ef053](https://github.com/themesberg/flowbite-react/commit/79ef053adb85267a0310ba628fcb86e015b28801))
+* wizard-item height ([00cb6c5](https://github.com/themesberg/flowbite-react/commit/00cb6c5f720b96767b48fe44c251116fc924efe3))
+
 ### [0.8.4](https://github.com/themesberg/flowbite-react/compare/v0.8.3...v0.8.4) (2024-02-06)
 
 
