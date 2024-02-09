@@ -7,7 +7,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
       on: 'w-20',
       off: 'w-64',
     },
-    inner: 'h-fit overflow-hidden shadow-lg pb-4',
+    inner: 'h-full bg-menu bg-cover bg-center overflow-hidden shadow-lg pb-4',
   },
   collapse: {
     button:
