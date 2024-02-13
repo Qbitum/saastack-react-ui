@@ -30,7 +30,7 @@ export const selectTheme: FlowbiteSelectTheme = {
         lg: 'sm:text-md p-4',
       },
       colors: {
-        gray: 'border-themeGray-100 bg-white text-defultText placeholder-themeGray-80 focus:border-themeGray-200 focus:ring-themeGray-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        gray: 'border-themeGray-65 bg-white text-defultText placeholder-themeGray-80 focus:border-themeGray-200 focus:ring-themeGray-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
         
         info: 'border-themeInfo-100 bg-themeInfo-60 text-defultText placeholder-themeGray-80 focus:border-themeInfo-200 focus:ring-themeInfo-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
 

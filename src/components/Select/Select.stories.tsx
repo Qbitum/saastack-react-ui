@@ -28,6 +28,7 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
   id: 'countries',
   icon: BsFlagFill,
+  color:'gray',
   children: (
     <>
       <option>United States</option>
