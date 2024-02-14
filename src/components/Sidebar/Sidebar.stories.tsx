@@ -301,16 +301,16 @@ MLSidebar.args = {
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={HiChartPie}>
-            Dashboard
+            DB
           </Sidebar.Item>
           <Sidebar.Item href="#" icon={HiViewBoards}>
-            Kanban
+            Job List
           </Sidebar.Item>
           <Sidebar.Item active={true} href="#" icon={HiInbox}>
-            Inbox
+            + New
           </Sidebar.Item>
           <Sidebar.Item href="#" icon={HiUser}>
-            Users
+            Report
           </Sidebar.Item>
           <Sidebar.Item href="#" icon={HiShoppingBag}>
             Products

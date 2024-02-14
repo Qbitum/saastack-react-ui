@@ -4,7 +4,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
     base: 'h-full bg-gradient-to-t from-cyan-500 to-blue-500 rounded-r-lg',
     collapsed: {
-      on: 'w-24',
+      on: 'w-20',
       off: 'w-64',
     },
     inner: 'h-full bg-menu bg-cover bg-center text-center shadow-lg pb-4',
