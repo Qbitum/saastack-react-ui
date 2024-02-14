@@ -4,10 +4,10 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
     base: 'h-full bg-gradient-to-t from-cyan-500 to-blue-500 rounded-r-lg',
     collapsed: {
-      on: 'w-20',
+      on: 'w-24',
       off: 'w-64',
     },
-    inner: 'h-full bg-menu bg-cover bg-center overflow-hidden shadow-lg pb-4',
+    inner: 'h-full bg-menu bg-cover bg-center text-center shadow-lg pb-4',
   },
   collapse: {
     button:
@@ -49,7 +49,7 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
   },
   item: {
     base: 'flex items-center justify-center p-1 rounded text-sm font-normal hover:text-sky-400 hover:bg-blue-200 dark:text-white dark:hover:bg-gray-700',
-    active: 'bg-blue-200 dark:bg-gray-800',
+    active: 'bg-blue-50 dark:bg-gray-800',
     collapsed: {
       insideCollapse: 'group pl-8 transition duration-75',
       noIcon: 'font-bold',
@@ -62,8 +62,8 @@ export const sidebarTheme: FlowbiteSidebarTheme = {
       active: 'text-sky-400',
     },
     label: {
-      base:'text-xs font-bold text-left overflow-hidden',
-      active:''
+      base:'text-xs font-bold text-center',
+      active:'text-sky-400'
     },
     listItem: 'text-blue-200',
   },

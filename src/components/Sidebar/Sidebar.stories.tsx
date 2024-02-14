@@ -287,3 +287,44 @@ LogoBranding.args = {
   ),
   collapsed: true,
 };
+
+
+
+export const MLSidebar = Template.bind({});
+MLSidebar.storyName = 'ML Sidebar';
+MLSidebar.args = {
+  children: (
+    <>
+      <Sidebar.Logo href="#" img="favicon.svg" imgAlt="Flowbite logo">
+        Flowbite
+      </Sidebar.Logo>
+      <Sidebar.Items>
+        <Sidebar.ItemGroup>
+          <Sidebar.Item href="#" icon={HiChartPie}>
+            Dashboard
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={HiViewBoards}>
+            Kanban
+          </Sidebar.Item>
+          <Sidebar.Item active={true} href="#" icon={HiInbox}>
+            Inbox
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={HiUser}>
+            Users
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={HiShoppingBag}>
+            Products
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={HiArrowSmRight}>
+            Sign In
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={HiTable}>
+            Sign Up
+          </Sidebar.Item>
+        </Sidebar.ItemGroup>
+      </Sidebar.Items>
+    </>
+  ),
+  collapsed: false,
+  
+};
