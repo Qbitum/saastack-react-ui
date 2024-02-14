@@ -61,4 +61,5 @@ TableWithIcons.storyName = 'Table with icons';
 TableWithIcons.args = {
   layout: 'table',
   showIcons: true,
+  color:''
 };

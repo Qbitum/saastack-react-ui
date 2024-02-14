@@ -22,7 +22,7 @@ DefaultTable.args = {
   children: (
     <>
       <Table>
-        <Table.Head>
+        <Table.Head >
           <Table.HeadCell>Product name</Table.HeadCell>
           <Table.HeadCell>Color</Table.HeadCell>
           <Table.HeadCell>Category</Table.HeadCell>
@@ -32,8 +32,8 @@ DefaultTable.args = {
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Row >
+            <Table.Cell >
               {'Apple MacBook Pro 17"'}
             </Table.Cell>
             <Table.Cell>Sliver</Table.Cell>
@@ -45,8 +45,8 @@ DefaultTable.args = {
               </a>
             </Table.Cell>
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Row >
+            <Table.Cell>
               Microsoft Surface Pro
             </Table.Cell>
             <Table.Cell>White</Table.Cell>
@@ -58,8 +58,8 @@ DefaultTable.args = {
               </a>
             </Table.Cell>
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Row >
+            <Table.Cell >
               Magic Mouse 2
             </Table.Cell>
             <Table.Cell>Black</Table.Cell>
@@ -71,8 +71,8 @@ DefaultTable.args = {
               </a>
             </Table.Cell>
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Row >
+            <Table.Cell >
               Google Pixel Phone
             </Table.Cell>
             <Table.Cell>Gray</Table.Cell>
@@ -84,8 +84,8 @@ DefaultTable.args = {
               </a>
             </Table.Cell>
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Row >
+            <Table.Cell>
               Apple Watch 5
             </Table.Cell>
             <Table.Cell>Red</Table.Cell>
@@ -107,7 +107,7 @@ export const InprogressView = Template.bind({});
 InprogressView.args = {
   children: (
     <>
-      <Table>
+      <Table className='h-full'>
         <Table.Head>
           <Table.HeadCell>ADDED DATE</Table.HeadCell>
           <Table.HeadCell>JOB NUMBER</Table.HeadCell>
@@ -122,8 +122,10 @@ InprogressView.args = {
           </Table.HeadCell>
         </Table.Head>
         <TableBody>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">22-Nov-2023</Table.Cell>
+        {/* className="bg-white dark:border-gray-700 dark:bg-gray-800" */}
+          <Table.Row >
+          {/* className="whitespace-nowrap font-xs text-gray-900 dark:text-white" */}
+            <Table.Cell>22-Nov-2023</Table.Cell>
             <Table.Cell>000001</Table.Cell>
             <Table.Cell>PO-001982</Table.Cell>
             <Table.Cell>VS</Table.Cell>
@@ -146,7 +148,7 @@ InprogressView.args = {
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">22-Nov-2023</Table.Cell>
-            <Table.Cell>000001</Table.Cell>
+            <Table.Cell className=''>000001</Table.Cell>
             <Table.Cell>PO-001982</Table.Cell>
             <Table.Cell>VS</Table.Cell>
             <Table.Cell>STY-NYK009</Table.Cell>
