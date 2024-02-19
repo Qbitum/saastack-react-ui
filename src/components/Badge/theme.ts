@@ -33,10 +33,10 @@ export const badgeTheme: FlowbiteBadgeTheme = {
         'bg-yellow-100 text-yellow-800 dark:bg-yellow-200 dark:text-yellow-900 group-hover:bg-yellow-200 dark:group-hover:bg-yellow-300 text-center w-24 text-left text-center',
       amber:
       'bg-amber-200 text-stone-600 dark:bg-yellow-200 dark:text-yellow-900 group-hover:bg-yellow-200 dark:group-hover:bg-yellow-300 rounded-[40px] text-center',
-    rpYellow: 'bg-amber-200 text-yellow-700',
-    paBlue: 'bg-cyan-200 text-cyan-700',
-    pfPink: 'bg-pink-300 text-pink-800',
-    prIndigo: 'bg-indigo-200 text-blue-800'
+    rpYellow: 'bg-amber-200 text-yellow-700 pt-1 pb-1',
+    paBlue: 'bg-cyan-200 text-cyan-700 pt-1 pb-1',
+    pfPink: 'bg-pink-300 text-pink-800 pt-1 pb-1',
+    prIndigo: 'bg-indigo-200 text-blue-800 pt-1 pb-1'
     },
     href: 'group',
     size: {

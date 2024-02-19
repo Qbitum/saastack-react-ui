@@ -77,7 +77,7 @@ ReadyToProcessJobLIst.args = {
 export const ProcessingJobLIst = Template.bind({});
 ProcessingJobLIst.storyName = 'ProcessingJobLIst';
 ProcessingJobLIst.args = {
-  color: 'purple',
+  color: 'paBlue',
   children: 'Processing',
   pill:true
 };

@@ -4,6 +4,7 @@ import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, Hi
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Sidebar } from './Sidebar';
+import { AiOutlineUser, AiOutlineInfo, AiOutlineLogin } from 'react-icons/ai';
 
 export default {
   title: 'Components/Sidebar',
@@ -295,36 +296,39 @@ MLSidebar.storyName = 'ML Sidebar';
 MLSidebar.args = {
   children: (
     <>
-      <Sidebar.Logo href="#" img="favicon.svg" imgAlt="Flowbite logo">
-        Flowbite
-      </Sidebar.Logo>
-      <Sidebar.Items>
-        <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={HiChartPie}>
-            DB
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiViewBoards}>
-            Job List
-          </Sidebar.Item>
-          <Sidebar.Item active={true} href="#" icon={HiInbox}>
-            + New
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiUser}>
-            Report
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiShoppingBag}>
-            Products
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiArrowSmRight}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiTable}>
-            Sign Up
-          </Sidebar.Item>
-        </Sidebar.ItemGroup>
-      </Sidebar.Items>
+
+        <Sidebar.Logo
+          href="#"
+          img="favicon.svg"
+          imgAlt="logo"
+        ></Sidebar.Logo>
+        <Sidebar.Items className="flex flex-col">
+          {/* top icons */}
+          <Sidebar.ItemGroup className="">
+          <Sidebar.Item href="#" icon={AiOutlineInfo}>DB</Sidebar.Item>
+          <Sidebar.Item href="#" icon={AiOutlineInfo}>Job List</Sidebar.Item>
+          <Sidebar.Item href="#" icon={AiOutlineInfo}>+ New</Sidebar.Item>
+          <Sidebar.Item href="#" icon={AiOutlineInfo}>Report</Sidebar.Item>
+
+          </Sidebar.ItemGroup>
+          {/* bottom icons */}
+          <div className="mt-24 border rounded-lg bg-white bg-opacity-30 m-4">
+          {/* w-12  self-center*/}
+          <Sidebar.ItemGroup>
+          {/* self-center */}
+            <Sidebar.Item href="#" icon={AiOutlineUser}>
+            </Sidebar.Item>
+            <Sidebar.Item href="#" icon={AiOutlineInfo}>
+            </Sidebar.Item>
+            <Sidebar.Item href="#" icon={AiOutlineLogin}>
+            </Sidebar.Item>
+          </Sidebar.ItemGroup>
+          </div>
+
+        </Sidebar.Items>
+        
     </>
   ),
-  collapsed: false,
+  collapsed: true,
   
 };
