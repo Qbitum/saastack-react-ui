@@ -2,7 +2,7 @@ import type { FlowbitePageWrapperTheme } from './PageWrapper';
 
 export const PageWrapperTheme: FlowbitePageWrapperTheme = {
   root: {
-    base: 'text-sm overflow-hidden flex flex-col h-full py-4 pr-4 text-black',
+    base: 'text-sm overflow-hidden flex flex-col h-full py-4 pr-4 pl-4 text-black',
     color: {
       default: 'bg-sky-50',
       primary: 'bg-primary-100',
@@ -29,5 +29,7 @@ export const PageWrapperTheme: FlowbitePageWrapperTheme = {
       teal: 'text-teal-900 bg-white border border-teal-300 enabled:hover:bg-teal-100 focus:ring-4 focus:ring-teal-300 dark:bg-teal-600 dark:text-white dark:border-teal-600 dark:enabled:hover:bg-teal-700 dark:enabled:hover:border-teal-700 dark:focus:ring-teal-700',
       white: 'text-black bg-white',
     },
+    inner: '',
+    // h-full bg-page bg-cover bg-center text-center shadow-lg pb-4
   },
 };

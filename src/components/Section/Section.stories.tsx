@@ -15,5 +15,5 @@ DefaultSection.args = {
   children: 'Section',
   className: 'bg-gray-600' ,
   radius: 'xl'
-  
+
 };

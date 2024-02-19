@@ -14,6 +14,7 @@ export interface FlowbitePageWrapperTheme {
 export interface FlowbitePageWrapperRootTheme {
   base: string;
   color: FlowbiteColors;
+  inner: string;
 }
 
 export interface PageWrapperProps extends Omit<ComponentProps<'div'>, 'color'> {
@@ -37,13 +38,14 @@ export const PageWrapper: FC<PageWrapperProps> = ({
     const wrapperClasses = classNames(
       twMerge(theme.root.base, 
         theme.root.color[color], 
-        className)           
+        className,theme.root.inner)           
         
     );
 
   return (
       <div className={wrapperClasses} data-testid="flowbite-PageWrapper">
     <Mounted>{children}</Mounted>
+    {/* <Mounted><div className={theme.root.inner}>{children}</div></Mounted> */}
   </div>
   );
 };
