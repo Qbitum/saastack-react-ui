@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.6](https://github.com/themesberg/flowbite-react/compare/v0.8.5...v0.8.6) (2024-02-19)
+
+
+### Bug Fixes
+
+* added selector border colour, added badge colours ([69c8a1c](https://github.com/themesberg/flowbite-react/commit/69c8a1ccd0383c48e74bbeed85f9f0726637683c))
+* button size ([04924db](https://github.com/themesberg/flowbite-react/commit/04924dbb832b80656ce4836e8950ce3b98af3bf4))
+* menu background as default ([eb300f9](https://github.com/themesberg/flowbite-react/commit/eb300f9293bb9995bdc4a7f4eb406cc98ee2b319))
+* outline button , clear button hover colour and theme on tabs ([11e6322](https://github.com/themesberg/flowbite-react/commit/11e6322eecc8f0a36cb1a22e791720fb99c07cb5))
+* remove bg ([6c4685b](https://github.com/themesberg/flowbite-react/commit/6c4685b52e09b96a9df05959137468a5f303a3fb))
+* sidebar dashboard wording alignment ([6ff6ac7](https://github.com/themesberg/flowbite-react/commit/6ff6ac7b711668e6ec91abde62091b6aefc1c7a2))
+* sidebar width ([d591b54](https://github.com/themesberg/flowbite-react/commit/d591b5420894fff5001f18dd4159ab30934cb48d))
+* table ([404d2a1](https://github.com/themesberg/flowbite-react/commit/404d2a1e3f6dc32eacbc18ce61deb1bc776a12c9))
+* table, pagination colour ([3db6e09](https://github.com/themesberg/flowbite-react/commit/3db6e0952b858aee93e30f99a158436d9ee1e294))
+
 ### [0.8.5](https://github.com/themesberg/flowbite-react/compare/v0.8.4...v0.8.5) (2024-02-09)
 
 
