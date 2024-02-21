@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.7](https://github.com/themesberg/flowbite-react/compare/v0.8.6...v0.8.7) (2024-02-21)
+
+
+### Bug Fixes
+
+* sidebar UI, joblist badge UI ([b1ceb5c](https://github.com/themesberg/flowbite-react/commit/b1ceb5c4a5ac6a245ca798552d538a314a261a06))
+
 ### [0.8.6](https://github.com/themesberg/flowbite-react/compare/v0.8.5...v0.8.6) (2024-02-19)
 
 
