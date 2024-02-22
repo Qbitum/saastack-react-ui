@@ -47,7 +47,7 @@ const Template: StoryFn<DatepickerProps> = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  open: false,
+  open: true,
   autoHide: true,
   showClearButton: true,
   showTodayButton: true,
@@ -55,6 +55,6 @@ Default.args = {
   minDate: undefined,
   maxDate: undefined,
   language: 'en',
-  weekStart: WeekStart.Sunday,
+  // weekStart: WeekStart.Sunday,
   theme: {},
 };

@@ -137,8 +137,8 @@ export const buttonTheme: FlowbiteButtonTheme = {
   outline: {
     color: {
       gray: 'border border-gray-400 enabled:hover:bg-gray-80 bg-white dark:border-white text-gray-100 text-xs',
-      primary: 'border border-primary-100 enabled:hover:bg-primary-80 bg-white text-primary-100 text-xs',
-      secondary: 'border border-secondary-100 enabled:hover:bg-secondary-80 bg-white text-secondary-100 text-xs',
+      primary: 'border border-primary-100 enabled:hover:bg-primary-60 bg-white text-primary-100 text-xs',
+      secondary: 'border border-secondary-100 enabled:hover:bg-secondary-80 bg-white text-secondary-100 text-xs', 
       tertiary: 'border border-tertiary-100 enabled:hover:bg-tertiary-80 bg-white text-tertiary-100 text-xs',
       failure: 'border border-themeFailure-100 bg-white',
       success: 'border border-themeSuccess-100 bg-white',

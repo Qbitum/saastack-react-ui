@@ -85,10 +85,10 @@ export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, curre
         <AiFillInfoCircle className='text-sky-400 mr-4' /><p>{info}</p>
       </div>}
       <div className='flex flex-grow justify-end'>
-        <Button className='m-1' outline onClick={saveExit}>
+        <Button className='m-1' outline color='primary' onClick={saveExit}>
           Save and Exit
         </Button>
-        <Button className='m-1' onClick={onNext} disabled={nextDisable} style={nextDisable ? { opacity: 0.5 } : {}}>
+        <Button className='m-1' color='primary' onClick={onNext} disabled={nextDisable} style={nextDisable ? { opacity: 0.5 } : {}}>
           {isLastStep ? 'Finish' : 'Next'}
         </Button>
       </div>

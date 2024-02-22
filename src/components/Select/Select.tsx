@@ -10,6 +10,7 @@ import { HelperText } from '../HelperText';
 export interface FlowbiteSelectTheme {
   base: string;
   addon: string;
+  color: FlowbiteColors;
   field: {
     base: string;
     icon: {
@@ -22,7 +23,9 @@ export interface FlowbiteSelectTheme {
       withAddon: FlowbiteBoolean;
       withShadow: FlowbiteBoolean;
       sizes: SelectSizes;
-      colors: SelectColors;
+      // colors: SelectColors;
+      color: FlowbiteColors;
+
     };
   };
 }
@@ -37,7 +40,9 @@ export interface SelectSizes extends Pick<FlowbiteSizes, 'sm' | 'md' | 'lg'> {
 
 export interface SelectProps extends Omit<ComponentProps<'select'>, 'color' | 'ref'> {
   addon?: ReactNode;
-  color?: keyof SelectColors;
+  // color?: keyof SelectColors;
+  color?: keyof FlowbiteColors;
+
   helperText?: ReactNode;
   icon?: FC<ComponentProps<'svg'>>;
   shadow?: boolean;
@@ -75,7 +80,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           <select
             className={twMerge(
               theme.field.select.base,
-              theme.field.select.colors[color],
+              theme.field.select.color[color],
               theme.field.select.sizes[sizing],
               theme.field.select.withIcon[Icon ? 'on' : 'off'],
               theme.field.select.withAddon[addon ? 'on' : 'off'],
