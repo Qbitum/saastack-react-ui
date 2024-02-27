@@ -2,7 +2,7 @@ import type { FlowbiteSelectTheme } from './Select';
 
 export const selectTheme: FlowbiteSelectTheme = {
   base: 'flex',
-  addon: 'inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400',
+  addon: 'inline-flex items-center rounded-l-md rounded-lg border border-l-0 border-gray-900 bg-gray-200 px-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-600 dark:text-gray-400',
   field: {
     base: 'relative w-full',
     icon: {
@@ -16,7 +16,7 @@ export const selectTheme: FlowbiteSelectTheme = {
         off: '',
       },
       withAddon: {
-        on: 'rounded-r-lg',
+        on: 'rounded-lg',
         off: 'rounded-lg',
       },
       withShadow: {
@@ -42,7 +42,7 @@ export const selectTheme: FlowbiteSelectTheme = {
           'text-btntext-themeFailure bg-themeFailure-100 border border-transparent enabled:hover:bg-themeFailure-200 focus:ring-4 focus:ring-themeFailure-60 dark:bg-red-600 dark:enabled:hover:bg-red-700 dark:focus:ring-red-900',
     
         success:
-          'text-btntext-themeSuccess bg-themeSuccess-100 border border-transparent enabled:hover:bg-themeSuccess-200 focus:ring-4 focus:ring-themeSuccess-60 dark:bg-green-600 dark:enabled:hover:bg-green-700 dark:focus:ring-green-800',
+          'text-btntext-themeSuccess bg-themeSuccess-100 border border-transparent enabled:hover:bg-themeSuccess-200 focus:ring-4 focus:ring-themeSuccess-60 dark:bg-green-600 dark:enabled:hover:bg-green-700dark:focus:ring-green-800',
     
         warning:
           'text-btntext-themeWarning bg-themeWarning-100 border border-transparent enabled:hover:bg-themeWarning-200 focus:ring-4 focus:ring-themeWarning-60 dark:focus:ring-yellow-900',
@@ -71,7 +71,8 @@ export const selectTheme: FlowbiteSelectTheme = {
     
         pink: 'text-white bg-pink-700 border border-transparent enabled:hover:bg-pink-800 focus:ring-4 focus:ring-pink-300 dark:bg-pink-600 dark:text-white dark:border-pink-600 dark:enabled:hover:bg-pink-700 dark:enabled:hover:border-pink-700 dark:focus:ring-pink-700',
     
-        gray: 'border-gray-400 bg-white text-gray-700 placeholder-slate-400 focus:border-gray-400 focus:ring-gray-400 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+        gray: 
+        'border-gray-400 bg-white text-gray-700 placeholder-slate-400 focus:border-gray-800 focus:ring-gray-800 dark:border-white-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
     
         indigo:
           'text-indigo-900 bg-white border border-indigo-300 enabled:hover:bg-indigo-100 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:text-white dark:border-indigo-600 dark:enabled:hover:bg-indigo-700 dark:enabled:hover:border-indigo-700 dark:focus:ring-indigo-700',
@@ -80,17 +81,6 @@ export const selectTheme: FlowbiteSelectTheme = {
     
         teal: 'text-teal-900 bg-white border border-teal-300 enabled:hover:bg-teal-100 focus:ring-4 focus:ring-teal-300 dark:bg-teal-600 dark:text-white dark:border-teal-600 dark:enabled:hover:bg-teal-700 dark:enabled:hover:border-teal-700 dark:focus:ring-teal-700',
       },
-      // colors: {
-      //   gray: 'border-gray-400 bg-white text-gray-700 placeholder-slate-400 focus:border-gray-400 focus:ring-gray-400 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-
-      //   info: 'border-themeInfo-100 bg-themeInfo-60 text-defultText placeholder-themeGray-80 focus:border-themeInfo-200 focus:ring-themeInfo-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-
-      //   failure: 'border-themeFailure-100 bg-themeFailure-60 text-defultText placeholder-themeFailure-80 focus:border-themeFailure-200 focus:ring-themeFailure-80 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500',
-      //   warning: 'border-themeWarning-100 bg-themeWarning-60 text-defultText placeholder-themeFailure-80 focus:border-themeWarning-200 focus:ring-themeWarning-80 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500',
-      //   success: 'border-themeSuccess-100 bg-themeSuccess-60 text-defultText placeholder-themeSuccess-80 focus:border-themeSuccess-200 focus:ring-themeSuccess-80 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500',
-
-      //   secondary: 'border-secondary-100 bg-white text-defultText placeholder-secondary-80 focus:border-secondary-200 focus:ring-secondary-60 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
-      // },
     },
   },
   color: {

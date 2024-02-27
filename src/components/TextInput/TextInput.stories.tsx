@@ -11,7 +11,12 @@ const Template: StoryFn<TextInputProps> = (args) => <TextInput {...args} />;
 
 export const Default = Template.bind({});
 // Default.storyName = 'Text input';
-Default.args = {};
+
+Default.args = {
+  color:'gray',
+  // rightIcon:{}
+
+};
 
 export const Filter = Template.bind({});
 Filter.storyName = 'Filter';
