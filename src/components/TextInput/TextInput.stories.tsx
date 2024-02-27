@@ -14,6 +14,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   color:'gray',
+  placeholder:'placeholder'
   // rightIcon:{}
 
 };

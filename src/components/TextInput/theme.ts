@@ -22,7 +22,7 @@ export const textInputTheme: FlowbiteTextInputTheme = {
         lg: 'sm:text-md p-4',
       },
       colors: {
-        gray: 'border-gray-400 bg-white text-gray-700 placeholder-slate-400 dark:border-white-400 dark:bg-white-100 dark:focus:border-white-500 dark:focus:ring-white-500',
+        gray: 'border-gray-400 bg-white text-gray-700 placeholder-gray-800 dark:border-white-400 dark:bg-white-100 dark:focus:border-white-500 dark:focus:ring-white-500',
         
         info: 'border-themeInfo-100 bg-themeInfo-60 text-defultText placeholder-themeInfo-80 focus:border-themeInfo-200 focus:ring-themeInfo-80 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
         failure:
