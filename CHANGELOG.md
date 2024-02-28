@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.8](https://github.com/themesberg/flowbite-react/compare/v0.8.7...v0.8.8) (2024-02-28)
+
+
+### Bug Fixes
+
+* improve ui datepicker, dropdown, wizard footer ([7362966](https://github.com/themesberg/flowbite-react/commit/7362966dced8e43b8a574a3c0a7ff62065d3602d))
+* select UI ([fc735f8](https://github.com/themesberg/flowbite-react/commit/fc735f89dec549bc0dfbd5522bf09abb4a61140d))
+* UI improvement select ([b8a1cf2](https://github.com/themesberg/flowbite-react/commit/b8a1cf23b57668b36b42ff1f9610c182c8412a6d))
+
 ### [0.8.7](https://github.com/themesberg/flowbite-react/compare/v0.8.6...v0.8.7) (2024-02-21)
 
 
