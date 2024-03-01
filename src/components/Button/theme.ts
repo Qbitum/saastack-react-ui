@@ -136,11 +136,11 @@ export const buttonTheme: FlowbiteButtonTheme = {
     'ml-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cyan-200 text-xs font-semibold ',//text-cyan-800
   outline: {
     color: {
-      gray: 'border border-gray-400 enabled:hover:bg-gray-80 bg-white dark:border-white text-gray-100 text-xs',
+      gray: 'border border-gray-400 enabled:hover:bg-gray-60 bg-white dark:border-white text-gray-100 text-xs',
       primary: 'border border-primary-100 enabled:hover:bg-primary-60 bg-white text-primary-100 text-xs',
-      secondary: 'border border-secondary-100 enabled:hover:bg-secondary-80 bg-white text-secondary-100 text-xs', 
-      tertiary: 'border border-tertiary-100 enabled:hover:bg-tertiary-80 bg-white text-tertiary-100 text-xs',
-      failure: 'border border-themeFailure-100 bg-white',
+      secondary: 'border border-secondary-100 enabled:hover:bg-secondary-60 bg-white text-secondary-100 text-xs', 
+      tertiary: 'border border-tertiary-100 enabled:hover:bg-tertiary-60 bg-white text-tertiary-100 text-xs',
+      failure: 'border border-themeFailure-100 bg-white enabled:hover:bg-themeFailure-60 text-themeFailure-100 text-xs',
       success: 'border border-themeSuccess-100 bg-white',
       info: 'border border-themeInfo-100 bg-white',
       warning: 'border border-themeWarning-100 bg-white',

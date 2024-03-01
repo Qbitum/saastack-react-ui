@@ -13,7 +13,8 @@ export const DefaultSection = Template.bind({});
 DefaultSection.storyName = 'Section';
 DefaultSection.args = {
   children: 'Section',
-  className: 'bg-gray-600' ,
-  radius: 'xl'
-
+  className:'w-64',
+  // color:'blue',
+  radius: 'sm',
+  borderd: true,
 };

@@ -8,6 +8,8 @@ export { SidebarItem } from './SidebarItem';
 export type { FlowbiteSidebarItemTheme, SidebarItemLabelColors, SidebarItemProps } from './SidebarItem';
 export { SidebarItemGroup } from './SidebarItemGroup';
 export type { FlowbiteSidebarItemGroupTheme, SidebarItemGroupProps } from './SidebarItemGroup';
+export { SidebarBottomGroup } from './SidebarBottomGroup';
+export type { FlowbiteSidebarBottomGroupTheme, SidebarBottomGroupProps } from './SidebarBottomGroup';
 export { SidebarItems } from './SidebarItems';
 export type { FlowbiteSidebarItemsTheme, SidebarItemsProps } from './SidebarItems';
 export { SidebarLogo } from './SidebarLogo';

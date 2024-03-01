@@ -5,6 +5,7 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Sidebar } from './Sidebar';
 import { AiOutlineUser, AiOutlineInfo, AiOutlineLogin } from 'react-icons/ai';
+import { Section } from '../Section';
 
 export default {
   title: 'Components/Sidebar',
@@ -296,33 +297,31 @@ MLSidebar.storyName = 'ML Sidebar';
 MLSidebar.args = {
   children: (
     <>
+    <Section className='bg-gray-300' alignedLeft={true} ></Section>
 
         <Sidebar.Logo
           href="#"
           img="favicon.svg"
           imgAlt="logo"
         ></Sidebar.Logo>
-        <Sidebar.Items className="flex flex-col">
+        <Sidebar.Items className="flex flex-col h-full">
           {/* top icons */}
-          <Sidebar.ItemGroup className="">
+          <Sidebar.ItemGroup className="flex-grow">
           <Sidebar.Item href="#" icon={AiOutlineInfo}>DB</Sidebar.Item>
           <Sidebar.Item href="#" icon={AiOutlineInfo}>Job List</Sidebar.Item>
           <Sidebar.Item href="#" icon={AiOutlineInfo}>+ New</Sidebar.Item>
-          <Sidebar.Item href="#" icon={AiOutlineInfo}>Report</Sidebar.Item>
-
           </Sidebar.ItemGroup>
           {/* bottom icons */}
           <div className="mt-24 border rounded-lg bg-white bg-opacity-30 m-4">
-          {/* w-12  self-center*/}
-          <Sidebar.ItemGroup>
-          {/* self-center */}
-            <Sidebar.Item href="#" icon={AiOutlineUser}>
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={AiOutlineInfo}>
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={AiOutlineLogin}>
-            </Sidebar.Item>
-          </Sidebar.ItemGroup>
+          <Sidebar.BottomGroup className='items-center'>
+          
+            <Sidebar.BottomItem href="#" icon={AiOutlineUser}>
+            </Sidebar.BottomItem>
+            <Sidebar.BottomItem href="#" icon={AiOutlineInfo}>
+            </Sidebar.BottomItem>
+            <Sidebar.BottomItem href="#" icon={AiOutlineLogin}>
+            </Sidebar.BottomItem>
+          </Sidebar.BottomGroup>
           </div>
 
         </Sidebar.Items>
