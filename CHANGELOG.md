@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.9](https://github.com/themesberg/flowbite-react/compare/v0.8.8...v0.8.9) (2024-03-04)
+
+
+### Bug Fixes
+
+* sidebar UI, outline-button hover colour ([c6f22af](https://github.com/themesberg/flowbite-react/commit/c6f22afd1cdc5128ed94a24d444c87b9a2ac38d8))
+
 ### [0.8.8](https://github.com/themesberg/flowbite-react/compare/v0.8.7...v0.8.8) (2024-02-28)
 
 
