@@ -27,15 +27,21 @@ export interface WizardProps {
   onNext?: () => boolean;
   onStepChange: (index: number) => void;
   nextDisable?: boolean;
+  saveExitDisable?: boolean;
   initialStep?: number;
   saveExit?: () => void;
+  showSaveExit?: boolean; // New prop to control "Save and Exit" button visibility
   message?: string;
   changeStep?: (index: number) => void;
 }
   /* eslint-disable @typescript-eslint/no-explicit-any */
 export const Wizard = forwardRef<any, WizardProps>(({ headerStyle, footerStyle, children, onStepChange, onNext, saveExit, message,
   nextDisable = false,
-  initialStep = 0
+  initialStep = 0,
+  saveExitDisable = false,
+  // showSaveExit = true, 
+
+  
 }, ref) => {
   const [activeItemIndex, setActiveItemIndex] = useState(initialStep); // Set the initial active step
 
@@ -82,7 +88,8 @@ export const Wizard = forwardRef<any, WizardProps>(({ headerStyle, footerStyle, 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   const titles = React.Children.map(children, (child) => (child as React.ReactElement<any>).props.title) as string[];
 
-  const isNextDisabled = false;
+  // const isNextDisabled = false;
+  // const isSaveExitDisabled = false;
 
   return (
     <div ref={ref} className='wizard flex flex-col h-full' data-test-id='wizard'>
@@ -104,10 +111,9 @@ export const Wizard = forwardRef<any, WizardProps>(({ headerStyle, footerStyle, 
       </div>
       <div className='wizard-footer '>
         {/* Add Footer styles */}
-        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} saveExit={saveExit} info={message} hidden />}
-
-        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={nextDisable} hidden />}
-        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} disabled={isNextDisabled} nextDisable={true} hidden />}
+        {footerStyle === 'lm-footer-button' && <LMFooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps}  nextDisable={nextDisable} saveExit={saveExit} saveExitDisable={saveExitDisable} info={message} hidden />}
+        {footerStyle === 'footer-button' && <FooterButton onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} nextDisable={nextDisable} hidden saveExitDisable={saveExitDisable} />}
+        {footerStyle === 'footer-nav' && <FooterNav onNext={handleNext} onPrev={handlePrev} currentStep={activeItemIndex} totalSteps={totalSteps} nextDisable={true} hidden saveExitDisable={saveExitDisable} />}
       </div>
     </div>
   );

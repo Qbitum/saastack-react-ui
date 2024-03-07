@@ -87,8 +87,8 @@ LMWizard.args = {
   },
 
   nextDisable: false, 
+  saveExitDisable: false,
   initialStep: 0, 
-// onmessage: "hi",
   footerStyle: 'lm-footer-button',
 
 };

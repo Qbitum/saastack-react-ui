@@ -1,15 +1,14 @@
 import React from 'react';
-import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
 import { Button } from '../Button';
-import { AiFillInfoCircle } from 'react-icons/ai';
+import { FaArrowLeft, FaArrowRight, FaCircleInfo } from 'react-icons/fa6';
 
 export interface FooterNavProps {
   onNext: () => void;
   onPrev: () => void;
   currentStep: number;
   totalSteps: number;
-  disabled: boolean;
   nextDisable: boolean;
+  saveExitDisable: boolean;
   saveExit?: () => void;
   hidden: boolean;
   info?: string;
@@ -26,7 +25,7 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
         onClick={onPrev} disabled={isFirstStep}
         className='mx-2'
       >
-        <HiOutlineArrowLeft className="h-6 w-6" />
+        <FaArrowLeft className="h-6 w-6" />
       </Button>
       <Button
         onClick={onNext}
@@ -34,7 +33,7 @@ export const FooterNav: React.FC<FooterNavProps> = ({ onNext, onPrev, currentSte
         disabled={nextDisable}
         style={nextDisable ? { opacity: 0.5 } : {}}
       >
-        <HiOutlineArrowRight className="h-6 w-6" />
+        <FaArrowRight className="h-6 w-6" />
       </Button>
     </div>
   )
@@ -58,23 +57,8 @@ export const FooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, current
 }
 
 
-export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps, nextDisable, saveExit, info }) => {
+export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, currentStep, totalSteps, nextDisable,saveExitDisable,  saveExit, info }) => {
   const isLastStep = currentStep === totalSteps - 1;
-  // return (
-  //   <div className='flex items-center'>
-  //     <Button className='m-1' onClick={onPrev} disabled={isFirstStep} hidden>
-  //       Previous
-  //     </Button>
-  //     <div className='flex flex-grow justify-end'>
-  //       <Button className='m-1' outline onClick={saveExit}>
-  //         Save and Exit
-  //       </Button>
-  //       <Button className='m-1' onClick={onNext} disabled={nextDisable} style={nextDisable ? { opacity: 0.5 } : {}}>
-  //         {isLastStep ? 'Finish' : 'Next'}
-  //       </Button>
-  //     </div>
-  //   </div>
-  // );
   return (
     <div className='flex items-center p-2'>
 
@@ -82,10 +66,10 @@ export const LMFooterButton: React.FC<FooterNavProps> = ({ onNext, onPrev, curre
         Previous
       </Button>
       {info && <div className='bg-sky-200 inline-flex flex-row items-center p-1 rounded'>
-        <AiFillInfoCircle className='text-sky-400 mr-4' /><p>{info}</p>
+        <FaCircleInfo className='text-sky-400 mr-4' /><p>{info}</p>
       </div>}
       <div className='flex flex-grow justify-end'>
-        <Button className='m-1' outline color='primary' onClick={saveExit}>
+        <Button className='m-1' outline color='primary' onClick={saveExit} disabled={saveExitDisable} style={saveExitDisable ? { opacity: 0.5 } : {}}>
           Save and Exit
         </Button>
         <Button className='m-1' color='primary' onClick={onNext} disabled={nextDisable} style={nextDisable ? { opacity: 0.5 } : {}}>
