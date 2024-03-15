@@ -126,7 +126,8 @@ export const selectTheme: FlowbiteSelectTheme = {
 
     pink: 'text-white bg-pink-700 border border-transparent enabled:hover:bg-pink-800 focus:ring-4 focus:ring-pink-300 dark:bg-pink-600 dark:text-white dark:border-pink-600 dark:enabled:hover:bg-pink-700 dark:enabled:hover:border-pink-700 dark:focus:ring-pink-700',
 
-    gray: 'border-gray-400 bg-white text-gray-700 placeholder-slate-400 focus:border-gray-400 focus:ring-gray-400 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
+    gray: '',
+    // 'border-gray-400 bg-white text-gray-700 placeholder-slate-400 focus:border-gray-400 focus:ring-gray-400 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500',
 
     indigo:
       'text-indigo-900 bg-white border border-indigo-300 enabled:hover:bg-indigo-100 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:text-white dark:border-indigo-600 dark:enabled:hover:bg-indigo-700 dark:enabled:hover:border-indigo-700 dark:focus:ring-indigo-700',

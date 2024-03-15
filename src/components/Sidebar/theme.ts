@@ -2,7 +2,7 @@ import type { FlowbiteSidebarTheme } from './Sidebar';
 
 export const sidebarTheme: FlowbiteSidebarTheme = {
   root: {
-    base: 'h-full bg-gradient-to-t from-cyan-500 to-blue-500 rounded-r-3xl shadow-[10px_0px_10px_-2px_rgba(0,0,0,0.3)]',
+    base: 'h-full bg-gradient-to-t from-cyan-500 to-blue-500 rounded-r-3xl shadow-[10px_0px_10px_-2px_rgba(0,0,0,0.2)]',
     collapsed: {
       on: 'w-20 ',
       off: 'w-56',

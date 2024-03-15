@@ -42,7 +42,6 @@ export interface SelectProps extends Omit<ComponentProps<'select'>, 'color' | 'r
   addon?: ReactNode;
   // color?: keyof SelectColors;
   color?: keyof FlowbiteColors;
-
   helperText?: ReactNode;
   icon?: FC<ComponentProps<'svg'>>;
   shadow?: boolean;
