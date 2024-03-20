@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.11](https://github.com/themesberg/flowbite-react/compare/v0.8.10...v0.8.11) (2024-03-20)
+
+
+### Bug Fixes
+
+* UI fix ([5062fff](https://github.com/themesberg/flowbite-react/commit/5062fffd55ea0104e36e3e8f6d05ac2ba60208c3))
+
 ### [0.8.10](https://github.com/themesberg/flowbite-react/compare/v0.8.9...v0.8.10) (2024-03-07)
 
 
