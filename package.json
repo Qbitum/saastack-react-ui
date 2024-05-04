@@ -25,7 +25,7 @@
     "url": "https://github.com/themesberg/flowbite-react"
   },
   "publishConfig": {
-    "registry": "https://saastackdev.qbitum.net/repository/qbitum-dev/"
+    "registry": "https://saastackdev.qbitum.net/repository/qbitum-dev"
   },
   "scripts": {
     "build": "next build",
